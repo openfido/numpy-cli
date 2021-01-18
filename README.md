@@ -1,4 +1,4 @@
-![Autotest](https://github.com/dchassin/numpy-cli/workflows/Autotest/badge.svg)
+![Master](https://github.com/dchassin/numpy-cli/workflows/Master/badge.svg)
 
 # Numpy Command Line Interface (CLI)
 
