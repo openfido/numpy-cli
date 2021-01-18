@@ -1,0 +1,1 @@
+numpy -x random.normal

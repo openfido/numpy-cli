@@ -1,5 +1,4 @@
-#!/usr/bin/python3
-"""General linear algebra for shell scripts
+"""Command line numpy interface
 
 This module is a CLI for the python numpy matrix class and supporting
 linear algebra library. The general syntax is
@@ -15,7 +14,7 @@ Examples:
 
 1) Generate a matrix of random numbers
 
-  shell% numpy random.normal size=2x1
+  shell% numpy random.normal size=2,1
   [[-0.35433847]; [ 0.66326107]]
 
 2) Tranumpyose a matrix
@@ -58,7 +57,7 @@ except:
 
 def dimensions(s):
 	"""Parse dimensions as N[xM[x[...]]]"""
-	return list(map(lambda n:int(n),s.split('x')))
+	return list(map(lambda n:int(n),s.split(',')))
 
 def intlist_args(*s):
 	"""Parse arguments as integer list"""
@@ -190,6 +189,10 @@ def main(argv):
 		elif argv[1] in ["-e","--exception"]:
 			config.exception = not config.exception
 			del argv[1]
+		elif argv[1] in ["-h","--help"]:
+			argv[1] = "help"
+		elif argv[1][0] == '-':
+			error(f"option '{argv[1]}' is not valid",code=E_INVALID)
 		else:
 			done = True
 
@@ -200,6 +203,7 @@ def main(argv):
 		print("Options:",file=sys.stderr)
 		print("  -d|--debug       enable debugging output",file=sys.stderr)
 		print("  -e|--exception   raise exceptions on errors",file=sys.stderr)
+		print("  -h|--help        print this help info")
 		print("  -q|--quiet       suppress all output to stderr",file=sys.stderr)
 		print("  -w|--warning     suppress warning output",file=sys.stderr)
 		print("Commands:",file=sys.stderr)
