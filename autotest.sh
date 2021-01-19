@@ -1,18 +1,19 @@
 #!/bin/bash
 cd autotest
-N=0
-M=0
+export AUTOTEST=$PWD
+PASS=0
+TOTAL=0
 for TEST in test_*.sh; do
 	DIR=${TEST%.*}
 	rm -rf $DIR
 	mkdir $DIR
 	cp $TEST $DIR
 	echo "Running $TEST... "
-	M=$(($M+1))
+	TOTAL=$(($TOTAL+1))
 	if [ "${DIR##*_}" == "err" ]; then
-		(cd $DIR; sh -C ./$TEST 1>stdout 2>stderr ) && echo "FAILED: unexpected success" || N=$(($N+1))
+		(cd $DIR; sh -C ./$TEST 1>stdout 2>stderr ) && echo "FAILED: unexpected success" || PASS=$(($PASS+1))
 	else
-		(cd $DIR; sh -C ./$TEST 1>stdout 2>stderr ) && N=$(($N+1)) || cat $DIR/stderr
+		(cd $DIR; sh -C ./$TEST 1>stdout 2>stderr ) && PASS=$(($PASS+1)) || grep -v '^+' --context=1 $DIR/stderr | head -n 2
 	fi
 done
-echo $M tests, $(($M-$N)) failed
+echo $TOTAL tests, $(($TOTAL-$PASS)) failed

@@ -54,6 +54,7 @@ except:
 	except Exception as err:
 		print(f"ERROR [{cmdname}]: unable to install numpy automatically ({err}), manual installation required",file=sys.stderr)
 		exit(E_FAILED)
+import numpy.matlib as matlib
 
 def dimensions(s):
 	"""Parse dimensions as N[xM[x[...]]]"""
@@ -73,59 +74,91 @@ def arrayorint(a):
 def array(a):
 	numpy.array(numpy.matrix(a).flatten())[0]
 
+_ARGS=""
 functions = {
+	"eye" :
+	{
+		_ARGS : [int],
+		"M" : int,
+		"k" : int,
+		"dtype" : str,
+		"order" : str,
+	},
+	"identity" :
+	{
+		_ARGS : [int],
+		"dtype" : str,
+	},
+	"ones" : 
+	{
+		_ARGS : [dimensions],
+		"dtype" : str,
+		"order" : str,
+	},
+	"matlib.rand" :
+	{
+		_ARGS : intlist_args,
+	},
+	"matlib.randn" :
+	{
+		_ARGS : intlist_args,
+	},
 	"random.normal" : 
 	{
-		"" : [],
+		_ARGS : [],
 		"loc" : numpy.matrix, 
 		"scale" : numpy.matrix,
 		"size" : dimensions,
 	},
 	"random.rand" : 
 	{
-		"" : intlist_args
+		_ARGS : [intlist_args]
 	},
 	"random.randn" : 
 	{
-		"" : intlist_args
+		_ARGS : [intlist_args]
 	},
 	"random.randint" : 
 	{
-		"" : [int],
+		_ARGS : [int],
 		"high" : int,
 		"size" : dimensions,
 		"dtype" : str,
 	},
 	"random.random_sample" : 
 	{
-		"" : [],
+		_ARGS : [],
 		"size" : dimensions,
 	},
 	"random.random" : 
 	{
-		"" : [],
+		_ARGS : [],
 		"size" : dimensions,
 	},
 	"random.ranf" :
 	{
-		"" : [],
+		_ARGS : [],
 		"size" : dimensions,
 	},
 	"random.sample" :
 	{
-		"" : [],
+		_ARGS : [],
 		"size" : dimensions,
 	},
 	"random.choice" :
 	{
-		"" : [arrayorint],
+		_ARGS : [arrayorint],
 		"size" : dimensions,
 		"replace" : bool,
 		"p" : array,	
 	},
+	"matlib.repmat" : 
+	{
+		_ARGS : [numpy.matrix, int, int],
+	},
 	"savetxt" : 
 	{
-		"" : [str, numpy.matrix],
+		_ARGS : [str, numpy.matrix],
 		"fmt" : str,
 		"delimiter" : str,
 		"newline" : str,
@@ -136,8 +169,14 @@ functions = {
 	},
 	"transpose" : 
 	{
-		"" : [numpy.matrix],
+		_ARGS : [numpy.matrix],
 	},
+	"zeros" :
+	{
+		_ARGS : [dimensions],
+		"dtype" : str,
+		"order" : str,
+	}
 }
 vararg = [intlist_args] # variable argument list handlers
 
@@ -191,6 +230,8 @@ def main(argv):
 			del argv[1]
 		elif argv[1] in ["-h","--help"]:
 			argv[1] = "help"
+		elif argv[1] in ["-v","--version"]:
+			argv[1] = "version"
 		elif argv[1][0] == '-':
 			error(f"option '{argv[1]}' is not valid",code=E_INVALID)
 		else:
@@ -203,11 +244,11 @@ def main(argv):
 		print("Options:",file=sys.stderr)
 		print("  -d|--debug       enable debugging output",file=sys.stderr)
 		print("  -e|--exception   raise exceptions on errors",file=sys.stderr)
-		print("  -h|--help        print this help info")
+		print("  -h|--help        print this help info",file=sys.stderr)
 		print("  -q|--quiet       suppress all output to stderr",file=sys.stderr)
 		print("  -w|--warning     suppress warning output",file=sys.stderr)
 		print("Commands:",file=sys.stderr)
-		print("  help [command]")
+		print("  help [command]",file=sys.stderr)
 		for name in sorted(list(functions.keys())):
 			specs = functions[name]
 			args = []
@@ -221,12 +262,15 @@ def main(argv):
 				else:
 					args.append(f"{tag}=<{value.__name__}>")
 			print(" ",name," ".join(args),file=sys.stderr)
-		exit(0)
+		exit(E_OK)
+	elif len(argv) == 2 and argv[1] == "version":
+		print(numpy.__version__,file=sys.stderr)
+		exit(E_OK)
 	elif len(argv) == 3 and argv[1] == "help":
 		if not argv[2] in functions.keys():
 			error(f"'{argv[2]}' not found",code=E_NOTFOUND)
 		help(f"numpy.{argv[2]}")
-		exit(0)
+		exit(E_OK)
 
 	try:
 		package = argv[1].split('.')
@@ -245,29 +289,37 @@ def main(argv):
 		pos = 0
 		name = argv[1]
 		function = functions[name]
-		if function[""] in vararg:
-			atype = function[""]
-			args = atype(argv[2:])
+		if function[_ARGS] in vararg:
+			atype = function[_ARGS]
+			if len(argv) > 2:
+				args = atype(argv[2:])
 		else:
 			for arg in argv[2:]:
 				spec = arg.split("=")
 				if len(spec) < 2:
-					if pos >= len(function[""]):
+					if pos >= len(function[_ARGS]):
 						error("too many positional argument",E_INVALID)
-					atype = function[""][pos]
+					atype = function[_ARGS][pos]
 					args.append(atype(arg))
 					pos += 1
 				else:
 					atype = function[spec[0]]
 					kwargs[spec[0]] = atype(spec[1])
-			while len(args) < len(function[""]):
+			while len(args) < len(function[_ARGS]):
 				if sys.stdin.isatty():
 					error("missing positional argument",E_INVALID)
-				atype = function[""][pos]
+				atype = function[_ARGS][pos]
 				data = sys.stdin.readlines()
 				args.append(atype(";".join(data)))
 				pos += 1
-		result = call(*args,**kwargs)
+		if args and kwargs:
+			result = call(*args,**kwargs)
+		elif args:
+			result = call(*args)
+		elif kwargs:
+			result = call(**kwargs)
+		else:
+			result = call()
 		output(result)
 	except Exception as info:
 		if config.exception:

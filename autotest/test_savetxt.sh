@@ -1,4 +1,4 @@
-. $(find .. -name assert.sh -print)
+. ${AUTOTEST:-..}/assert.sh
 
 numpy savetxt output.csv "1,2,3"
 numpy savetxt output.csv "1,2,3" fmt='%g' delimiter=,

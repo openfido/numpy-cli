@@ -1,4 +1,4 @@
-. $(find .. -name assert.sh -print)
+. ${AUTOTEST:-..}/assert.sh
 
-assert -z $(numpy help 1>/dev/null)
-assert -z $(numpy help random.normal 1>/dev/null) 
+numpy help
+numpy help random.normal
