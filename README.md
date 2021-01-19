@@ -29,7 +29,7 @@ sh% numpy random.normal size=3,5
 2) The following generates a 3x5 and transposes it:
 
 ~~~
-sh% numpy numpy random.normal size=3,5 | numpy transpose
+sh% numpy random.normal size=3,5 | numpy transpose
 0.48714749,0.57812237,0.32112621
 -0.30149098,0.74261362,0.0081088468
 -0.7004004,-1.616231,1.2450845
