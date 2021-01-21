@@ -113,6 +113,10 @@ functions = {
 		_ARGS : [numpy.matrix],
 		"p" : order,
 	},
+	"linalg.det" :
+	{
+		_ARGS : [numpy.matrix],
+	},
 	"linalg.norm" :
 	{
 		_ARGS : [numpy.matrix],

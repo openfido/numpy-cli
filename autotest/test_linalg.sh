@@ -19,3 +19,5 @@ assert "$(numpy linalg.cond '1,2;3,4' p=1)" = "21"
 assert "$(numpy linalg.cond '1,2;3,4' p=-1)" = "6"
 assert "$(numpy linalg.cond '1,2;3,4' p=2)" = "14.933034"
 assert "$(numpy linalg.cond '1,2;3,4' p=-2)" = "0.066965626"
+
+assert "$(numpy linalg.det '1,2;3,4')" -eq -2
