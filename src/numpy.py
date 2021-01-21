@@ -138,6 +138,10 @@ functions = {
 	},
 
 	# linag
+	"linalg.cholesky" :
+	{
+		_ARGS : [numpy.matrix],
+	},
 	"linalg.cond" :
 	{
 		_ARGS : [numpy.matrix],
@@ -147,9 +151,32 @@ functions = {
 	{
 		_ARGS : [numpy.matrix],
 	},
+	"linalg.eig" :
+	{
+		_ARGS : [numpy.matrix],
+	},
+	"linalg.eigh" :
+	{
+		_ARGS : [numpy.matrix],
+		"UPLO" : str,
+	},
+	"linalg.eigvals" :
+	{
+		_ARGS : [numpy.matrix],
+	},
+	"linalg.eigvalsh" :
+	{
+		_ARGS : [numpy.matrix],
+		"UPLO" : str,
+	},
 	"linalg.inv" :
 	{
 		_ARGS : [numpy.matrix],
+	},
+	"linalg.lstsq" : 
+	{
+		_ARGS : [numpy.matrix,numpy.matrix],
+		"rcond" : float,
 	},
 	"linalg.matrix_rank" :
 	{
@@ -166,6 +193,11 @@ functions = {
 	{
 		_ARGS : [numpy.matrix],
 	},
+	"linalg.qr" :
+	{
+		_ARGS : [numpy.matrix],
+		"mode" : str,
+	},
 	"linalg.slogdet" :
 	{
 		_ARGS : [numpy.matrix],
@@ -174,10 +206,12 @@ functions = {
 	{
 		_ARGS : [numpy.matrix,numpy.matrix],
 	},
-	"linalg.lstsq" : 
+	"linalg.svd" : 
 	{
-		_ARGS : [numpy.matrix,numpy.matrix],
-		"rcond" : float,
+		_ARGS : [numpy.matrix],
+		"full_matrices" : bool,
+		"compute_uv" : bool,
+		"hermitian" : bool,
 	},
 
 	# matlib
