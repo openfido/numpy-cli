@@ -17,7 +17,7 @@ Examples:
   shell% numpy random.normal size=2,1
   [[-0.35433847]; [ 0.66326107]]
 
-2) Tranumpyose a matrix
+2) Transpose a matrix
 
   shell% numpy transpose '[[ 0.60125537] [-0.45920654]]'
   [[ 0.60125537]; [-0.45920654]]
@@ -57,6 +57,9 @@ except:
 import numpy.matlib as matlib
 import numpy.linalg as linalg
 
+#
+# Argument types
+#
 def dimensions(s):
 	"""Parse dimensions as N[xM[x[...]]]"""
 	return list(map(lambda n:int(n),s.split(',')))
@@ -83,11 +86,15 @@ def order(a):
 	except:
 		return a
 
-_ARGS=""
+#
+# Arguments and options
+#
+_REQARGS="" # keyword for required arguments
+_VARARGS = [intlist_args] # variable argument list handlers
 functions = {
 	"eye" :
 	{
-		_ARGS : [int],
+		_REQARGS : [int],
 		"M" : int,
 		"k" : int,
 		"dtype" : str,
@@ -95,22 +102,22 @@ functions = {
 	},
 	"identity" :
 	{
-		_ARGS : [int],
+		_REQARGS : [int],
 		"dtype" : str,
 	},
 	"ones" : 
 	{
-		_ARGS : [dimensions],
+		_REQARGS : [dimensions],
 		"dtype" : str,
 		"order" : str,
 	},
 	"dot" :
 	{
-		_ARGS : [numpy.matrix,numpy.matrix],
+		_REQARGS : [numpy.matrix,numpy.matrix],
 	},
 	"savetxt" : 
 	{
-		_ARGS : [str, numpy.matrix],
+		_REQARGS : [str, numpy.matrix],
 		"fmt" : str,
 		"delimiter" : str,
 		"newline" : str,
@@ -121,18 +128,18 @@ functions = {
 	},
 	"trace" :
 	{
-		_ARGS : [numpy.matrix],
+		_REQARGS : [numpy.matrix],
 		"offset" : int,
 		"axis" : int,
 		"dtype" : str,
 	},
 	"transpose" : 
 	{
-		_ARGS : [numpy.matrix],
+		_REQARGS : [numpy.matrix],
 	},
 	"zeros" :
 	{
-		_ARGS : [dimensions],
+		_REQARGS : [dimensions],
 		"dtype" : str,
 		"order" : str,
 	},
@@ -140,75 +147,75 @@ functions = {
 	# linag
 	"linalg.cholesky" :
 	{
-		_ARGS : [numpy.matrix],
+		_REQARGS : [numpy.matrix],
 	},
 	"linalg.cond" :
 	{
-		_ARGS : [numpy.matrix],
+		_REQARGS : [numpy.matrix],
 		"p" : order,
 	},
 	"linalg.det" :
 	{
-		_ARGS : [numpy.matrix],
+		_REQARGS : [numpy.matrix],
 	},
 	"linalg.eig" :
 	{
-		_ARGS : [numpy.matrix],
+		_REQARGS : [numpy.matrix],
 	},
 	"linalg.eigh" :
 	{
-		_ARGS : [numpy.matrix],
+		_REQARGS : [numpy.matrix],
 		"UPLO" : str,
 	},
 	"linalg.eigvals" :
 	{
-		_ARGS : [numpy.matrix],
+		_REQARGS : [numpy.matrix],
 	},
 	"linalg.eigvalsh" :
 	{
-		_ARGS : [numpy.matrix],
+		_REQARGS : [numpy.matrix],
 		"UPLO" : str,
 	},
 	"linalg.inv" :
 	{
-		_ARGS : [numpy.matrix],
+		_REQARGS : [numpy.matrix],
 	},
 	"linalg.lstsq" : 
 	{
-		_ARGS : [numpy.matrix,numpy.matrix],
+		_REQARGS : [numpy.matrix,numpy.matrix],
 		"rcond" : float,
 	},
 	"linalg.matrix_rank" :
 	{
-		_ARGS : [numpy.matrix],
+		_REQARGS : [numpy.matrix],
 	},
 	"linalg.norm" :
 	{
-		_ARGS : [numpy.matrix],
+		_REQARGS : [numpy.matrix],
 		"ord" : order,
 		"axis" : int,
 		"keepdims" : bool,
 	},
 	"linalg.pinv" :
 	{
-		_ARGS : [numpy.matrix],
+		_REQARGS : [numpy.matrix],
 	},
 	"linalg.qr" :
 	{
-		_ARGS : [numpy.matrix],
+		_REQARGS : [numpy.matrix],
 		"mode" : str,
 	},
 	"linalg.slogdet" :
 	{
-		_ARGS : [numpy.matrix],
+		_REQARGS : [numpy.matrix],
 	},
 	"linalg.solve" : 
 	{
-		_ARGS : [numpy.matrix,numpy.matrix],
+		_REQARGS : [numpy.matrix,numpy.matrix],
 	},
 	"linalg.svd" : 
 	{
-		_ARGS : [numpy.matrix],
+		_REQARGS : [numpy.matrix],
 		"full_matrices" : bool,
 		"compute_uv" : bool,
 		"hermitian" : bool,
@@ -217,71 +224,73 @@ functions = {
 	# matlib
 	"matlib.rand" :
 	{
-		_ARGS : intlist_args,
+		_REQARGS : intlist_args,
 	},
 	"matlib.randn" :
 	{
-		_ARGS : intlist_args,
+		_REQARGS : intlist_args,
 	},
 	"matlib.repmat" : 
 	{
-		_ARGS : [numpy.matrix, int, int],
+		_REQARGS : [numpy.matrix, int, int],
 	},
 
 	# random
 	"random.normal" : 
 	{
-		_ARGS : [],
+		_REQARGS : [],
 		"loc" : numpy.matrix, 
 		"scale" : numpy.matrix,
 		"size" : dimensions,
 	},
 	"random.rand" : 
 	{
-		_ARGS : intlist_args
+		_REQARGS : intlist_args
 	},
 	"random.randn" : 
 	{
-		_ARGS : intlist_args
+		_REQARGS : intlist_args
 	},
 	"random.randint" : 
 	{
-		_ARGS : [int],
+		_REQARGS : [int],
 		"high" : int,
 		"size" : dimensions,
 		"dtype" : str,
 	},
 	"random.random_sample" : 
 	{
-		_ARGS : [],
+		_REQARGS : [],
 		"size" : dimensions,
 	},
 	"random.random" : 
 	{
-		_ARGS : [],
+		_REQARGS : [],
 		"size" : dimensions,
 	},
 	"random.ranf" :
 	{
-		_ARGS : [],
+		_REQARGS : [],
 		"size" : dimensions,
 	},
 	"random.sample" :
 	{
-		_ARGS : [],
+		_REQARGS : [],
 		"size" : dimensions,
 	},
 	"random.choice" :
 	{
-		_ARGS : [arrayorint],
+		_REQARGS : [arrayorint],
 		"size" : dimensions,
 		"replace" : bool,
 		"p" : array,	
 	},
 
 }
-vararg = [intlist_args] # variable argument list handlers
 
+#
+# Configuration values
+#
 class config:
 	warning = True
 	quiet = False
@@ -291,6 +300,9 @@ class config:
 
 numpy.set_printoptions(threshold=sys.maxsize)
 
+#
+# Output routines
+#
 def output(result):
 	if type(result) == type(None):
 		return
@@ -299,6 +311,8 @@ def output(result):
 			output(item)
 	elif type(result) == list:
 		numpy.savetxt(sys.stdout,result,fmt=config.format,delimiter=",")
+	elif type(result) == str:
+		print(result,file=sys.stdout)
 	else:
 		try:
 			output(numpy.matrix(result).tolist())
@@ -321,6 +335,9 @@ def debug(msg):
 	if config.debug:
 		print(f"DEBUG [{cmdname}]: {msg}",file=sys.stderr)
 
+#
+# Main function
+#
 def main(argv):
 	done = False
 	while not done and len(argv) > 1:
@@ -371,14 +388,33 @@ def main(argv):
 					args.append(f"{tag}=<{value.__name__}>")
 			print(" ",name," ".join(args),file=sys.stdout)
 		exit(E_OK)
-	elif len(argv) == 2 and argv[1] == "version":
-		print(numpy.__version__,file=sys.stdout)
-		exit(E_OK)
 	elif len(argv) == 3 and argv[1] == "help":
-		if not argv[2] in functions.keys():
+		name = argv[2]
+		if not name in functions.keys():
 			error(f"'{argv[2]}' not found",code=E_NOTFOUND)
 		sys.stderr = sys.stdout
-		help(f"numpy.{argv[2]}")
+		package = name.split('.')
+		lib = numpy
+		for name in package[0:-1]:
+			lib = getattr(lib,name)
+		call = getattr(lib,package[-1])
+		specs = functions[name]
+		args = []
+		for tag, value in specs.items():
+			if not tag:
+				if type(value) is list:
+					for item in value:
+						args.append(f"<{item.__name__}>")
+				else:
+					args.append(f"<{value.__name__}>")
+			else:
+				args.append(f"{tag}=<{value.__name__}>")
+		print("numpy",name," ".join(args),file=sys.stdout)
+		output(call.__doc__)
+		# help(f"numpy.{argv[2]}")
+		exit(E_OK)
+	elif len(argv) == 2 and argv[1] == "version":
+		print(numpy.__version__,file=sys.stdout)
 		exit(E_OK)
 
 	try:
@@ -398,26 +434,26 @@ def main(argv):
 		pos = 0
 		name = argv[1]
 		function = functions[name]
-		if function[_ARGS] in vararg:
-			atype = function[_ARGS]
+		if function[_REQARGS] in _VARARGS:
+			atype = function[_REQARGS]
 			if len(argv) > 2:
 				args = atype(argv[2:])
 		else:
 			for arg in argv[2:]:
 				spec = arg.split("=")
 				if len(spec) < 2:
-					if pos >= len(function[_ARGS]):
+					if pos >= len(function[_REQARGS]):
 						error("too many positional argument",E_INVALID)
-					atype = function[_ARGS][pos]
+					atype = function[_REQARGS][pos]
 					args.append(atype(arg))
 					pos += 1
 				else:
 					atype = function[spec[0]]
 					kwargs[spec[0]] = atype(spec[1])
-			while len(args) < len(function[_ARGS]):
+			while len(args) < len(function[_REQARGS]):
 				if sys.stdin.isatty():
 					error("missing positional argument",E_INVALID)
-				atype = function[_ARGS][pos]
+				atype = function[_REQARGS][pos]
 				data = sys.stdin.readlines()
 				args.append(atype(";".join(data)))
 				pos += 1
