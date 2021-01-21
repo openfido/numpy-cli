@@ -55,6 +55,7 @@ except:
 		print(f"ERROR [{cmdname}]: unable to install numpy automatically ({err}), manual installation required",file=sys.stderr)
 		exit(E_FAILED)
 import numpy.matlib as matlib
+import numpy.linalg as linalg
 
 def dimensions(s):
 	"""Parse dimensions as N[xM[x[...]]]"""
@@ -73,6 +74,14 @@ def arrayorint(a):
 
 def array(a):
 	numpy.array(numpy.matrix(a).flatten())[0]
+
+def order(a):
+	if a in ["inf","-inf"]:
+		return float(a)
+	try:
+		return int(a)
+	except:
+		return a
 
 _ARGS=""
 functions = {
@@ -95,6 +104,22 @@ functions = {
 		"dtype" : str,
 		"order" : str,
 	},
+	"dot" :
+	{
+		_ARGS : [numpy.matrix,numpy.matrix],
+	},
+	"linalg.cond" :
+	{
+		_ARGS : [numpy.matrix],
+		"p" : order,
+	},
+	"linalg.norm" :
+	{
+		_ARGS : [numpy.matrix],
+		"ord" : order,
+		"axis" : int,
+		"keepdims" : bool,
+	},
 	"matlib.rand" :
 	{
 		_ARGS : intlist_args,
@@ -112,11 +137,11 @@ functions = {
 	},
 	"random.rand" : 
 	{
-		_ARGS : [intlist_args]
+		_ARGS : intlist_args
 	},
 	"random.randn" : 
 	{
-		_ARGS : [intlist_args]
+		_ARGS : intlist_args
 	},
 	"random.randint" : 
 	{
@@ -240,15 +265,15 @@ def main(argv):
 	if len(sys.argv) < 2:
 		error(f"Syntax: {cmdname} [options] [command [arguments]]",code=E_NOARGS)
 	elif len(sys.argv) == 2 and sys.argv[1] == "help":
-		print(f"Syntax: {cmdname} [options] [command] [arguments]",file=sys.stderr)
-		print("Options:",file=sys.stderr)
-		print("  -d|--debug       enable debugging output",file=sys.stderr)
-		print("  -e|--exception   raise exceptions on errors",file=sys.stderr)
-		print("  -h|--help        print this help info",file=sys.stderr)
-		print("  -q|--quiet       suppress all output to stderr",file=sys.stderr)
-		print("  -w|--warning     suppress warning output",file=sys.stderr)
-		print("Commands:",file=sys.stderr)
-		print("  help [command]",file=sys.stderr)
+		print(f"Syntax: {cmdname} [options] [command] [arguments]",file=sys.stdout)
+		print("Options:",file=sys.stdout)
+		print("  -d|--debug       enable debugging output",file=sys.stdout)
+		print("  -e|--exception   raise exceptions on errors",file=sys.stdout)
+		print("  -h|--help        print this help info",file=sys.stdout)
+		print("  -q|--quiet       suppress all output to stderr",file=sys.stdout)
+		print("  -w|--warning     suppress warning output",file=sys.stdout)
+		print("Commands:",file=sys.stdout)
+		print("  help [command]",file=sys.stdout)
 		for name in sorted(list(functions.keys())):
 			specs = functions[name]
 			args = []
@@ -261,14 +286,15 @@ def main(argv):
 						args.append(f"<{value.__name__}>")
 				else:
 					args.append(f"{tag}=<{value.__name__}>")
-			print(" ",name," ".join(args),file=sys.stderr)
+			print(" ",name," ".join(args),file=sys.stdout)
 		exit(E_OK)
 	elif len(argv) == 2 and argv[1] == "version":
-		print(numpy.__version__,file=sys.stderr)
+		print(numpy.__version__,file=sys.stdout)
 		exit(E_OK)
 	elif len(argv) == 3 and argv[1] == "help":
 		if not argv[2] in functions.keys():
 			error(f"'{argv[2]}' not found",code=E_NOTFOUND)
+		sys.stderr = sys.stdout
 		help(f"numpy.{argv[2]}")
 		exit(E_OK)
 

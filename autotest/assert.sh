@@ -19,6 +19,4 @@ onerror ()
 	EXITCODE=2
 }
 
-set -e
-set -u
 set -x

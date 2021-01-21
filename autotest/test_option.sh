@@ -2,6 +2,7 @@
 
 numpy -v
 numpy --version
+numpy version
 assert $(numpy version) = $(python3 -c "import numpy; print(numpy.__version__)")
 
 numpy -e random.random

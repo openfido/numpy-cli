@@ -13,7 +13,7 @@ for TEST in test_*.sh; do
 	if [ "${DIR##*_}" == "err" ]; then
 		(cd $DIR; sh -C ./$TEST 1>stdout 2>stderr ) && echo "FAILED: unexpected success" || PASS=$(($PASS+1))
 	else
-		(cd $DIR; sh -C ./$TEST 1>stdout 2>stderr ) && PASS=$(($PASS+1)) || grep -v '^+' --context=1 $DIR/stderr | head -n 2
+		(cd $DIR; sh -C ./$TEST 1>stdout 2>stderr ) && PASS=$(($PASS+1)) || grep -v '^+' $DIR/stderr
 	fi
 done
 echo $TOTAL tests, $(($TOTAL-$PASS)) failed

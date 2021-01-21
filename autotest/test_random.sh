@@ -15,6 +15,7 @@ assert ! -z "$(numpy random.normal loc=10 scale=10)"
 assert ! -z "$(numpy random.normal loc=10 scale=10 size=1,3)"
 
 assert ! -z "$(numpy random.rand)"
+assert ! -z "$(numpy random.rand 2)"
 assert ! -z "$(numpy random.rand 1 2)"
 
 assert $(numpy random.randint 1) -eq 0
