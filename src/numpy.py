@@ -73,7 +73,7 @@ def arrayorint(a):
 	return numpy.array(numpy.matrix(a).flatten())[0]
 
 def array(a):
-	numpy.array(numpy.matrix(a).flatten())[0]
+	return numpy.array(numpy.matrix(a).flatten())[0]
 
 def order(a):
 	if a in ["inf","-inf"]:
@@ -108,12 +108,50 @@ functions = {
 	{
 		_ARGS : [numpy.matrix,numpy.matrix],
 	},
+	"savetxt" : 
+	{
+		_ARGS : [str, numpy.matrix],
+		"fmt" : str,
+		"delimiter" : str,
+		"newline" : str,
+		"header" : str,
+		"footer" : str,
+		"comments" : str,
+		"encoding" : str,
+	},
+	"trace" :
+	{
+		_ARGS : [numpy.matrix],
+		"offset" : int,
+		"axis" : int,
+		"dtype" : str,
+	},
+	"transpose" : 
+	{
+		_ARGS : [numpy.matrix],
+	},
+	"zeros" :
+	{
+		_ARGS : [dimensions],
+		"dtype" : str,
+		"order" : str,
+	},
+
+	# linag
 	"linalg.cond" :
 	{
 		_ARGS : [numpy.matrix],
 		"p" : order,
 	},
 	"linalg.det" :
+	{
+		_ARGS : [numpy.matrix],
+	},
+	"linalg.inv" :
+	{
+		_ARGS : [numpy.matrix],
+	},
+	"linalg.matrix_rank" :
 	{
 		_ARGS : [numpy.matrix],
 	},
@@ -124,6 +162,25 @@ functions = {
 		"axis" : int,
 		"keepdims" : bool,
 	},
+	"linalg.pinv" :
+	{
+		_ARGS : [numpy.matrix],
+	},
+	"linalg.slogdet" :
+	{
+		_ARGS : [numpy.matrix],
+	},
+	"linalg.solve" : 
+	{
+		_ARGS : [numpy.matrix,numpy.matrix],
+	},
+	"linalg.lstsq" : 
+	{
+		_ARGS : [numpy.matrix,numpy.matrix],
+		"rcond" : float,
+	},
+
+	# matlib
 	"matlib.rand" :
 	{
 		_ARGS : intlist_args,
@@ -132,6 +189,12 @@ functions = {
 	{
 		_ARGS : intlist_args,
 	},
+	"matlib.repmat" : 
+	{
+		_ARGS : [numpy.matrix, int, int],
+	},
+
+	# random
 	"random.normal" : 
 	{
 		_ARGS : [],
@@ -181,31 +244,7 @@ functions = {
 		"replace" : bool,
 		"p" : array,	
 	},
-	"matlib.repmat" : 
-	{
-		_ARGS : [numpy.matrix, int, int],
-	},
-	"savetxt" : 
-	{
-		_ARGS : [str, numpy.matrix],
-		"fmt" : str,
-		"delimiter" : str,
-		"newline" : str,
-		"header" : str,
-		"footer" : str,
-		"comments" : str,
-		"encoding" : str,
-	},
-	"transpose" : 
-	{
-		_ARGS : [numpy.matrix],
-	},
-	"zeros" :
-	{
-		_ARGS : [dimensions],
-		"dtype" : str,
-		"order" : str,
-	}
+
 }
 vararg = [intlist_args] # variable argument list handlers
 
@@ -221,10 +260,16 @@ numpy.set_printoptions(threshold=sys.maxsize)
 def output(result):
 	if type(result) == type(None):
 		return
-	if type(result) != list:
-		output(numpy.matrix(result).tolist())
-	else:
+	if type(result) == tuple:
+		for item in result:
+			output(item)
+	elif type(result) == list:
 		numpy.savetxt(sys.stdout,result,fmt=config.format,delimiter=",")
+	else:
+		try:
+			output(numpy.matrix(result).tolist())
+		except:
+			print(f"output({type(result)}={result}) failed",file=sys.stderr)
 
 def warning(msg):
 	if config.warning:
