@@ -34,6 +34,13 @@ using the syntax:
 
   shell% numpy help [command]
 
+Note: any matrix can be provided as a URL, e.g.,
+
+  shell% echo "1,2;3,4" > /tmp/A
+  shell% numpy transpose file:///tmp/A
+  1,3
+  2,4
+  
 """
 
 # exit codes
@@ -43,7 +50,7 @@ E_FAILED = 2
 E_NOTFOUND = 3
 E_INVALID = 4
 
-import sys, os, subprocess, csv
+import sys, os, subprocess, csv, urllib.request
 cmdname = os.path.basename(sys.argv[0])
 try:
 	import numpy
@@ -60,6 +67,14 @@ import numpy.linalg as linalg
 #
 # Argument types
 #
+def matrix(a):
+	"""Matrix or input file"""
+	try: # normally it's a string that can be read as a matrix
+		return numpy.matrix(a)
+	except: # maybe it's a file
+		with urllib.request.urlopen(a) as req:
+			return numpy.matrix(req.read().decode("utf-8"))
+
 def dimensions(s):
 	"""Parse dimensions as N[xM[x[...]]]"""
 	return list(map(lambda n:int(n),s.split(',')))
@@ -113,11 +128,11 @@ functions = {
 	},
 	"dot" :
 	{
-		_REQARGS : [numpy.matrix,numpy.matrix],
+		_REQARGS : [matrix,matrix],
 	},
 	"savetxt" : 
 	{
-		_REQARGS : [str, numpy.matrix],
+		_REQARGS : [str, matrix],
 		"fmt" : str,
 		"delimiter" : str,
 		"newline" : str,
@@ -128,14 +143,14 @@ functions = {
 	},
 	"trace" :
 	{
-		_REQARGS : [numpy.matrix],
+		_REQARGS : [matrix],
 		"offset" : int,
 		"axis" : int,
 		"dtype" : str,
 	},
 	"transpose" : 
 	{
-		_REQARGS : [numpy.matrix],
+		_REQARGS : [matrix],
 	},
 	"zeros" :
 	{
@@ -147,75 +162,75 @@ functions = {
 	# linag
 	"linalg.cholesky" :
 	{
-		_REQARGS : [numpy.matrix],
+		_REQARGS : [matrix],
 	},
 	"linalg.cond" :
 	{
-		_REQARGS : [numpy.matrix],
+		_REQARGS : [matrix],
 		"p" : order,
 	},
 	"linalg.det" :
 	{
-		_REQARGS : [numpy.matrix],
+		_REQARGS : [matrix],
 	},
 	"linalg.eig" :
 	{
-		_REQARGS : [numpy.matrix],
+		_REQARGS : [matrix],
 	},
 	"linalg.eigh" :
 	{
-		_REQARGS : [numpy.matrix],
+		_REQARGS : [matrix],
 		"UPLO" : str,
 	},
 	"linalg.eigvals" :
 	{
-		_REQARGS : [numpy.matrix],
+		_REQARGS : [matrix],
 	},
 	"linalg.eigvalsh" :
 	{
-		_REQARGS : [numpy.matrix],
+		_REQARGS : [matrix],
 		"UPLO" : str,
 	},
 	"linalg.inv" :
 	{
-		_REQARGS : [numpy.matrix],
+		_REQARGS : [matrix],
 	},
 	"linalg.lstsq" : 
 	{
-		_REQARGS : [numpy.matrix,numpy.matrix],
+		_REQARGS : [matrix,matrix],
 		"rcond" : float,
 	},
 	"linalg.matrix_rank" :
 	{
-		_REQARGS : [numpy.matrix],
+		_REQARGS : [matrix],
 	},
 	"linalg.norm" :
 	{
-		_REQARGS : [numpy.matrix],
+		_REQARGS : [matrix],
 		"ord" : order,
 		"axis" : int,
 		"keepdims" : bool,
 	},
 	"linalg.pinv" :
 	{
-		_REQARGS : [numpy.matrix],
+		_REQARGS : [matrix],
 	},
 	"linalg.qr" :
 	{
-		_REQARGS : [numpy.matrix],
+		_REQARGS : [matrix],
 		"mode" : str,
 	},
 	"linalg.slogdet" :
 	{
-		_REQARGS : [numpy.matrix],
+		_REQARGS : [matrix],
 	},
 	"linalg.solve" : 
 	{
-		_REQARGS : [numpy.matrix,numpy.matrix],
+		_REQARGS : [matrix,matrix],
 	},
 	"linalg.svd" : 
 	{
-		_REQARGS : [numpy.matrix],
+		_REQARGS : [matrix],
 		"full_matrices" : bool,
 		"compute_uv" : bool,
 		"hermitian" : bool,
@@ -232,15 +247,15 @@ functions = {
 	},
 	"matlib.repmat" : 
 	{
-		_REQARGS : [numpy.matrix, int, int],
+		_REQARGS : [matrix, int, int],
 	},
 
 	# random
 	"random.normal" : 
 	{
 		_REQARGS : [],
-		"loc" : numpy.matrix, 
-		"scale" : numpy.matrix,
+		"loc" : matrix, 
+		"scale" : matrix,
 		"size" : dimensions,
 	},
 	"random.rand" : 

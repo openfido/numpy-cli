@@ -49,3 +49,12 @@ sh% numpy random.normal size=3,5 | numpy transpose
 1.513378,-0.072733548,1.3628931
 0.29747421,0.82542784,0.31864684
 ~~~
+
+Note: any matrix can be provided as a URL, e.g.,
+
+~~~
+sh% echo "1,2;3,4" > /tmp/A
+sh% numpy transpose file:///tmp/A
+1,3
+2,4
+~~~  
