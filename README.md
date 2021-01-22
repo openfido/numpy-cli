@@ -4,7 +4,15 @@
 
 This project provides a command-line interface (CLI) for the python numpy package.
 
-## Installation
+## Quick install
+
+The easiest way to install the `numpy-cli` is to run the following command
+
+~~~
+curl https://raw.githubusercontent.com/dchassin/numpy-cli/master/install.sh | sh
+~~~
+
+## Developer install
 
 To install and validate `numpy-cli`:
 
