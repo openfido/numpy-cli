@@ -296,6 +296,7 @@ class config:
 	quiet = False
 	debug = False
 	exception = False
+	newline = '\n'
 	format = "%.8g"
 
 numpy.set_printoptions(threshold=sys.maxsize)
@@ -310,7 +311,7 @@ def output(result):
 		for item in result:
 			output(item)
 	elif type(result) == list:
-		numpy.savetxt(sys.stdout,result,fmt=config.format,delimiter=",")
+		numpy.savetxt(sys.stdout,result,fmt=config.format,delimiter=",",newline=config.newline)
 	elif type(result) == str:
 		print(result,file=sys.stdout)
 	else:
@@ -353,6 +354,9 @@ def main(argv):
 		elif argv[1] in ["-e","--exception"]:
 			config.exception = not config.exception
 			del argv[1]
+		elif argv[1] in ["-f","--flatten"]:
+			config.newline = ';'
+			del argv[1]
 		elif argv[1] in ["-h","--help"]:
 			argv[1] = "help"
 		elif argv[1] in ["-v","--version"]:
@@ -369,6 +373,7 @@ def main(argv):
 		print("Options:",file=sys.stdout)
 		print("  -d|--debug       enable debugging output",file=sys.stdout)
 		print("  -e|--exception   raise exceptions on errors",file=sys.stdout)
+		print("  -f|--flatten     use semicolon as newline",file=sys.stdout)
 		print("  -h|--help        print this help info",file=sys.stdout)
 		print("  -q|--quiet       suppress all output to stderr",file=sys.stdout)
 		print("  -w|--warning     suppress warning output",file=sys.stdout)
