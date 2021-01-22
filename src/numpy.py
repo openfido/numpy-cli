@@ -403,7 +403,7 @@ def main(argv):
 		for name in package[0:-1]:
 			lib = getattr(lib,name)
 		call = getattr(lib,package[-1])
-		specs = functions[name]
+		specs = functions[argv[2]]
 		args = []
 		for tag, value in specs.items():
 			if not tag:
@@ -414,7 +414,7 @@ def main(argv):
 					args.append(f"<{value.__name__}>")
 			else:
 				args.append(f"{tag}=<{value.__name__}>")
-		print("numpy",name," ".join(args),file=sys.stdout)
+		print("numpy",argv[2]," ".join(args),file=sys.stdout)
 		output(call.__doc__)
 		# help(f"numpy.{argv[2]}")
 		exit(E_OK)
