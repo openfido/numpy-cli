@@ -1,3 +1,5 @@
+.SUFFIXES:
+	
 all:
 	@echo "Available targets:"
 	@echo "  install    install to /usr/local/bin"
