@@ -12,6 +12,11 @@ The easiest way to install the `numpy-cli` is to run the following command
 curl https://raw.githubusercontent.com/dchassin/numpy-cli/master/install.sh | sh
 ~~~
 
+## Prerequisites
+
+The `numpy-cli` requires python3 and numpy.  Please consult the installation procedures for these tools if they are not already installed.  See https://python.org/ and https://numpy.org for details.
+
+
 ## Developer install
 
 To install and validate `numpy-cli`:
