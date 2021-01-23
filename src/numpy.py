@@ -50,7 +50,7 @@ E_FAILED = 2
 E_NOTFOUND = 3
 E_INVALID = 4
 
-import sys, os, subprocess, csv, urllib.request
+import sys, os, subprocess, csv, urllib.request, re
 cmdname = os.path.basename(sys.argv[0])
 try:
 	import numpy
@@ -1061,6 +1061,60 @@ def debug(msg):
 	if config.debug:
 		print(f"DEBUG [{cmdname}]: {msg}",file=sys.stderr)
 
+def help(name='.*'):
+	if name in list(functions.keys()):
+		if not name in functions.keys():
+			error(f"'{name}' not found",code=E_NOTFOUND)
+		sys.stderr = sys.stdout
+		package = name.split('.')
+		lib = numpy
+		for name in package[0:-1]:
+			lib = getattr(lib,name)
+		call = getattr(lib,package[-1])
+		specs = functions[name]
+		args = []
+		for tag, value in specs.items():
+			if not tag:
+				if type(value) is list:
+					for item in value:
+						args.append(f"<{item.__name__}>")
+				else:
+					args.append(f"<{value.__name__}>")
+			else:
+				args.append(f"{tag}=<{value.__name__}>")
+		print("numpy",name," ".join(args),file=sys.stdout)
+		output(call.__doc__)
+	else:
+		print(f"Syntax: {cmdname} [options] [command] [arguments]",file=sys.stdout)
+		print("Options:",file=sys.stdout)
+		print("  -d|--debug       enable debugging output",file=sys.stdout)
+		print("  -e|--exception   raise exceptions on errors",file=sys.stdout)
+		print("  -f|--flatten     use semicolon as newline",file=sys.stdout)
+		print("  -h|--help        print this help info",file=sys.stdout)
+		print("  -q|--quiet       suppress all output to stderr",file=sys.stdout)
+		print("  -w|--warning     suppress warning output",file=sys.stdout)
+		print("Commands:",file=sys.stdout)
+		print("  help [command]",file=sys.stdout)
+		for function in sorted(list(functions.keys())):
+			if not re.search(name,function): 
+				continue
+			specs = functions[function]
+			args = []
+			for tag, value in specs.items():
+				if tag == POSITIONAL:
+					if type(value) is list:
+						for item in value:
+							args.append(f"<{item.__name__}>")
+					else:
+						args.append(f"<{value.__name__}>")
+				elif tag == UARGS:
+					for utag in value:
+						ufunc = UFUNC[utag]
+						args.append(f"[{utag}=<{UFUNC[utag].__name__}>]")
+				else:
+					args.append(f"{tag}=<{value.__name__}>")
+			print(" ",function," ".join(args),file=sys.stdout)
+
 #
 # Main function
 #
@@ -1094,58 +1148,12 @@ def main(argv):
 	if len(sys.argv) < 2:
 		error(f"Syntax: {cmdname} [options] [command [arguments]]",code=E_NOARGS)
 	elif len(sys.argv) == 2 and sys.argv[1] == "help":
-		print(f"Syntax: {cmdname} [options] [command] [arguments]",file=sys.stdout)
-		print("Options:",file=sys.stdout)
-		print("  -d|--debug       enable debugging output",file=sys.stdout)
-		print("  -e|--exception   raise exceptions on errors",file=sys.stdout)
-		print("  -f|--flatten     use semicolon as newline",file=sys.stdout)
-		print("  -h|--help        print this help info",file=sys.stdout)
-		print("  -q|--quiet       suppress all output to stderr",file=sys.stdout)
-		print("  -w|--warning     suppress warning output",file=sys.stdout)
-		print("Commands:",file=sys.stdout)
-		print("  help [command]",file=sys.stdout)
-		for name in sorted(list(functions.keys())):
-			specs = functions[name]
-			args = []
-			for tag, value in specs.items():
-				if tag == POSITIONAL:
-					if type(value) is list:
-						for item in value:
-							args.append(f"<{item.__name__}>")
-					else:
-						args.append(f"<{value.__name__}>")
-				elif tag == UARGS:
-					for utag in value:
-						ufunc = UFUNC[utag]
-						args.append(f"[{utag}=<{UFUNC[utag].__name__}>]")
-				else:
-					args.append(f"{tag}=<{value.__name__}>")
-			print(" ",name," ".join(args),file=sys.stdout)
+		help()
 		exit(E_OK)
-	elif len(argv) == 3 and argv[1] == "help":
-		name = argv[2]
-		if not name in functions.keys():
-			error(f"'{argv[2]}' not found",code=E_NOTFOUND)
-		sys.stderr = sys.stdout
-		package = name.split('.')
-		lib = numpy
-		for name in package[0:-1]:
-			lib = getattr(lib,name)
-		call = getattr(lib,package[-1])
-		specs = functions[argv[2]]
-		args = []
-		for tag, value in specs.items():
-			if not tag:
-				if type(value) is list:
-					for item in value:
-						args.append(f"<{item.__name__}>")
-				else:
-					args.append(f"<{value.__name__}>")
-			else:
-				args.append(f"{tag}=<{value.__name__}>")
-		print("numpy",argv[2]," ".join(args),file=sys.stdout)
-		output(call.__doc__)
-		# help(f"numpy.{argv[2]}")
+	elif len(argv) >= 3 and argv[1] == "help":
+		if len(argv) > 3:
+			error("too many help functions requested",code=E_INVALID)
+		help(argv[2])
 		exit(E_OK)
 	elif len(argv) == 2 and argv[1] == "version":
 		print(numpy.__version__,file=sys.stdout)
