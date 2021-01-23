@@ -70,7 +70,7 @@ import numpy.linalg as linalg
 def matrix(a):
 	"""Matrix or input file"""
 	try: # normally it's a string that can be read as a matrix
-		return numpy.matrix(a)
+		return numpy.matrix(a.rstrip(";"))
 	except: # maybe it's a file
 		with urllib.request.urlopen(a) as req:
 			return numpy.matrix(req.read().decode("utf-8"))
