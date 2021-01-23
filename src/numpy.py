@@ -1094,7 +1094,7 @@ def help(name='.*'):
 		print("  -q|--quiet       suppress all output to stderr",file=sys.stdout)
 		print("  -w|--warning     suppress warning output",file=sys.stdout)
 		print("Commands:",file=sys.stdout)
-		print("  help [command]",file=sys.stdout)
+		print("  help [pattern]",file=sys.stdout)
 		for function in sorted(list(functions.keys())):
 			if not re.search(name,function): 
 				continue
