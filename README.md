@@ -31,7 +31,9 @@ sh# make validate
 
 ## Examples
 
-1) The following generates a CSV array with an 3x5 array of random number drawn from the standard normal distribution:
+### Example 1
+
+The following generates a 3x5 CSV array of random numbers drawn from the standard normal distribution:
 
 ~~~
 sh% numpy random.normal size=3,5
@@ -40,7 +42,9 @@ sh% numpy random.normal size=3,5
 0.42732899,1.7809519,-0.77028383,0.741399,1.3907123
 ~~~
 
-2) The following generates a 3x5 and transposes it:
+### Example 2
+
+The following transposes the result of the Example 1:
 
 ~~~
 sh% numpy random.normal size=3,5 | numpy transpose
@@ -51,7 +55,9 @@ sh% numpy random.normal size=3,5 | numpy transpose
 0.29747421,0.82542784,0.31864684
 ~~~
 
-Note: any matrix can be provided as a URL, e.g.,
+### Example 3
+
+A matrix can provided as a URL:
 
 ~~~
 sh% echo "1,2;3,4" > /tmp/A
@@ -59,3 +65,21 @@ sh% numpy transpose file:///tmp/A
 1,3
 2,4
 ~~~  
+
+### Example 4
+
+Using the `--flatten` option generates a string with semicolons instead of line feeds or carriage returns:
+
+~~~
+sh% numpy -f random.normal size=2,2
+-1.1391251,0.28421301;0.67772248,-0.24125024;
+~~~
+
+### Example 5
+
+Many functions support complex numbers:
+
+~~~
+sh% numpy angle '1+2j,3+4j'
+1.1071487,0.92729522
+~~~
