@@ -4,6 +4,10 @@
 
 This project provides a command-line interface (CLI) for the python numpy package.
 
+## Prerequisites
+
+The `numpy-cli` requires python3 and numpy.  Please consult the installation procedures for these tools if they are not already installed.  See https://python.org/ and https://numpy.org for details.
+
 ## Quick install
 
 The easiest way to install the `numpy-cli` is to run the following command
@@ -12,10 +16,7 @@ The easiest way to install the `numpy-cli` is to run the following command
 curl -sL https://raw.githubusercontent.com/dchassin/numpy-cli/master/install.sh | sh
 ~~~
 
-## Prerequisites
-
-The `numpy-cli` requires python3 and numpy.  Please consult the installation procedures for these tools if they are not already installed.  See https://python.org/ and https://numpy.org for details.
-
+This command installs the `numpy` command in `/usr/local/bin`.  You should add this folder to your shell `PATH` if you have not already done so. Note that if you have not already installed the `numpy` module using `python3 -m pip install numpy`, using the `numpy` command will automatically do so for the current user only. 
 
 ## Developer install
 
