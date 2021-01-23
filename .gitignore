@@ -1,1 +1,2 @@
 autotest/test_*/
+__pycache__/
