@@ -851,7 +851,7 @@ functions = {
 	"matrix.conjugate" : {
 		POSITIONAL : [matrix],
 	},
-	"matrix.comprod" : {
+	"matrix.cumprod" : {
 		POSITIONAL : [matrix],
 	},
 	"matrix.cumsum" : {
@@ -911,7 +911,7 @@ functions = {
 	"matrix.put" : {
 		POSITIONAL : [matrix],
 	},
-	"matrix.rave" : {
+	"matrix.ravel" : {
 		POSITIONAL : [matrix],
 	},
 	"matrix.repeat" : {
@@ -1061,6 +1061,32 @@ def debug(msg):
 	if config.debug:
 		print(f"DEBUG [{cmdname}]: {msg}",file=sys.stderr)
 
+def makedocs():
+	for function in functions.keys():
+		specs = function.split(".")
+		path = "/".join(list(map(lambda n:n.title(),specs[0:-1])))
+		if len(specs) > 1:
+			os.makedirs("docs/"+path.title(),exist_ok=True)
+		name = specs[-1].title()
+		with open(f"docs/{path}/{name}.md","w") as fh:
+			fh.write(f"[[/{path}/{name}]]\n\n~~~\n")
+			lib = numpy
+			for pkg in specs[0:-1]:
+				lib = getattr(lib,pkg)
+			call = getattr(lib,specs[-1])
+			fspecs = functions[function]
+			args = []
+			for tag, value in fspecs.items():
+				if tag == POSITIONAL:
+					if not type(value) is list:
+						value = [value]
+					if not type(value)  is str:
+						value = str(value)
+					args.append(value)
+			fh.write(f"Syntax:\n\n  numpy {name} {' '.join(args)}\n\n")
+			fh.write(call.__doc__)
+			fh.write("\n~~~\n")
+
 def help(name='.*'):
 	if name in list(functions.keys()):
 		if not name in functions.keys():
@@ -1074,7 +1100,7 @@ def help(name='.*'):
 		specs = functions[name]
 		args = []
 		for tag, value in specs.items():
-			if not tag:
+			if tag == POSITIONAL:
 				if type(value) is list:
 					for item in value:
 						args.append(f"<{item.__name__}>")
@@ -1141,6 +1167,9 @@ def main(argv):
 			argv[1] = "help"
 		elif argv[1] in ["-v","--version"]:
 			argv[1] = "version"
+		elif argv[1] == "--makedocs":
+			makedocs()
+			exit(E_OK)
 		elif argv[1][0] == '-':
 			error(f"option '{argv[1]}' is not valid",code=E_INVALID)
 		else:
