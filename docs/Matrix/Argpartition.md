@@ -1,0 +1,16 @@
+[[/Matrix/Argpartition]]
+Syntax:
+
+  numpy Argpartition [<function matrix at 0x100b237a0>]
+
+a.argpartition(kth, axis=-1, kind='introselect', order=None)
+
+    Returns the indices that would partition this array.
+
+    Refer to `numpy.argpartition` for full documentation.
+
+    .. versionadded:: 1.8.0
+
+    See Also
+    --------
+    numpy.argpartition : equivalent function

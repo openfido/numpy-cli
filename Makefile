@@ -3,6 +3,7 @@
 all:
 	@echo "Available targets:"
 	@echo "  install    install to /usr/local/bin"
+	@echo "  docs       update docs folder"
 	@echo "  validate   validate installation"
 
 install: /usr/local/bin/numpy
@@ -16,3 +17,10 @@ install: /usr/local/bin/numpy
 
 validate:
 	@./autotest.sh
+
+docs:
+	rm -rf docs/*
+	cp README.md docs
+	numpy --makedocs
+
+.PHONY: docs
