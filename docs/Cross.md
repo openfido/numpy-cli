@@ -1,7 +1,9 @@
 [[//Cross]]
+
+~~~
 Syntax:
 
-  numpy Cross [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Cross [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 
     Return the cross product of two (arrays of) vectors.
@@ -115,3 +117,4 @@ Syntax:
            [-36,  72, -36]])
 
     
+~~~

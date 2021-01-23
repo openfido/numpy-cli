@@ -1,7 +1,9 @@
 [[//Clip]]
+
+~~~
 Syntax:
 
-  numpy Clip [<function matrix at 0x100b237a0>]
+  numpy Clip [<function matrix at 0x10222a7a0>]
 
 
     Clip (limit) the values in an array.
@@ -65,3 +67,4 @@ Syntax:
     array([3, 4, 2, 3, 4, 5, 6, 7, 8, 8])
 
     
+~~~

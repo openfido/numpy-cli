@@ -1,7 +1,9 @@
 [[//Gradient]]
+
+~~~
 Syntax:
 
-  numpy Gradient [<function matrix at 0x100b237a0>]
+  numpy Gradient [<function matrix at 0x10222a7a0>]
 
 
     Return the gradient of an N-dimensional array.
@@ -176,3 +178,4 @@ Syntax:
             `PDF <http://www.ams.org/journals/mcom/1988-51-184/
             S0025-5718-1988-0935077-0/S0025-5718-1988-0935077-0.pdf>`_.
     
+~~~

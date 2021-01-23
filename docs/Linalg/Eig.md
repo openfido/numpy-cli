@@ -1,7 +1,9 @@
 [[/Linalg/Eig]]
+
+~~~
 Syntax:
 
-  numpy Eig [<function matrix at 0x100b237a0>]
+  numpy Eig [<function matrix at 0x10222a7a0>]
 
 
     Compute the eigenvalues and right eigenvectors of a square array.
@@ -128,3 +130,4 @@ Syntax:
            [0., 1.]])
 
     
+~~~

@@ -1,7 +1,9 @@
 [[/Linalg/Slogdet]]
+
+~~~
 Syntax:
 
-  numpy Slogdet [<function matrix at 0x100b237a0>]
+  numpy Slogdet [<function matrix at 0x10222a7a0>]
 
 
     Compute the sign and (natural) logarithm of the determinant of an array.
@@ -76,3 +78,4 @@ Syntax:
     (1, -1151.2925464970228)
 
     
+~~~

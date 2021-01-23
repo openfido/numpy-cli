@@ -1,7 +1,9 @@
 [[//Spacing]]
+
+~~~
 Syntax:
 
-  numpy Spacing [<function matrix at 0x100b237a0>]
+  numpy Spacing [<function matrix at 0x10222a7a0>]
 
 spacing(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -46,3 +48,4 @@ Examples
 --------
 >>> np.spacing(1) == np.finfo(np.float64).eps
 True
+~~~

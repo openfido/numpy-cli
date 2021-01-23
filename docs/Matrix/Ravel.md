@@ -1,7 +1,9 @@
 [[/Matrix/Ravel]]
+
+~~~
 Syntax:
 
-  numpy Ravel [<function matrix at 0x100b237a0>]
+  numpy Ravel [<function matrix at 0x10222a7a0>]
 
 
         Return a flattened matrix.
@@ -38,3 +40,4 @@ Syntax:
         numpy.ravel : related function which returns an ndarray
 
         
+~~~

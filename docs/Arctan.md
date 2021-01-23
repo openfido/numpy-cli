@@ -1,7 +1,9 @@
 [[//Arctan]]
+
+~~~
 Syntax:
 
-  numpy Arctan [<function matrix at 0x100b237a0>]
+  numpy Arctan [<function matrix at 0x10222a7a0>]
 
 arctan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -80,3 +82,4 @@ Plot arctan:
 >>> plt.plot(x, np.arctan(x))
 >>> plt.axis('tight')
 >>> plt.show()
+~~~

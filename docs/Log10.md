@@ -1,7 +1,9 @@
 [[//Log10]]
+
+~~~
 Syntax:
 
-  numpy Log10 [<function matrix at 0x100b237a0>]
+  numpy Log10 [<function matrix at 0x10222a7a0>]
 
 log10(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -63,3 +65,4 @@ Examples
 --------
 >>> np.log10([1e-15, -3.])
 array([-15.,  nan])
+~~~

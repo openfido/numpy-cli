@@ -1,7 +1,9 @@
 [[/Matrix/Setfield]]
+
+~~~
 Syntax:
 
-  numpy Setfield [<function matrix at 0x100b237a0>]
+  numpy Setfield [<function matrix at 0x10222a7a0>]
 
 a.setfield(val, dtype, offset=0)
 
@@ -48,3 +50,4 @@ a.setfield(val, dtype, offset=0)
     array([[1.,  0.,  0.],
            [0.,  1.,  0.],
            [0.,  0.,  1.]])
+~~~

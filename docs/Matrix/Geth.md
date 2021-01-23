@@ -1,7 +1,9 @@
 [[/Matrix/Geth]]
+
+~~~
 Syntax:
 
-  numpy Geth [<function matrix at 0x100b237a0>]
+  numpy Geth [<function matrix at 0x10222a7a0>]
 
 
         Returns the (complex) conjugate transpose of `self`.
@@ -31,3 +33,4 @@ Syntax:
                 [ 3. +3.j,  7. +7.j, 11.+11.j]])
 
         
+~~~

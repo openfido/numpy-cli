@@ -1,4 +1,6 @@
 [[//Identity]]
+
+~~~
 Syntax:
 
   numpy Identity [<class 'int'>]
@@ -30,3 +32,4 @@ Syntax:
            [0.,  0.,  1.]])
 
     
+~~~

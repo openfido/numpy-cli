@@ -1,7 +1,9 @@
 [[/Linalg/Svd]]
+
+~~~
 Syntax:
 
-  numpy Svd [<function matrix at 0x100b237a0>]
+  numpy Svd [<function matrix at 0x10222a7a0>]
 
 
     Singular Value Decomposition.
@@ -136,3 +138,4 @@ Syntax:
     True
 
     
+~~~

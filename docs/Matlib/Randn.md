@@ -1,7 +1,9 @@
 [[/Matlib/Randn]]
+
+~~~
 Syntax:
 
-  numpy Randn [<function intlist_args at 0x105a769e0>]
+  numpy Randn [<function intlist_args at 0x10d17e9e0>]
 
 
     Return a random matrix with data from the "standard normal" distribution.
@@ -49,3 +51,4 @@ Syntax:
             [2.76322758, 6.72847407, 1.40274501, 1.8900451 ]])
 
     
+~~~

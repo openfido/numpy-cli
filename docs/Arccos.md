@@ -1,7 +1,9 @@
 [[//Arccos]]
+
+~~~
 Syntax:
 
-  numpy Arccos [<function matrix at 0x100b237a0>]
+  numpy Arccos [<function matrix at 0x10222a7a0>]
 
 arccos(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -76,3 +78,4 @@ Plot arccos:
 >>> plt.plot(x, np.arccos(x))
 >>> plt.axis('tight')
 >>> plt.show()
+~~~

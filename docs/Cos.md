@@ -1,7 +1,9 @@
 [[//Cos]]
+
+~~~
 Syntax:
 
-  numpy Cos [<function matrix at 0x100b237a0>]
+  numpy Cos [<function matrix at 0x10222a7a0>]
 
 cos(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -59,3 +61,4 @@ True
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ValueError: operands could not be broadcast together with shapes (3,3) (2,2)
+~~~

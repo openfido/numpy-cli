@@ -1,7 +1,9 @@
 [[//Sign]]
+
+~~~
 Syntax:
 
-  numpy Sign [<function matrix at 0x100b237a0>]
+  numpy Sign [<function matrix at 0x10222a7a0>]
 
 sign(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -55,3 +57,4 @@ array([-1.,  1.])
 0
 >>> np.sign(5-2j)
 (1+0j)
+~~~

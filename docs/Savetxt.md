@@ -1,7 +1,9 @@
 [[//Savetxt]]
+
+~~~
 Syntax:
 
-  numpy Savetxt [<class 'str'>, <function matrix at 0x100b237a0>]
+  numpy Savetxt [<class 'str'>, <function matrix at 0x10222a7a0>]
 
 
     Save an array to a text file.
@@ -122,3 +124,4 @@ Syntax:
     >>> np.savetxt('test.out', x, fmt='%1.4e')   # use exponential notation
 
     
+~~~

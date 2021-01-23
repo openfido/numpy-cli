@@ -1,7 +1,9 @@
 [[//Sum]]
+
+~~~
 Syntax:
 
-  numpy Sum [<function matrix at 0x100b237a0>]
+  numpy Sum [<function matrix at 0x10222a7a0>]
 
 
     Sum of array elements over a given axis.
@@ -123,3 +125,4 @@ Syntax:
     >>> np.sum([10], initial=5)
     15
     
+~~~

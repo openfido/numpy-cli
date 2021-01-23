@@ -1,7 +1,9 @@
 [[/Linalg/Pinv]]
+
+~~~
 Syntax:
 
-  numpy Pinv [<function matrix at 0x100b237a0>]
+  numpy Pinv [<function matrix at 0x10222a7a0>]
 
 
     Compute the (Moore-Penrose) pseudo-inverse of a matrix.
@@ -81,3 +83,4 @@ Syntax:
     True
 
     
+~~~

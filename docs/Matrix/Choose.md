@@ -1,7 +1,9 @@
 [[/Matrix/Choose]]
+
+~~~
 Syntax:
 
-  numpy Choose [<function matrix at 0x100b237a0>, <function intlist at 0x105830290>]
+  numpy Choose [<function matrix at 0x10222a7a0>, <function intlist at 0x10cf39290>]
 
 a.choose(choices, out=None, mode='raise')
 
@@ -12,3 +14,4 @@ a.choose(choices, out=None, mode='raise')
     See Also
     --------
     numpy.choose : equivalent function
+~~~

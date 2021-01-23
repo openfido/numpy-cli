@@ -1,7 +1,9 @@
 [[/Matrix/Argsort]]
+
+~~~
 Syntax:
 
-  numpy Argsort [<function matrix at 0x100b237a0>]
+  numpy Argsort [<function matrix at 0x10222a7a0>]
 
 a.argsort(axis=-1, kind=None, order=None)
 
@@ -12,3 +14,4 @@ a.argsort(axis=-1, kind=None, order=None)
     See Also
     --------
     numpy.argsort : equivalent function
+~~~

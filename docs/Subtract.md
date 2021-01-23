@@ -1,7 +1,9 @@
 [[//Subtract]]
+
+~~~
 Syntax:
 
-  numpy Subtract [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Subtract [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 subtract(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -50,3 +52,4 @@ Examples
 array([[ 0.,  0.,  0.],
        [ 3.,  3.,  3.],
        [ 6.,  6.,  6.]])
+~~~

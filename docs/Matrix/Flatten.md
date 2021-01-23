@@ -1,7 +1,9 @@
 [[/Matrix/Flatten]]
+
+~~~
 Syntax:
 
-  numpy Flatten [<function matrix at 0x100b237a0>]
+  numpy Flatten [<function matrix at 0x10222a7a0>]
 
 
         Return a flattened copy of the matrix.
@@ -37,3 +39,4 @@ Syntax:
         matrix([[1, 3, 2, 4]])
 
         
+~~~

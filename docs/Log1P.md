@@ -1,7 +1,9 @@
 [[//Log1P]]
+
+~~~
 Syntax:
 
-  numpy Log1P [<function matrix at 0x100b237a0>]
+  numpy Log1P [<function matrix at 0x10222a7a0>]
 
 log1p(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -69,3 +71,4 @@ Examples
 1e-99
 >>> np.log(1 + 1e-99)
 0.0
+~~~

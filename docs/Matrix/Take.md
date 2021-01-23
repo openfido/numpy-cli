@@ -1,7 +1,9 @@
 [[/Matrix/Take]]
+
+~~~
 Syntax:
 
-  numpy Take [<function matrix at 0x100b237a0>]
+  numpy Take [<function matrix at 0x10222a7a0>]
 
 a.take(indices, axis=None, out=None, mode='raise')
 
@@ -12,3 +14,4 @@ a.take(indices, axis=None, out=None, mode='raise')
     See Also
     --------
     numpy.take : equivalent function
+~~~

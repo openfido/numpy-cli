@@ -1,7 +1,9 @@
 [[/Matrix/Mean]]
+
+~~~
 Syntax:
 
-  numpy Mean [<function matrix at 0x100b237a0>]
+  numpy Mean [<function matrix at 0x10222a7a0>]
 
 
         Returns the average of the matrix elements along the given axis.
@@ -34,3 +36,4 @@ Syntax:
                 [ 9.5]])
 
         
+~~~

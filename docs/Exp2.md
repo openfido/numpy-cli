@@ -1,7 +1,9 @@
 [[//Exp2]]
+
+~~~
 Syntax:
 
-  numpy Exp2 [<function matrix at 0x100b237a0>]
+  numpy Exp2 [<function matrix at 0x10222a7a0>]
 
 exp2(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -47,3 +49,4 @@ Examples
 --------
 >>> np.exp2([2, 3])
 array([ 4.,  8.])
+~~~

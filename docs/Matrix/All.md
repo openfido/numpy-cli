@@ -1,7 +1,9 @@
 [[/Matrix/All]]
+
+~~~
 Syntax:
 
-  numpy All [<function matrix at 0x100b237a0>]
+  numpy All [<function matrix at 0x10222a7a0>]
 
 
         Test whether all matrix elements along a given axis evaluate to True.
@@ -40,3 +42,4 @@ Syntax:
                 [False]])
 
         
+~~~

@@ -1,7 +1,9 @@
 [[//Modf]]
+
+~~~
 Syntax:
 
-  numpy Modf [<function matrix at 0x100b237a0>]
+  numpy Modf [<function matrix at 0x10222a7a0>]
 
 modf(x[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -54,3 +56,4 @@ Examples
 (array([ 0. ,  0.5]), array([ 0.,  3.]))
 >>> np.modf(-0.5)
 (-0.5, -0)
+~~~

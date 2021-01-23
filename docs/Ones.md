@@ -1,7 +1,9 @@
 [[//Ones]]
+
+~~~
 Syntax:
 
-  numpy Ones [<function intlist at 0x105830290>]
+  numpy Ones [<function intlist at 0x10cf39290>]
 
 
     Return a new array of given shape and type, filled with ones.
@@ -49,3 +51,4 @@ Syntax:
            [1.,  1.]])
 
     
+~~~

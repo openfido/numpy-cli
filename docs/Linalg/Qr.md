@@ -1,7 +1,9 @@
 [[/Linalg/Qr]]
+
+~~~
 Syntax:
 
-  numpy Qr [<function matrix at 0x100b237a0>]
+  numpy Qr [<function matrix at 0x10222a7a0>]
 
 
     Compute the qr factorization of a matrix.
@@ -118,3 +120,4 @@ Syntax:
     array([  1.1e-16,   1.0e+00])
 
     
+~~~

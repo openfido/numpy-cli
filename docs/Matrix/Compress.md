@@ -1,7 +1,9 @@
 [[/Matrix/Compress]]
+
+~~~
 Syntax:
 
-  numpy Compress [<function matrix at 0x100b237a0>]
+  numpy Compress [<function matrix at 0x10222a7a0>]
 
 a.compress(condition, axis=None, out=None)
 
@@ -12,3 +14,4 @@ a.compress(condition, axis=None, out=None)
     See Also
     --------
     numpy.compress : equivalent function
+~~~

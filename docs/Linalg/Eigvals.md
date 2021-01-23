@@ -1,7 +1,9 @@
 [[/Linalg/Eigvals]]
+
+~~~
 Syntax:
 
-  numpy Eigvals [<function matrix at 0x100b237a0>]
+  numpy Eigvals [<function matrix at 0x10222a7a0>]
 
 
     Compute the eigenvalues of a general matrix.
@@ -72,3 +74,4 @@ Syntax:
     array([ 1., -1.]) # random
 
     
+~~~

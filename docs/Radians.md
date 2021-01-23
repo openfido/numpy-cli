@@ -1,7 +1,9 @@
 [[//Radians]]
+
+~~~
 Syntax:
 
-  numpy Radians [<function matrix at 0x100b237a0>]
+  numpy Radians [<function matrix at 0x10222a7a0>]
 
 radians(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -51,3 +53,4 @@ array([ 0.        ,  0.52359878,  1.04719755,  1.57079633,  2.0943951 ,
 >>> ret = np.radians(deg, out)
 >>> ret is out
 True
+~~~

@@ -1,7 +1,9 @@
 [[/Matrix/Itemset]]
+
+~~~
 Syntax:
 
-  numpy Itemset [<function matrix at 0x100b237a0>]
+  numpy Itemset [<function matrix at 0x10222a7a0>]
 
 a.itemset(*args)
 
@@ -44,3 +46,4 @@ a.itemset(*args)
     array([[2, 2, 6],
            [1, 0, 6],
            [1, 0, 9]])
+~~~

@@ -1,7 +1,9 @@
 [[//Fmod]]
+
+~~~
 Syntax:
 
-  numpy Fmod [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Fmod [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 fmod(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -73,3 +75,4 @@ array([[-3, -2],
 array([[-1,  0],
        [-1,  0],
        [ 1,  0]])
+~~~

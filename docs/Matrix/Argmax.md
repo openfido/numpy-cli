@@ -1,7 +1,9 @@
 [[/Matrix/Argmax]]
+
+~~~
 Syntax:
 
-  numpy Argmax [<function matrix at 0x100b237a0>]
+  numpy Argmax [<function matrix at 0x10222a7a0>]
 
 
         Indexes of the maximum values along an axis.
@@ -39,3 +41,4 @@ Syntax:
                 [3]])
 
         
+~~~

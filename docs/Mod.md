@@ -1,7 +1,9 @@
 [[//Mod]]
+
+~~~
 Syntax:
 
-  numpy Mod [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Mod [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 remainder(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -71,3 +73,4 @@ Examples
 array([0, 1])
 >>> np.remainder(np.arange(7), 5)
 array([0, 1, 2, 3, 4, 0, 1])
+~~~

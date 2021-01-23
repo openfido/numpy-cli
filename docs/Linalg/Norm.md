@@ -1,7 +1,9 @@
 [[/Linalg/Norm]]
+
+~~~
 Syntax:
 
-  numpy Norm [<function matrix at 0x100b237a0>]
+  numpy Norm [<function matrix at 0x10222a7a0>]
 
 
     Matrix or vector norm.
@@ -152,3 +154,4 @@ Syntax:
     (3.7416573867739413, 11.224972160321824)
 
     
+~~~

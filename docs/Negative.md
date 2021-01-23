@@ -1,7 +1,9 @@
 [[//Negative]]
+
+~~~
 Syntax:
 
-  numpy Negative [<function matrix at 0x100b237a0>]
+  numpy Negative [<function matrix at 0x10222a7a0>]
 
 negative(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -37,3 +39,4 @@ Examples
 --------
 >>> np.negative([1.,-1.])
 array([-1.,  1.])
+~~~

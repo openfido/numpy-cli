@@ -1,7 +1,9 @@
 [[//Sinc]]
+
+~~~
 Syntax:
 
-  numpy Sinc [<function matrix at 0x100b237a0>]
+  numpy Sinc [<function matrix at 0x10222a7a0>]
 
 
     Return the sinc function.
@@ -70,3 +72,4 @@ Syntax:
     >>> plt.show()
 
     
+~~~

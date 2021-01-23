@@ -1,7 +1,9 @@
 [[//Nextafter]]
+
+~~~
 Syntax:
 
-  numpy Nextafter [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Nextafter [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 nextafter(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -44,3 +46,4 @@ Examples
 True
 >>> np.nextafter([1, 2], [2, 1]) == [eps + 1, 2 - eps]
 array([ True,  True])
+~~~

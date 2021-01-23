@@ -1,7 +1,9 @@
 [[//Arctan2]]
+
+~~~
 Syntax:
 
-  numpy Arctan2 [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Arctan2 [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 arctan2(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -94,3 +96,4 @@ the range ``[-pi, pi]``:
 array([ 1.57079633, -1.57079633])
 >>> np.arctan2([0., 0., np.inf], [+0., -0., np.inf])
 array([ 0.        ,  3.14159265,  0.78539816])
+~~~

@@ -1,7 +1,9 @@
 [[/Matrix/Any]]
+
+~~~
 Syntax:
 
-  numpy Any [<function matrix at 0x100b237a0>]
+  numpy Any [<function matrix at 0x10222a7a0>]
 
 
         Test whether any array element along a given axis evaluates to True.
@@ -23,3 +25,4 @@ Syntax:
                 returns `ndarray`
 
         
+~~~

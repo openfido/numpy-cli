@@ -1,7 +1,9 @@
 [[/Matrix/Argpartition]]
+
+~~~
 Syntax:
 
-  numpy Argpartition [<function matrix at 0x100b237a0>]
+  numpy Argpartition [<function matrix at 0x10222a7a0>]
 
 a.argpartition(kth, axis=-1, kind='introselect', order=None)
 
@@ -14,3 +16,4 @@ a.argpartition(kth, axis=-1, kind='introselect', order=None)
     See Also
     --------
     numpy.argpartition : equivalent function
+~~~

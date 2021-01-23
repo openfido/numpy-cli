@@ -1,7 +1,9 @@
 [[//Divide]]
+
+~~~
 Syntax:
 
-  numpy Divide [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Divide [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 true_divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -57,3 +59,4 @@ array([ 0.  ,  0.25,  0.5 ,  0.75,  1.  ])
 
 >>> x//4
 array([0, 0, 0, 0, 1])
+~~~

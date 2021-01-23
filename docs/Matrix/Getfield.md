@@ -1,7 +1,9 @@
 [[/Matrix/Getfield]]
+
+~~~
 Syntax:
 
-  numpy Getfield [<function matrix at 0x100b237a0>]
+  numpy Getfield [<function matrix at 0x10222a7a0>]
 
 a.getfield(dtype, offset=0)
 
@@ -39,3 +41,4 @@ a.getfield(dtype, offset=0)
     >>> x.getfield(np.float64, offset=8)
     array([[1.,  0.],
            [0.,  4.]])
+~~~

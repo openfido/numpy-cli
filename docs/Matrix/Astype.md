@@ -1,7 +1,9 @@
 [[/Matrix/Astype]]
+
+~~~
 Syntax:
 
-  numpy Astype [<function matrix at 0x100b237a0>]
+  numpy Astype [<function matrix at 0x10222a7a0>]
 
 a.astype(dtype, order='K', casting='unsafe', subok=True, copy=True)
 
@@ -71,3 +73,4 @@ a.astype(dtype, order='K', casting='unsafe', subok=True, copy=True)
 
     >>> x.astype(int)
     array([1, 2, 2])
+~~~

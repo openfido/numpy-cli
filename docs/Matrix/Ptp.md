@@ -1,7 +1,9 @@
 [[/Matrix/Ptp]]
+
+~~~
 Syntax:
 
-  numpy Ptp [<function matrix at 0x100b237a0>]
+  numpy Ptp [<function matrix at 0x10222a7a0>]
 
 
         Peak-to-peak (maximum - minimum) value along the given axis.
@@ -33,3 +35,4 @@ Syntax:
                 [3]])
 
         
+~~~

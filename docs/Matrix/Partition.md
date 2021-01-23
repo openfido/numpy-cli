@@ -1,7 +1,9 @@
 [[/Matrix/Partition]]
+
+~~~
 Syntax:
 
-  numpy Partition [<function matrix at 0x100b237a0>]
+  numpy Partition [<function matrix at 0x10222a7a0>]
 
 a.partition(kth, axis=-1, kind='introselect', order=None)
 
@@ -54,3 +56,4 @@ a.partition(kth, axis=-1, kind='introselect', order=None)
     >>> a.partition((1, 3))
     >>> a
     array([1, 2, 3, 4])
+~~~

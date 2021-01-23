@@ -1,7 +1,9 @@
 [[//Lcm]]
+
+~~~
 Syntax:
 
-  numpy Lcm [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Lcm [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 lcm(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -34,3 +36,4 @@ Examples
 120
 >>> np.lcm(np.arange(6), 20)
 array([ 0, 20, 20, 60, 20, 20])
+~~~

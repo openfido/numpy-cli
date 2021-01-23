@@ -1,7 +1,9 @@
 [[/Matrix/Cumsum]]
+
+~~~
 Syntax:
 
-  numpy Cumsum [<function matrix at 0x100b237a0>]
+  numpy Cumsum [<function matrix at 0x10222a7a0>]
 
 a.cumsum(axis=None, dtype=None, out=None)
 
@@ -12,3 +14,4 @@ a.cumsum(axis=None, dtype=None, out=None)
     See Also
     --------
     numpy.cumsum : equivalent function
+~~~

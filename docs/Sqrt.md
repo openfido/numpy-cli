@@ -1,7 +1,9 @@
 [[//Sqrt]]
+
+~~~
 Syntax:
 
-  numpy Sqrt [<function matrix at 0x100b237a0>]
+  numpy Sqrt [<function matrix at 0x10222a7a0>]
 
 sqrt(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -60,3 +62,4 @@ array([ 2.+0.j,  0.+1.j,  1.+2.j])
 
 >>> np.sqrt([4, -1, np.inf])
 array([ 2., nan, inf])
+~~~

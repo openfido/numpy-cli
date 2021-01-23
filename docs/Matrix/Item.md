@@ -1,7 +1,9 @@
 [[/Matrix/Item]]
+
+~~~
 Syntax:
 
-  numpy Item [<function matrix at 0x100b237a0>]
+  numpy Item [<function matrix at 0x10222a7a0>]
 
 a.item(*args)
 
@@ -56,3 +58,4 @@ a.item(*args)
     2
     >>> x.item((2, 2))
     1
+~~~

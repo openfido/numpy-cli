@@ -1,4 +1,6 @@
 [[/Random/Random_Sample]]
+
+~~~
 Syntax:
 
   numpy Random_Sample []
@@ -52,3 +54,4 @@ Syntax:
                [-1.23204345, -1.75224494]])
 
         
+~~~

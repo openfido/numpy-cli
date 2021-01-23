@@ -1,7 +1,9 @@
 [[//Interp]]
+
+~~~
 Syntax:
 
-  numpy Interp [<function array at 0x105a76b00>, <function array at 0x105a76b00>, <function array at 0x105a76b00>]
+  numpy Interp [<function array at 0x10d17eb00>, <function array at 0x10d17eb00>, <function array at 0x10d17eb00>]
 
 
     One-dimensional linear interpolation.
@@ -101,3 +103,4 @@ Syntax:
     array([0.+1.j , 1.+1.5j])
 
     
+~~~

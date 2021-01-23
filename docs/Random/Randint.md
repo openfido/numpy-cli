@@ -1,4 +1,6 @@
 [[/Random/Randint]]
+
+~~~
 Syntax:
 
   numpy Randint [<class 'int'>]
@@ -78,3 +80,4 @@ Syntax:
         array([[ 8,  6,  9,  7], # random
                [ 1, 16,  9, 12]], dtype=uint8)
         
+~~~

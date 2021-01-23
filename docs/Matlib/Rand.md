@@ -1,7 +1,9 @@
 [[/Matlib/Rand]]
+
+~~~
 Syntax:
 
-  numpy Rand [<function intlist_args at 0x105a769e0>]
+  numpy Rand [<function intlist_args at 0x10d17e9e0>]
 
 
     Return a matrix of random values with given shape.
@@ -44,3 +46,4 @@ Syntax:
             [0.73799541, 0.18249173, 0.17545176]])
 
     
+~~~

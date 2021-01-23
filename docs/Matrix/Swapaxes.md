@@ -1,7 +1,9 @@
 [[/Matrix/Swapaxes]]
+
+~~~
 Syntax:
 
-  numpy Swapaxes [<function matrix at 0x100b237a0>]
+  numpy Swapaxes [<function matrix at 0x10222a7a0>]
 
 a.swapaxes(axis1, axis2)
 
@@ -12,3 +14,4 @@ a.swapaxes(axis1, axis2)
     See Also
     --------
     numpy.swapaxes : equivalent function
+~~~

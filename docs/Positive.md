@@ -1,7 +1,9 @@
 [[//Positive]]
+
+~~~
 Syntax:
 
-  numpy Positive [<function matrix at 0x100b237a0>]
+  numpy Positive [<function matrix at 0x10222a7a0>]
 
 positive(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -24,3 +26,4 @@ Notes
 -----
 Equivalent to `x.copy()`, but only defined for types that support
 arithmetic.
+~~~

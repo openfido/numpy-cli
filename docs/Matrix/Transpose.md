@@ -1,7 +1,9 @@
 [[/Matrix/Transpose]]
+
+~~~
 Syntax:
 
-  numpy Transpose [<function matrix at 0x100b237a0>]
+  numpy Transpose [<function matrix at 0x10222a7a0>]
 
 a.transpose(*axes)
 
@@ -54,3 +56,4 @@ a.transpose(*axes)
     >>> a.transpose(1, 0)
     array([[1, 3],
            [2, 4]])
+~~~

@@ -1,7 +1,9 @@
 [[//Trunc]]
+
+~~~
 Syntax:
 
-  numpy Trunc [<function matrix at 0x100b237a0>]
+  numpy Trunc [<function matrix at 0x10222a7a0>]
 
 trunc(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -50,3 +52,4 @@ Examples
 >>> a = np.array([-1.7, -1.5, -0.2, 0.2, 1.5, 1.7, 2.0])
 >>> np.trunc(a)
 array([-1., -1., -0.,  0.,  1.,  1.,  2.])
+~~~

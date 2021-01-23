@@ -1,7 +1,9 @@
 [[/Matrix/Std]]
+
+~~~
 Syntax:
 
-  numpy Std [<function matrix at 0x100b237a0>]
+  numpy Std [<function matrix at 0x10222a7a0>]
 
 
         Return the standard deviation of the array elements along the given axis.
@@ -34,3 +36,4 @@ Syntax:
                 [ 1.11803399]])
 
         
+~~~

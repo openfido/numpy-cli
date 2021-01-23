@@ -1,7 +1,9 @@
 [[//Arcsin]]
+
+~~~
 Syntax:
 
-  numpy Arcsin [<function matrix at 0x100b237a0>]
+  numpy Arcsin [<function matrix at 0x10222a7a0>]
 
 arcsin(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -68,3 +70,4 @@ Examples
 -1.5707963267948966
 >>> np.arcsin(0)
 0.0
+~~~

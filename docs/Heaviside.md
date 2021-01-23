@@ -1,7 +1,9 @@
 [[//Heaviside]]
+
+~~~
 Syntax:
 
-  numpy Heaviside [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Heaviside [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 heaviside(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -60,3 +62,4 @@ Examples
 array([ 0. ,  0.5,  1. ])
 >>> np.heaviside([-1.5, 0, 2.0], 1)
 array([ 0.,  1.,  1.])
+~~~

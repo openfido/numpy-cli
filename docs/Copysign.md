@@ -1,7 +1,9 @@
 [[//Copysign]]
+
+~~~
 Syntax:
 
-  numpy Copysign [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Copysign [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 copysign(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -52,3 +54,4 @@ inf
 array([-1., -0., -1.])
 >>> np.copysign([-1, 0, 1], np.arange(3)-1)
 array([-1.,  0.,  1.])
+~~~

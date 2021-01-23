@@ -1,7 +1,9 @@
 [[//Expm1]]
+
+~~~
 Syntax:
 
-  numpy Expm1 [<function matrix at 0x100b237a0>]
+  numpy Expm1 [<function matrix at 0x10222a7a0>]
 
 expm1(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -53,3 +55,4 @@ expm1 in this case.
 1.00000000005e-10
 >>> np.exp(1e-10) - 1
 1.000000082740371e-10
+~~~

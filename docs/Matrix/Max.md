@@ -1,7 +1,9 @@
 [[/Matrix/Max]]
+
+~~~
 Syntax:
 
-  numpy Max [<function matrix at 0x100b237a0>]
+  numpy Max [<function matrix at 0x10222a7a0>]
 
 
         Return the maximum value along an axis.
@@ -35,3 +37,4 @@ Syntax:
                 [11]])
 
         
+~~~

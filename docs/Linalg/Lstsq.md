@@ -1,7 +1,9 @@
 [[/Linalg/Lstsq]]
+
+~~~
 Syntax:
 
-  numpy Lstsq [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Lstsq [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 
     Return the least-squares solution to a linear matrix equation.
@@ -97,3 +99,4 @@ Syntax:
     >>> plt.show()
 
     
+~~~

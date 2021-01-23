@@ -1,7 +1,9 @@
 [[/Matrix/Fill]]
+
+~~~
 Syntax:
 
-  numpy Fill [<function matrix at 0x100b237a0>]
+  numpy Fill [<function matrix at 0x10222a7a0>]
 
 a.fill(value)
 
@@ -22,3 +24,4 @@ a.fill(value)
     >>> a.fill(1)
     >>> a
     array([1.,  1.])
+~~~

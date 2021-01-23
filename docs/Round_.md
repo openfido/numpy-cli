@@ -1,7 +1,9 @@
 [[//Round_]]
+
+~~~
 Syntax:
 
-  numpy Round_ [<function matrix at 0x100b237a0>]
+  numpy Round_ [<function matrix at 0x10222a7a0>]
 
 
     Round an array to the given number of decimals.
@@ -10,3 +12,4 @@ Syntax:
     --------
     around : equivalent function; see for details.
     
+~~~

@@ -1,7 +1,9 @@
 [[/Random/Randn]]
+
+~~~
 Syntax:
 
-  numpy Randn [<function intlist_args at 0x105a769e0>]
+  numpy Randn [<function intlist_args at 0x10d17e9e0>]
 
 
         randn(d0, d1, ..., dn)
@@ -61,3 +63,4 @@ Syntax:
                [ 0.39924804,  4.68456316,  4.99394529,  4.84057254]])  # random
 
         
+~~~

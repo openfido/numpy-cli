@@ -1,7 +1,9 @@
 [[//Diff]]
+
+~~~
 Syntax:
 
-  numpy Diff [<function matrix at 0x100b237a0>]
+  numpy Diff [<function matrix at 0x10222a7a0>]
 
 
     Calculate the n-th discrete difference along the given axis.
@@ -86,3 +88,4 @@ Syntax:
     array([1, 1], dtype='timedelta64[D]')
 
     
+~~~

@@ -1,7 +1,9 @@
 [[//Angle]]
+
+~~~
 Syntax:
 
-  numpy Angle [<function matrix at 0x100b237a0>]
+  numpy Angle [<function matrix at 0x10222a7a0>]
 
 
     Return the angle of the complex argument.
@@ -40,3 +42,4 @@ Syntax:
     45.0
 
     
+~~~

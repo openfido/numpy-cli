@@ -1,7 +1,9 @@
 [[//Fabs]]
+
+~~~
 Syntax:
 
-  numpy Fabs [<function matrix at 0x100b237a0>]
+  numpy Fabs [<function matrix at 0x10222a7a0>]
 
 fabs(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -48,3 +50,4 @@ Examples
 1.0
 >>> np.fabs([-1.2, 1.2])
 array([ 1.2,  1.2])
+~~~

@@ -1,7 +1,9 @@
 [[/Linalg/Eigvalsh]]
+
+~~~
 Syntax:
 
-  numpy Eigvalsh [<function matrix at 0x100b237a0>]
+  numpy Eigvalsh [<function matrix at 0x10222a7a0>]
 
 
     Compute the eigenvalues of a complex Hermitian or real symmetric matrix.
@@ -76,3 +78,4 @@ Syntax:
     array([6.+0.j, 1.+0.j])
 
     
+~~~

@@ -1,7 +1,9 @@
 [[/Matrix/Cumprod]]
+
+~~~
 Syntax:
 
-  numpy Cumprod [<function matrix at 0x100b237a0>]
+  numpy Cumprod [<function matrix at 0x10222a7a0>]
 
 a.cumprod(axis=None, dtype=None, out=None)
 
@@ -12,3 +14,4 @@ a.cumprod(axis=None, dtype=None, out=None)
     See Also
     --------
     numpy.cumprod : equivalent function
+~~~

@@ -1,7 +1,9 @@
 [[//Hypot]]
+
+~~~
 Syntax:
 
-  numpy Hypot [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Hypot [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 hypot(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -53,3 +55,4 @@ Example showing broadcast of scalar_like argument:
 array([[ 5.,  5.,  5.],
        [ 5.,  5.,  5.],
        [ 5.,  5.,  5.]])
+~~~

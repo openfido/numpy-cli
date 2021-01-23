@@ -1,7 +1,9 @@
 [[/Matrix/Resize]]
+
+~~~
 Syntax:
 
-  numpy Resize [<function matrix at 0x100b237a0>]
+  numpy Resize [<function matrix at 0x10222a7a0>]
 
 a.resize(new_shape, refcheck=True)
 
@@ -89,3 +91,4 @@ a.resize(new_shape, refcheck=True)
     array([[0]])
     >>> c
     array([[0]])
+~~~

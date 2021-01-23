@@ -1,7 +1,9 @@
 [[/Linalg/Cholesky]]
+
+~~~
 Syntax:
 
-  numpy Cholesky [<function matrix at 0x100b237a0>]
+  numpy Cholesky [<function matrix at 0x10222a7a0>]
 
 
     Cholesky decomposition.
@@ -85,3 +87,4 @@ Syntax:
             [ 0.+2.j,  1.+0.j]])
 
     
+~~~

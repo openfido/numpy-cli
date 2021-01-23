@@ -1,7 +1,9 @@
 [[//Arcsinh]]
+
+~~~
 Syntax:
 
-  numpy Arcsinh [<function matrix at 0x100b237a0>]
+  numpy Arcsinh [<function matrix at 0x10222a7a0>]
 
 arcsinh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -60,3 +62,4 @@ Examples
 --------
 >>> np.arcsinh(np.array([np.e, 10.0]))
 array([ 1.72538256,  2.99822295])
+~~~

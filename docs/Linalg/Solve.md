@@ -1,7 +1,9 @@
 [[/Linalg/Solve]]
+
+~~~
 Syntax:
 
-  numpy Solve [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Solve [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 
     Solve a linear matrix equation, or system of linear scalar equations.
@@ -66,3 +68,4 @@ Syntax:
     True
 
     
+~~~

@@ -1,7 +1,9 @@
 [[/Matrix/Sort]]
+
+~~~
 Syntax:
 
-  numpy Sort [<function matrix at 0x100b237a0>]
+  numpy Sort [<function matrix at 0x10222a7a0>]
 
 a.sort(axis=-1, kind=None, order=None)
 
@@ -60,3 +62,4 @@ a.sort(axis=-1, kind=None, order=None)
     >>> a
     array([(b'c', 1), (b'a', 2)],
           dtype=[('x', 'S1'), ('y', '<i8')])
+~~~

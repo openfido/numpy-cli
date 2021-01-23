@@ -1,7 +1,9 @@
 [[//Exp]]
+
+~~~
 Syntax:
 
-  numpy Exp [<function matrix at 0x100b237a0>]
+  numpy Exp [<function matrix at 0x10222a7a0>]
 
 exp(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -79,3 +81,4 @@ Plot the magnitude and phase of ``exp(x)`` in the complex plane:
 ...            extent=[-2*np.pi, 2*np.pi, -2*np.pi, 2*np.pi], cmap='hsv')
 >>> plt.title('Phase (angle) of exp(x)')
 >>> plt.show()
+~~~

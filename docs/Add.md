@@ -1,7 +1,9 @@
 [[//Add]]
+
+~~~
 Syntax:
 
-  numpy Add [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Add [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 add(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -49,3 +51,4 @@ Examples
 array([[  0.,   2.,   4.],
        [  3.,   5.,   7.],
        [  6.,   8.,  10.]])
+~~~

@@ -1,7 +1,9 @@
 [[//Trapz]]
+
+~~~
 Syntax:
 
-  numpy Trapz [<function matrix at 0x100b237a0>]
+  numpy Trapz [<function matrix at 0x10222a7a0>]
 
 
     Integrate along the given axis using the composite trapezoidal rule.
@@ -64,3 +66,4 @@ Syntax:
     array([2.,  8.])
 
     
+~~~

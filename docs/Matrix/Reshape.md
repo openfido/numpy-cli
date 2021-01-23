@@ -1,7 +1,9 @@
 [[/Matrix/Reshape]]
+
+~~~
 Syntax:
 
-  numpy Reshape [<function matrix at 0x100b237a0>]
+  numpy Reshape [<function matrix at 0x10222a7a0>]
 
 a.reshape(shape, order='C')
 
@@ -19,3 +21,4 @@ a.reshape(shape, order='C')
     the elements of the shape parameter to be passed in as separate arguments.
     For example, ``a.reshape(10, 11)`` is equivalent to
     ``a.reshape((10, 11))``.
+~~~

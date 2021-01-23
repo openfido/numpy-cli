@@ -1,7 +1,9 @@
 [[//Logaddexp2]]
+
+~~~
 Syntax:
 
-  numpy Logaddexp2 [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Logaddexp2 [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 logaddexp2(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -58,3 +60,4 @@ Examples
 (-166.09640474436813, -164.77447664948076, -164.28904982231052)
 >>> 2**prob12
 3.4999999999999914e-50
+~~~

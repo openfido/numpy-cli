@@ -1,7 +1,9 @@
 [[/Linalg/Inv]]
+
+~~~
 Syntax:
 
-  numpy Inv [<function matrix at 0x100b237a0>]
+  numpy Inv [<function matrix at 0x10222a7a0>]
 
 
     Compute the (multiplicative) inverse of a matrix.
@@ -63,3 +65,4 @@ Syntax:
             [ 0.75, -0.25]]])
 
     
+~~~

@@ -1,7 +1,9 @@
 [[//Log]]
+
+~~~
 Syntax:
 
-  numpy Log [<function matrix at 0x100b237a0>]
+  numpy Log [<function matrix at 0x10222a7a0>]
 
 log(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -66,3 +68,4 @@ Examples
 --------
 >>> np.log([1, np.e, np.e**2, 0])
 array([  0.,   1.,   2., -Inf])
+~~~

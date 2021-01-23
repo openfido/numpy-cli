@@ -1,7 +1,9 @@
 [[/Linalg/Matrix_Rank]]
+
+~~~
 Syntax:
 
-  numpy Matrix_Rank [<function matrix at 0x100b237a0>]
+  numpy Matrix_Rank [<function matrix at 0x10222a7a0>]
 
 
     Return matrix rank of array using SVD method
@@ -95,3 +97,4 @@ Syntax:
     >>> matrix_rank(np.zeros((4,)))
     0
     
+~~~

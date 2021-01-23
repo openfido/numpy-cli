@@ -1,7 +1,9 @@
 [[/Linalg/Eigh]]
+
+~~~
 Syntax:
 
-  numpy Eigh [<function matrix at 0x100b237a0>]
+  numpy Eigh [<function matrix at 0x10222a7a0>]
 
 
     Return the eigenvalues and eigenvectors of a complex Hermitian
@@ -118,3 +120,4 @@ Syntax:
     array([[ 0.89442719+0.j       , -0.        +0.4472136j],
            [-0.        +0.4472136j,  0.89442719+0.j       ]])
     
+~~~

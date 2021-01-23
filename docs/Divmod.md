@@ -1,7 +1,9 @@
 [[//Divmod]]
+
+~~~
 Syntax:
 
-  numpy Divmod [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Divmod [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 divmod(x1, x2[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -57,3 +59,4 @@ Examples
 --------
 >>> np.divmod(np.arange(5), 3)
 (array([0, 0, 0, 1, 1]), array([0, 1, 2, 0, 1]))
+~~~

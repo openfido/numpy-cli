@@ -1,7 +1,9 @@
 [[//Square]]
+
+~~~
 Syntax:
 
-  numpy Square [<function matrix at 0x100b237a0>]
+  numpy Square [<function matrix at 0x10222a7a0>]
 
 square(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -43,3 +45,4 @@ Examples
 --------
 >>> np.square([-1j, 1])
 array([-1.-0.j,  1.+0.j])
+~~~

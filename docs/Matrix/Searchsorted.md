@@ -1,7 +1,9 @@
 [[/Matrix/Searchsorted]]
+
+~~~
 Syntax:
 
-  numpy Searchsorted [<function matrix at 0x100b237a0>]
+  numpy Searchsorted [<function matrix at 0x10222a7a0>]
 
 a.searchsorted(v, side='left', sorter=None)
 
@@ -12,3 +14,4 @@ a.searchsorted(v, side='left', sorter=None)
     See Also
     --------
     numpy.searchsorted : equivalent function
+~~~

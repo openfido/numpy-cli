@@ -1,7 +1,9 @@
 [[//Signbit]]
+
+~~~
 Syntax:
 
-  numpy Signbit [<function matrix at 0x100b237a0>]
+  numpy Signbit [<function matrix at 0x10222a7a0>]
 
 signbit(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -39,3 +41,4 @@ Examples
 True
 >>> np.signbit(np.array([1, -2.3, 2.1]))
 array([False,  True, False])
+~~~

@@ -1,7 +1,9 @@
 [[//Minimum]]
+
+~~~
 Syntax:
 
-  numpy Minimum [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Minimum [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 minimum(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -74,3 +76,4 @@ array([[ 0.5,  0. ],
 array([nan, nan, nan])
 >>> np.minimum(-np.Inf, 1)
 -inf
+~~~

@@ -1,7 +1,9 @@
 [[//Maximum]]
+
+~~~
 Syntax:
 
-  numpy Maximum [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Maximum [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 maximum(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -74,3 +76,4 @@ array([[ 1. ,  2. ],
 array([nan, nan, nan])
 >>> np.maximum(np.Inf, 1)
 inf
+~~~

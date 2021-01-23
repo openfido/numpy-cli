@@ -1,7 +1,9 @@
 [[//Zeros]]
+
+~~~
 Syntax:
 
-  numpy Zeros [<function intlist at 0x105830290>]
+  numpy Zeros [<function intlist at 0x10cf39290>]
 
 zeros(shape, dtype=float, order='C')
 
@@ -51,3 +53,4 @@ zeros(shape, dtype=float, order='C')
     >>> np.zeros((2,), dtype=[('x', 'i4'), ('y', 'i4')]) # custom dtype
     array([(0, 0), (0, 0)],
           dtype=[('x', '<i4'), ('y', '<i4')])
+~~~

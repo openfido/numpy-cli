@@ -1,7 +1,9 @@
 [[/Linalg/Cond]]
+
+~~~
 Syntax:
 
-  numpy Cond [<function matrix at 0x100b237a0>]
+  numpy Cond [<function matrix at 0x10222a7a0>]
 
 
     Compute the condition number of a matrix.
@@ -81,3 +83,4 @@ Syntax:
     0.70710678118654746 # may vary
 
     
+~~~

@@ -1,7 +1,9 @@
 [[/Matrix/Min]]
+
+~~~
 Syntax:
 
-  numpy Min [<function matrix at 0x100b237a0>]
+  numpy Min [<function matrix at 0x10222a7a0>]
 
 
         Return the minimum value along an axis.
@@ -35,3 +37,4 @@ Syntax:
                 [-11]])
 
         
+~~~

@@ -1,7 +1,9 @@
 [[//Cumprod]]
+
+~~~
 Syntax:
 
-  numpy Cumprod [<function matrix at 0x100b237a0>]
+  numpy Cumprod [<function matrix at 0x10222a7a0>]
 
 
     Return the cumulative product of elements along a given axis.
@@ -62,3 +64,4 @@ Syntax:
            [  4,  20, 120]])
 
     
+~~~

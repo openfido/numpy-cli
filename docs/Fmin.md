@@ -1,7 +1,9 @@
 [[//Fmin]]
+
+~~~
 Syntax:
 
-  numpy Fmin [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Fmin [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 fmin(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -73,3 +75,4 @@ array([[ 0.5,  0. ],
 
 >>> np.fmin([np.nan, 0, np.nan],[0, np.nan, np.nan])
 array([ 0.,  0., nan])
+~~~

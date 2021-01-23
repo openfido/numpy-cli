@@ -1,7 +1,9 @@
 [[/Matrix/Nonzero]]
+
+~~~
 Syntax:
 
-  numpy Nonzero [<function matrix at 0x100b237a0>]
+  numpy Nonzero [<function matrix at 0x10222a7a0>]
 
 a.nonzero()
 
@@ -12,3 +14,4 @@ a.nonzero()
     See Also
     --------
     numpy.nonzero : equivalent function
+~~~

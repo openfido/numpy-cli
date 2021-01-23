@@ -1,7 +1,9 @@
 [[/Matrix/Gett]]
+
+~~~
 Syntax:
 
-  numpy Gett [<function matrix at 0x100b237a0>]
+  numpy Gett [<function matrix at 0x10222a7a0>]
 
 
         Returns the transpose of the matrix.
@@ -32,3 +34,4 @@ Syntax:
                 [2, 4]])
 
         
+~~~

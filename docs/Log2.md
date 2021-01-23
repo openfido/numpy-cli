@@ -1,7 +1,9 @@
 [[//Log2]]
+
+~~~
 Syntax:
 
-  numpy Log2 [<function matrix at 0x100b237a0>]
+  numpy Log2 [<function matrix at 0x10222a7a0>]
 
 log2(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -63,3 +65,4 @@ array([-Inf,   0.,   1.,   4.])
 >>> xi = np.array([0+1.j, 1, 2+0.j, 4.j])
 >>> np.log2(xi)
 array([ 0.+2.26618007j,  0.+0.j        ,  1.+0.j        ,  2.+2.26618007j])
+~~~

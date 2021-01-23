@@ -1,7 +1,9 @@
 [[//Prod]]
+
+~~~
 Syntax:
 
-  numpy Prod [<function matrix at 0x100b237a0>]
+  numpy Prod [<function matrix at 0x10222a7a0>]
 
 
     Return the product of array elements over a given axis.
@@ -118,3 +120,4 @@ Syntax:
     >>> np.prod([1, 2], initial=5)
     10
     
+~~~

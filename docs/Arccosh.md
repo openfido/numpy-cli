@@ -1,7 +1,9 @@
 [[//Arccosh]]
+
+~~~
 Syntax:
 
-  numpy Arccosh [<function matrix at 0x100b237a0>]
+  numpy Arccosh [<function matrix at 0x10222a7a0>]
 
 arccosh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -65,3 +67,4 @@ Examples
 array([ 1.65745445,  2.99322285])
 >>> np.arccosh(1)
 0.0
+~~~

@@ -1,7 +1,9 @@
 [[//Gcd]]
+
+~~~
 Syntax:
 
-  numpy Gcd [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Gcd [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 gcd(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -32,3 +34,4 @@ Examples
 5
 >>> np.gcd(np.arange(6), 20)
 array([20,  1,  2,  1,  4,  5])
+~~~

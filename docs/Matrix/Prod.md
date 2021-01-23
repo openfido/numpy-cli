@@ -1,7 +1,9 @@
 [[/Matrix/Prod]]
+
+~~~
 Syntax:
 
-  numpy Prod [<function matrix at 0x100b237a0>]
+  numpy Prod [<function matrix at 0x10222a7a0>]
 
 
         Return the product of the array elements over the given axis.
@@ -33,3 +35,4 @@ Syntax:
                 [7920]])
 
         
+~~~

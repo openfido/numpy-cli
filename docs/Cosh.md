@@ -1,7 +1,9 @@
 [[//Cosh]]
+
+~~~
 Syntax:
 
-  numpy Cosh [<function matrix at 0x100b237a0>]
+  numpy Cosh [<function matrix at 0x10222a7a0>]
 
 cosh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -46,3 +48,4 @@ The hyperbolic cosine describes the shape of a hanging cable:
 >>> x = np.linspace(-4, 4, 1000)
 >>> plt.plot(x, np.cosh(x))
 >>> plt.show()
+~~~

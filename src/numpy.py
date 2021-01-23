@@ -1069,7 +1069,7 @@ def makedocs():
 			os.makedirs("docs/"+path.title(),exist_ok=True)
 		name = specs[-1].title()
 		with open(f"docs/{path}/{name}.md","w") as fh:
-			fh.write(f"[[/{path}/{name}]]\n")
+			fh.write(f"[[/{path}/{name}]]\n\n~~~\n")
 			lib = numpy
 			for pkg in specs[0:-1]:
 				lib = getattr(lib,pkg)
@@ -1085,6 +1085,7 @@ def makedocs():
 					args.append(value)
 			fh.write(f"Syntax:\n\n  numpy {name} {' '.join(args)}\n\n")
 			fh.write(call.__doc__)
+			fh.write("\n~~~\n")
 
 def help(name='.*'):
 	if name in list(functions.keys()):

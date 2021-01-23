@@ -1,7 +1,9 @@
 [[/Matrix/Geti]]
+
+~~~
 Syntax:
 
-  numpy Geti [<function matrix at 0x100b237a0>]
+  numpy Geti [<function matrix at 0x10222a7a0>]
 
 
         Returns the (multiplicative) inverse of invertible `self`.
@@ -39,3 +41,4 @@ Syntax:
                 [ 0.,  1.]])
 
         
+~~~

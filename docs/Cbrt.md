@@ -1,7 +1,9 @@
 [[//Cbrt]]
+
+~~~
 Syntax:
 
-  numpy Cbrt [<function matrix at 0x100b237a0>]
+  numpy Cbrt [<function matrix at 0x10222a7a0>]
 
 cbrt(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -42,3 +44,4 @@ Examples
 --------
 >>> np.cbrt([1,8,27])
 array([ 1.,  2.,  3.])
+~~~

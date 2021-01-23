@@ -1,4 +1,6 @@
 [[//Eye]]
+
+~~~
 Syntax:
 
   numpy Eye [<class 'int'>]
@@ -46,3 +48,4 @@ Syntax:
            [0.,  0.,  0.]])
 
     
+~~~

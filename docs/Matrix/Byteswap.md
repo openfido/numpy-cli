@@ -1,7 +1,9 @@
 [[/Matrix/Byteswap]]
+
+~~~
 Syntax:
 
-  numpy Byteswap [<function matrix at 0x100b237a0>]
+  numpy Byteswap [<function matrix at 0x10222a7a0>]
 
 a.byteswap(inplace=False)
 
@@ -51,3 +53,4 @@ a.byteswap(inplace=False)
     >>> A.view(np.uint8)
     array([0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0,
            0, 3], dtype=uint8)
+~~~

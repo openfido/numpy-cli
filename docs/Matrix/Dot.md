@@ -1,7 +1,9 @@
 [[/Matrix/Dot]]
+
+~~~
 Syntax:
 
-  numpy Dot [<function matrix at 0x100b237a0>]
+  numpy Dot [<function matrix at 0x10222a7a0>]
 
 a.dot(b, out=None)
 
@@ -26,3 +28,4 @@ a.dot(b, out=None)
     >>> a.dot(b).dot(b)
     array([[8.,  8.],
            [8.,  8.]])
+~~~

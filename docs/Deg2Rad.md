@@ -1,7 +1,9 @@
 [[//Deg2Rad]]
+
+~~~
 Syntax:
 
-  numpy Deg2Rad [<function matrix at 0x100b237a0>]
+  numpy Deg2Rad [<function matrix at 0x10222a7a0>]
 
 deg2rad(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -48,3 +50,4 @@ Examples
 --------
 >>> np.deg2rad(180)
 3.1415926535897931
+~~~

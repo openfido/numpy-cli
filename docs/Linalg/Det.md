@@ -1,7 +1,9 @@
 [[/Linalg/Det]]
+
+~~~
 Syntax:
 
-  numpy Det [<function matrix at 0x100b237a0>]
+  numpy Det [<function matrix at 0x10222a7a0>]
 
 
     Compute the determinant of an array.
@@ -50,3 +52,4 @@ Syntax:
     array([-2., -3., -8.])
 
     
+~~~

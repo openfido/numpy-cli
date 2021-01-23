@@ -1,7 +1,9 @@
 [[//Floor_Divide]]
+
+~~~
 Syntax:
 
-  numpy Floor_Divide [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Floor_Divide [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 floor_divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -54,3 +56,4 @@ Examples
 2
 >>> np.floor_divide([1., 2., 3., 4.], 2.5)
 array([ 0.,  0.,  1.,  1.])
+~~~

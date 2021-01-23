@@ -1,7 +1,9 @@
 [[/Matrix/Var]]
+
+~~~
 Syntax:
 
-  numpy Var [<function matrix at 0x100b237a0>]
+  numpy Var [<function matrix at 0x10222a7a0>]
 
 
         Returns the variance of the matrix elements, along the given axis.
@@ -34,3 +36,4 @@ Syntax:
                 [1.25]])
 
         
+~~~

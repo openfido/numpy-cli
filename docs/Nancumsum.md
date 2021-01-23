@@ -1,7 +1,9 @@
 [[//Nancumsum]]
+
+~~~
 Syntax:
 
-  numpy Nancumsum [<function matrix at 0x100b237a0>]
+  numpy Nancumsum [<function matrix at 0x10222a7a0>]
 
 
     Return the cumulative sum of array elements over a given axis treating Not a
@@ -63,3 +65,4 @@ Syntax:
            [3.,  3.]])
 
     
+~~~

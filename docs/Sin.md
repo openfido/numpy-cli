@@ -1,7 +1,9 @@
 [[//Sin]]
+
+~~~
 Syntax:
 
-  numpy Sin [<function matrix at 0x100b237a0>]
+  numpy Sin [<function matrix at 0x10222a7a0>]
 
 sin(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -72,3 +74,4 @@ Plot the sine function:
 >>> plt.ylabel('sin(x)')
 >>> plt.axis('tight')
 >>> plt.show()
+~~~

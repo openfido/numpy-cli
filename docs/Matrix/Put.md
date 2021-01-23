@@ -1,7 +1,9 @@
 [[/Matrix/Put]]
+
+~~~
 Syntax:
 
-  numpy Put [<function matrix at 0x100b237a0>]
+  numpy Put [<function matrix at 0x10222a7a0>]
 
 a.put(indices, values, mode='raise')
 
@@ -12,3 +14,4 @@ a.put(indices, values, mode='raise')
     See Also
     --------
     numpy.put : equivalent function
+~~~

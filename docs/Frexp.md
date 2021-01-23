@@ -1,7 +1,9 @@
 [[//Frexp]]
+
+~~~
 Syntax:
 
-  numpy Frexp [<function matrix at 0x100b237a0>]
+  numpy Frexp [<function matrix at 0x10222a7a0>]
 
 frexp(x[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -63,3 +65,4 @@ array([ 0.   ,  0.5  ,  0.5  ,  0.75 ,  0.5  ,  0.625,  0.75 ,  0.875,
 array([0, 1, 2, 2, 3, 3, 3, 3, 4])
 >>> y1 * 2**y2
 array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.])
+~~~

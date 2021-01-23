@@ -1,7 +1,9 @@
 [[/Matrix/Clip]]
+
+~~~
 Syntax:
 
-  numpy Clip [<function matrix at 0x100b237a0>]
+  numpy Clip [<function matrix at 0x10222a7a0>]
 
 a.clip(min=None, max=None, out=None, **kwargs)
 
@@ -13,3 +15,4 @@ a.clip(min=None, max=None, out=None, **kwargs)
     See Also
     --------
     numpy.clip : equivalent function
+~~~

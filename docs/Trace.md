@@ -1,7 +1,9 @@
 [[//Trace]]
+
+~~~
 Syntax:
 
-  numpy Trace [<function matrix at 0x100b237a0>]
+  numpy Trace [<function matrix at 0x10222a7a0>]
 
 
     Return the sum along diagonals of the array.
@@ -58,3 +60,4 @@ Syntax:
     (2, 3)
 
     
+~~~

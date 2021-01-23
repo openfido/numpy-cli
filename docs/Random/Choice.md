@@ -1,7 +1,9 @@
 [[/Random/Choice]]
+
+~~~
 Syntax:
 
-  numpy Choice [<function arrayorint at 0x105a76a70>]
+  numpy Choice [<function arrayorint at 0x10d17ea70>]
 
 
         choice(a, size=None, replace=True, p=None)
@@ -89,3 +91,4 @@ Syntax:
               dtype='<U11')
 
         
+~~~

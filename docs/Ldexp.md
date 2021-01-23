@@ -1,7 +1,9 @@
 [[//Ldexp]]
+
+~~~
 Syntax:
 
-  numpy Ldexp [<function matrix at 0x100b237a0>, <function matrix at 0x100b237a0>]
+  numpy Ldexp [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
 
 ldexp(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -59,3 +61,4 @@ array([ 5., 10., 20., 40.], dtype=float16)
 >>> x = np.arange(6)
 >>> np.ldexp(*np.frexp(x))
 array([ 0.,  1.,  2.,  3.,  4.,  5.])
+~~~

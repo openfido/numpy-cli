@@ -1,7 +1,9 @@
 [[//Nansum]]
+
+~~~
 Syntax:
 
-  numpy Nansum [<function matrix at 0x100b237a0>]
+  numpy Nansum [<function matrix at 0x10222a7a0>]
 
 
     Return the sum of array elements over a given axis treating Not a
@@ -91,3 +93,4 @@ Syntax:
     nan
 
     
+~~~

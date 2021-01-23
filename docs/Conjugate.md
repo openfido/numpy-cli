@@ -1,7 +1,9 @@
 [[//Conjugate]]
+
+~~~
 Syntax:
 
-  numpy Conjugate [<function matrix at 0x100b237a0>]
+  numpy Conjugate [<function matrix at 0x10222a7a0>]
 
 conjugate(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -52,3 +54,4 @@ Examples
 >>> np.conjugate(x)
 array([[ 1.-1.j,  0.-0.j],
        [ 0.-0.j,  1.-1.j]])
+~~~

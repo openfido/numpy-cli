@@ -1,7 +1,9 @@
 [[//Arctanh]]
+
+~~~
 Syntax:
 
-  numpy Arctanh [<function matrix at 0x100b237a0>]
+  numpy Arctanh [<function matrix at 0x10222a7a0>]
 
 arctanh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -64,3 +66,4 @@ Examples
 --------
 >>> np.arctanh([0, -0.5])
 array([ 0.        , -0.54930614])
+~~~

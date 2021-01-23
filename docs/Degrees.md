@@ -1,7 +1,9 @@
 [[//Degrees]]
+
+~~~
 Syntax:
 
-  numpy Degrees [<function matrix at 0x100b237a0>]
+  numpy Degrees [<function matrix at 0x10222a7a0>]
 
 degrees(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -51,3 +53,4 @@ array([   0.,   30.,   60.,   90.,  120.,  150.,  180.,  210.,  240.,
 >>> r = np.degrees(rad, out)
 >>> np.all(r == out)
 True
+~~~

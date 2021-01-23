@@ -1,7 +1,9 @@
 [[/Matrix/Conjugate]]
+
+~~~
 Syntax:
 
-  numpy Conjugate [<function matrix at 0x100b237a0>]
+  numpy Conjugate [<function matrix at 0x10222a7a0>]
 
 a.conjugate()
 
@@ -12,3 +14,4 @@ a.conjugate()
     See Also
     --------
     numpy.conjugate : equivalent function
+~~~

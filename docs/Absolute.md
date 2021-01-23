@@ -1,7 +1,9 @@
 [[//Absolute]]
+
+~~~
 Syntax:
 
-  numpy Absolute [<function matrix at 0x100b237a0>]
+  numpy Absolute [<function matrix at 0x10222a7a0>]
 
 absolute(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -58,3 +60,4 @@ Plot the function over the complex plane:
 >>> xx = x + 1j * x[:, np.newaxis]
 >>> plt.imshow(np.abs(xx), extent=[-10, 10, -10, 10], cmap='gray')
 >>> plt.show()
+~~~

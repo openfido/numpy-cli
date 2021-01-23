@@ -1,7 +1,9 @@
 [[//Reciprocal]]
+
+~~~
 Syntax:
 
-  numpy Reciprocal [<function matrix at 0x100b237a0>]
+  numpy Reciprocal [<function matrix at 0x10222a7a0>]
 
 reciprocal(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
 
@@ -50,3 +52,4 @@ Examples
 0.5
 >>> np.reciprocal([1, 2., 3.33])
 array([ 1.       ,  0.5      ,  0.3003003])
+~~~
