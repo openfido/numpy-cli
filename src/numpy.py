@@ -40,7 +40,7 @@ Note: any matrix can be provided as a URL, e.g.,
   shell% numpy transpose file:///tmp/A
   1,3
   2,4
-  
+
 """
 
 # exit codes
@@ -75,9 +75,17 @@ def matrix(a):
 		with urllib.request.urlopen(a) as req:
 			return numpy.matrix(req.read().decode("utf-8"))
 
-def dimensions(s):
-	"""Parse dimensions as N[xM[x[...]]]"""
+def intlist(s):
+	"""Parse intlist as N[,M[,[...]]]"""
 	return list(map(lambda n:int(n),s.split(',')))
+
+def boollist(s):
+	"""Parse intlist as N[,M[,[...]]]"""
+	return list(map(lambda n:bool(n),s.split(',')))
+
+def tuplelist(s):
+	"""Parse intlist as N[,M[,[...]]]"""
+	return list(map(lambda n:intlist(n),s.split(',')))
 
 def intlist_args(*s):
 	"""Parse arguments as integer list"""
@@ -104,12 +112,538 @@ def order(a):
 #
 # Arguments and options
 #
-_REQARGS="" # keyword for required arguments
-_VARARGS = [intlist_args] # variable argument list handlers
+POSITIONAL="" # keyword for required arguments
+VARARGS = [intlist_args] # variable argument list handlers
+UARGS = "**" # keywork for kwargs for ufunc
+UFUNC = {
+	"where" : boollist,
+	"axes" : tuplelist,
+	"axis" : intlist,
+	"keepdims" : bool,
+	"casting" : str,
+	"order" : str,
+	"dtype" : str,
+	"subok" : bool,
+}
+UKEYS = list(UFUNC.keys())
 functions = {
+
+	# arithmetic
+	"add" :
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"reciprocal" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"positive" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"negative" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"multiply" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"divide" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"power" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"subtract" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"true_divide" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"floor_divide" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"float_power" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"fmod" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"mod" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"modf" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"remainder" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"divmod" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	
+	# complex numbers
+	"angle" : 
+	{
+		POSITIONAL : [matrix],
+		"deg" : bool,
+	},
+	"real" : 
+	{
+		POSITIONAL : [matrix],
+	},
+	"imag" : 
+	{
+		POSITIONAL : [matrix],
+	},
+	"conj" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"conjugate" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+
+	# miscellaneous
+	"convolve" : 
+	{
+		POSITIONAL : [array,array],
+		"mode" : str,
+	},
+	"clip" : 
+	{
+		POSITIONAL : [matrix],
+		"a_min" : matrix,
+		"a_max" : matrix,
+		UARGS : UKEYS,
+	},
+	"sqrt" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"cbrt" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"square" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"absolute" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"fabs" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"sign" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"heaviside" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"maximum" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"minimum" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"fmax" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"fmin" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	# "nan_to_num" : 
+	# {
+	# 	POSITIONAL : [matrix],
+	# 	UARGS : UKEYS,
+	# },
+	"real_if_close" : 
+	{
+		POSITIONAL : [matrix],
+		"tol" : float
+	},
+	"interp" : 
+	{
+		POSITIONAL : [array,array,array],
+		"left" : complex,
+		"right" : complex,
+		"period" : complex,
+	},
+
+	# trigonometric
+	"sin" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"cos" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"tan" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"arcsin" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"arccos" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"arctan" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"hypot" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"arctan2" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"degrees" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"radians" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"unwrap" : 
+	{
+		POSITIONAL : [matrix],
+		"discont" : float,
+		"axis" : int,
+	},
+	"deg2rad" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"rad2deg" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+
+	# hyperbolic functions
+	"sinh" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"cosh" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"tanh" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"arcsinh" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"arccosh" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"arctanh" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+
+	# rounding
+	"around" : 
+	{
+		POSITIONAL : [matrix],
+		"decimals" : int,
+	},
+	"round_" : 
+	{
+		POSITIONAL : [matrix],
+		"decimals" : int,
+	},
+	"rint" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"fix" : 
+	{
+		POSITIONAL : [matrix],
+	},
+	"floor" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"ceil" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"trunc" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	
+	# sums, profducts, differences
+	"prod" : 
+	{
+		POSITIONAL : [matrix],
+		"initial" : float,
+		UARGS : ["axis","dtype","keepdims","where"],
+	},
+	"sum" : 
+	{
+		POSITIONAL : [matrix],
+		"initial" : float,
+		UARGS : ["axis","dtype","keepdims","where"],
+	},
+	"nanprod" : 
+	{
+		POSITIONAL : [matrix],
+		"initial" : float,
+		UARGS : ["axis","dtype","keepdims","where"],
+	},
+	"nansum" : 
+	{
+		POSITIONAL : [matrix],
+		"initial" : float,
+		UARGS : ["axis","dtype","keepdims","where"],
+	},
+	"cumprod" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : ["axis","dtype"],
+	},
+	"cumsum" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : ["axis","dtype"],
+	},
+	"nancumprod" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : ["axis","dtype"],
+	},
+	"nancumsum" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : ["axis","dtype"],
+	},
+	"diff" : 
+	{
+		POSITIONAL : [matrix],
+		"n" : int,
+		"prepend" : matrix,
+		"append" : matrix,
+		UARGS : ["axis"],
+	},
+	# "ediff1d" : 
+	# {
+	# 	POSITIONAL : [matrix],
+	# 	"to_end" : matrix,
+	# 	"to_begin" : matrix,
+	# },
+	"gradient" : 
+	{
+		POSITIONAL : [matrix],
+		"spacing" : matrix,
+		"axis" : int,
+		"edge_order" : int,
+	},
+	"cross" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		"axisa" : int,
+		"axisb" : int,
+		"axisc" : int,
+		"axis" : int,
+	},
+	"trapz" : 
+	{
+		POSITIONAL : [matrix],
+		"x" : matrix,
+		"dx" : float,
+		"axis" : int,
+	},
+	
+	# exponents and logarithms
+	"exp" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"expm1" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"exp2" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"log" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"log10" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"log2" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"log1p" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"logaddexp" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"logaddexp2" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+
+	# other special functions
+	"i0" : 
+	{
+		POSITIONAL : [array],
+	},
+	"sinc" : 
+	{
+		POSITIONAL : [matrix],
+	},
+
+	# floating point routines
+	"signbit" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"copysign" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"frexp" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+	"ldexp" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"nextafter" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"spacing" : 
+	{
+		POSITIONAL : [matrix],
+		UARGS : UKEYS,
+	},
+
+	# rational routines
+	"lcm" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+	"gcd" : 
+	{
+		POSITIONAL : [matrix,matrix],
+		UARGS : UKEYS,
+	},
+
+	# numpy 
 	"eye" :
 	{
-		_REQARGS : [int],
+		POSITIONAL : [int],
 		"M" : int,
 		"k" : int,
 		"dtype" : str,
@@ -117,22 +651,22 @@ functions = {
 	},
 	"identity" :
 	{
-		_REQARGS : [int],
+		POSITIONAL : [int],
 		"dtype" : str,
 	},
 	"ones" : 
 	{
-		_REQARGS : [dimensions],
+		POSITIONAL : [intlist],
 		"dtype" : str,
 		"order" : str,
 	},
 	"dot" :
 	{
-		_REQARGS : [matrix,matrix],
+		POSITIONAL : [matrix,matrix],
 	},
 	"savetxt" : 
 	{
-		_REQARGS : [str, matrix],
+		POSITIONAL : [str, matrix],
 		"fmt" : str,
 		"delimiter" : str,
 		"newline" : str,
@@ -143,18 +677,18 @@ functions = {
 	},
 	"trace" :
 	{
-		_REQARGS : [matrix],
+		POSITIONAL : [matrix],
 		"offset" : int,
 		"axis" : int,
 		"dtype" : str,
 	},
 	"transpose" : 
 	{
-		_REQARGS : [matrix],
+		POSITIONAL : [matrix],
 	},
 	"zeros" :
 	{
-		_REQARGS : [dimensions],
+		POSITIONAL : [intlist],
 		"dtype" : str,
 		"order" : str,
 	},
@@ -162,75 +696,75 @@ functions = {
 	# linag
 	"linalg.cholesky" :
 	{
-		_REQARGS : [matrix],
+		POSITIONAL : [matrix],
 	},
 	"linalg.cond" :
 	{
-		_REQARGS : [matrix],
+		POSITIONAL : [matrix],
 		"p" : order,
 	},
 	"linalg.det" :
 	{
-		_REQARGS : [matrix],
+		POSITIONAL : [matrix],
 	},
 	"linalg.eig" :
 	{
-		_REQARGS : [matrix],
+		POSITIONAL : [matrix],
 	},
 	"linalg.eigh" :
 	{
-		_REQARGS : [matrix],
+		POSITIONAL : [matrix],
 		"UPLO" : str,
 	},
 	"linalg.eigvals" :
 	{
-		_REQARGS : [matrix],
+		POSITIONAL : [matrix],
 	},
 	"linalg.eigvalsh" :
 	{
-		_REQARGS : [matrix],
+		POSITIONAL : [matrix],
 		"UPLO" : str,
 	},
 	"linalg.inv" :
 	{
-		_REQARGS : [matrix],
+		POSITIONAL : [matrix],
 	},
 	"linalg.lstsq" : 
 	{
-		_REQARGS : [matrix,matrix],
+		POSITIONAL : [matrix,matrix],
 		"rcond" : float,
 	},
 	"linalg.matrix_rank" :
 	{
-		_REQARGS : [matrix],
+		POSITIONAL : [matrix],
 	},
 	"linalg.norm" :
 	{
-		_REQARGS : [matrix],
+		POSITIONAL : [matrix],
 		"ord" : order,
 		"axis" : int,
 		"keepdims" : bool,
 	},
 	"linalg.pinv" :
 	{
-		_REQARGS : [matrix],
+		POSITIONAL : [matrix],
 	},
 	"linalg.qr" :
 	{
-		_REQARGS : [matrix],
+		POSITIONAL : [matrix],
 		"mode" : str,
 	},
 	"linalg.slogdet" :
 	{
-		_REQARGS : [matrix],
+		POSITIONAL : [matrix],
 	},
 	"linalg.solve" : 
 	{
-		_REQARGS : [matrix,matrix],
+		POSITIONAL : [matrix,matrix],
 	},
 	"linalg.svd" : 
 	{
-		_REQARGS : [matrix],
+		POSITIONAL : [matrix],
 		"full_matrices" : bool,
 		"compute_uv" : bool,
 		"hermitian" : bool,
@@ -239,64 +773,240 @@ functions = {
 	# matlib
 	"matlib.rand" :
 	{
-		_REQARGS : intlist_args,
+		POSITIONAL : intlist_args,
 	},
 	"matlib.randn" :
 	{
-		_REQARGS : intlist_args,
+		POSITIONAL : intlist_args,
 	},
 	"matlib.repmat" : 
 	{
-		_REQARGS : [matrix, int, int],
+		POSITIONAL : [matrix, int, int],
+	},
+
+	# matrix
+	"matrix.all" : 
+	{
+		POSITIONAL : [matrix],
+		"axis" : int,
+	},
+	"matrix.any" : 
+	{
+		POSITIONAL : [matrix],
+		"axis" : int,
+	},
+	"matrix.argmax" : 
+	{
+		POSITIONAL : [matrix],
+		"axis" : int,
+	},
+	"matrix.argmin" : 
+	{
+		POSITIONAL : [matrix],
+		"axis" : int,
+	},
+	"matrix.argpartition" : 
+	{
+		POSITIONAL : [matrix],
+		"axis" : int,
+		"kind" : str,
+		"order" : intlist,
+	},
+	"matrix.argsort" : 
+	{
+		POSITIONAL : [matrix],
+		"axis" : int,
+		"kind" : str,
+		"order" : intlist,
+	},
+	"matrix.astype" :
+	{
+		POSITIONAL : [matrix],
+		"order" : str,
+		"casting" : str,
+		"subok" : bool,
+	},
+	"matrix.byteswap" :
+	{
+		POSITIONAL : [matrix],
+	},
+	"matrix.choose" :
+	{
+		POSITIONAL : [matrix,intlist],
+		"mode" : str,
+	},
+	"matrix.clip" :
+	{
+		POSITIONAL : [matrix],
+		"min" : float,
+		"max" : float,
+		UARGS : UKEYS,
+	},
+	"matrix.compress" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.conj" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.conjugate" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.comprod" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.cumsum" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.diagonal" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.dot" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.fill" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.flatten" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.getH" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.getI" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.getT" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.getfield" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.item" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.itemset" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.max" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.mean" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.min" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.nonzero" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.partition" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.prod" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.ptp" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.put" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.rave" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.repeat" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.reshape" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.resize" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.round" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.searchsorted" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.setfield" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.sort" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.squeeze" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.std" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.sum" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.swapaxes" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.take" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.trace" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.transpose" : {
+		POSITIONAL : [matrix],
+	},
+	"matrix.var" : {
+		POSITIONAL : [matrix],
 	},
 
 	# random
 	"random.normal" : 
 	{
-		_REQARGS : [],
+		POSITIONAL : [],
 		"loc" : matrix, 
 		"scale" : matrix,
-		"size" : dimensions,
+		"size" : intlist,
 	},
 	"random.rand" : 
 	{
-		_REQARGS : intlist_args
+		POSITIONAL : intlist_args
 	},
 	"random.randn" : 
 	{
-		_REQARGS : intlist_args
+		POSITIONAL : intlist_args
 	},
 	"random.randint" : 
 	{
-		_REQARGS : [int],
+		POSITIONAL : [int],
 		"high" : int,
-		"size" : dimensions,
+		"size" : intlist,
 		"dtype" : str,
 	},
 	"random.random_sample" : 
 	{
-		_REQARGS : [],
-		"size" : dimensions,
+		POSITIONAL : [],
+		"size" : intlist,
 	},
 	"random.random" : 
 	{
-		_REQARGS : [],
-		"size" : dimensions,
+		POSITIONAL : [],
+		"size" : intlist,
 	},
 	"random.ranf" :
 	{
-		_REQARGS : [],
-		"size" : dimensions,
+		POSITIONAL : [],
+		"size" : intlist,
 	},
 	"random.sample" :
 	{
-		_REQARGS : [],
-		"size" : dimensions,
+		POSITIONAL : [],
+		"size" : intlist,
 	},
 	"random.choice" :
 	{
-		_REQARGS : [arrayorint],
-		"size" : dimensions,
+		POSITIONAL : [arrayorint],
+		"size" : intlist,
 		"replace" : bool,
 		"p" : array,	
 	},
@@ -398,12 +1108,16 @@ def main(argv):
 			specs = functions[name]
 			args = []
 			for tag, value in specs.items():
-				if not tag:
+				if tag == POSITIONAL:
 					if type(value) is list:
 						for item in value:
 							args.append(f"<{item.__name__}>")
 					else:
 						args.append(f"<{value.__name__}>")
+				elif tag == UARGS:
+					for utag in value:
+						ufunc = UFUNC[utag]
+						args.append(f"[{utag}=<{UFUNC[utag].__name__}>]")
 				else:
 					args.append(f"{tag}=<{value.__name__}>")
 			print(" ",name," ".join(args),file=sys.stdout)
@@ -454,26 +1168,26 @@ def main(argv):
 		pos = 0
 		name = argv[1]
 		function = functions[name]
-		if function[_REQARGS] in _VARARGS:
-			atype = function[_REQARGS]
+		if function[POSITIONAL] in VARARGS:
+			atype = function[POSITIONAL]
 			if len(argv) > 2:
 				args = atype(argv[2:])
 		else:
 			for arg in argv[2:]:
 				spec = arg.split("=")
 				if len(spec) < 2:
-					if pos >= len(function[_REQARGS]):
+					if pos >= len(function[POSITIONAL]):
 						error("too many positional argument",E_INVALID)
-					atype = function[_REQARGS][pos]
+					atype = function[POSITIONAL][pos]
 					args.append(atype(arg))
 					pos += 1
 				else:
 					atype = function[spec[0]]
 					kwargs[spec[0]] = atype(spec[1])
-			while len(args) < len(function[_REQARGS]):
+			while len(args) < len(function[POSITIONAL]):
 				if sys.stdin.isatty():
 					error("missing positional argument",E_INVALID)
-				atype = function[_REQARGS][pos]
+				atype = function[POSITIONAL][pos]
 				data = sys.stdin.readlines()
 				args.append(atype(";".join(data)))
 				pos += 1
