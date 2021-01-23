@@ -28,7 +28,7 @@ sh# make install
 sh# make validate
 ~~~
 
-## Example
+## Examples
 
 1) The following generates a CSV array with an 3x5 array of random number drawn from the standard normal distribution:
 
