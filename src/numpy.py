@@ -1068,8 +1068,8 @@ def help(name='.*'):
 		sys.stderr = sys.stdout
 		package = name.split('.')
 		lib = numpy
-		for name in package[0:-1]:
-			lib = getattr(lib,name)
+		for pkg in package[0:-1]:
+			lib = getattr(lib,pkg)
 		call = getattr(lib,package[-1])
 		specs = functions[name]
 		args = []
@@ -1086,34 +1086,35 @@ def help(name='.*'):
 		output(call.__doc__)
 	else:
 		print(f"Syntax: {cmdname} [options] [command] [arguments]",file=sys.stdout)
-		print("Options:",file=sys.stdout)
-		print("  -d|--debug       enable debugging output",file=sys.stdout)
-		print("  -e|--exception   raise exceptions on errors",file=sys.stdout)
-		print("  -f|--flatten     use semicolon as newline",file=sys.stdout)
-		print("  -h|--help        print this help info",file=sys.stdout)
-		print("  -q|--quiet       suppress all output to stderr",file=sys.stdout)
-		print("  -w|--warning     suppress warning output",file=sys.stdout)
-		print("Commands:",file=sys.stdout)
-		print("  help [pattern]",file=sys.stdout)
-		for function in sorted(list(functions.keys())):
-			if not re.search(name,function): 
-				continue
-			specs = functions[function]
-			args = []
-			for tag, value in specs.items():
-				if tag == POSITIONAL:
-					if type(value) is list:
-						for item in value:
-							args.append(f"<{item.__name__}>")
+		if not name == None:
+			print("Options:",file=sys.stdout)
+			print("  -d|--debug       enable debugging output",file=sys.stdout)
+			print("  -e|--exception   raise exceptions on errors",file=sys.stdout)
+			print("  -f|--flatten     use semicolon as newline",file=sys.stdout)
+			print("  -h|--help        print this help info",file=sys.stdout)
+			print("  -q|--quiet       suppress all output to stderr",file=sys.stdout)
+			print("  -w|--warning     suppress warning output",file=sys.stdout)
+			print("Commands:",file=sys.stdout)
+			print("  help [pattern]",file=sys.stdout)
+			for function in sorted(list(functions.keys())):
+				if not re.search(name,function): 
+					continue
+				specs = functions[function]
+				args = []
+				for tag, value in specs.items():
+					if tag == POSITIONAL:
+						if type(value) is list:
+							for item in value:
+								args.append(f"<{item.__name__}>")
+						else:
+							args.append(f"<{value.__name__}>")
+					elif tag == UARGS:
+						for utag in value:
+							ufunc = UFUNC[utag]
+							args.append(f"[{utag}=<{UFUNC[utag].__name__}>]")
 					else:
-						args.append(f"<{value.__name__}>")
-				elif tag == UARGS:
-					for utag in value:
-						ufunc = UFUNC[utag]
-						args.append(f"[{utag}=<{UFUNC[utag].__name__}>]")
-				else:
-					args.append(f"{tag}=<{value.__name__}>")
-			print(" ",function," ".join(args),file=sys.stdout)
+						args.append(f"{tag}=<{value.__name__}>")
+				print(" ",function," ".join(args),file=sys.stdout)
 
 #
 # Main function
@@ -1146,16 +1147,18 @@ def main(argv):
 			done = True
 
 	if len(sys.argv) < 2:
-		error(f"Syntax: {cmdname} [options] [command [arguments]]",code=E_NOARGS)
-	elif len(sys.argv) == 2 and sys.argv[1] == "help":
-		help()
-		exit(E_OK)
-	elif len(argv) >= 3 and argv[1] == "help":
-		if len(argv) > 3:
+		help(None)
+		exit(E_NOARGS)
+	elif sys.argv[1] == "help":
+		if len(sys.argv) == 2:
+			help()
+			exit(E_OK)
+		elif len(argv) == 3 and argv[1] == "help":
+			help(argv[2])
+			exit(E_OK)
+		else:
 			error("too many help functions requested",code=E_INVALID)
-		help(argv[2])
-		exit(E_OK)
-	elif len(argv) == 2 and argv[1] == "version":
+	elif argv[1] == "version":
 		print(numpy.__version__,file=sys.stdout)
 		exit(E_OK)
 
