@@ -1,10 +1,10 @@
-[[/Around]] -- 
+[[/Around]]
 
 ~~~
 Syntax
 ------
 
-  numpy around <matrix> decimals=<int>
+numpy around <matrix> decimals=<int>
 
 
     Evenly round to the given number of decimals.

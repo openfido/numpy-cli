@@ -1,10 +1,10 @@
-[[/Fix]] -- 
+[[/Fix]]
 
 ~~~
 Syntax
 ------
 
-  numpy fix <matrix>
+numpy fix <matrix>
 
 
     Round to nearest integer towards zero.

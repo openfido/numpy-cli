@@ -1,10 +1,10 @@
-[[/Matrix/Resize]] --     Change shape and size of array in-place.
+[[/Matrix/Resize]]
 
 ~~~
 Syntax
 ------
 
-  numpy resize <matrix>
+numpy resize <matrix>
 
 a.resize(new_shape, refcheck=True)
 

@@ -1,10 +1,10 @@
-[[/Random/Randint]] -- 
+[[/Random/Randint]]
 
 ~~~
 Syntax
 ------
 
-  numpy randint <int> high=<int> size=<intlist> dtype=<str>
+numpy randint <int> high=<int> size=<intlist> dtype=<str>
 
 
         randint(low, high=None, size=None, dtype=int)

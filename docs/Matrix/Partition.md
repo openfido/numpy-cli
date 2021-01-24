@@ -1,10 +1,10 @@
-[[/Matrix/Partition]] --     Rearranges the elements in the array in such a way that the value of the
+[[/Matrix/Partition]]
 
 ~~~
 Syntax
 ------
 
-  numpy partition <matrix>
+numpy partition <matrix>
 
 a.partition(kth, axis=-1, kind='introselect', order=None)
 

@@ -1,10 +1,10 @@
-[[/Matrix/Byteswap]] --     Swap the bytes of the array elements
+[[/Matrix/Byteswap]]
 
 ~~~
 Syntax
 ------
 
-  numpy byteswap <matrix>
+numpy byteswap <matrix>
 
 a.byteswap(inplace=False)
 

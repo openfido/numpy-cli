@@ -1,10 +1,10 @@
-[[/Gradient]] -- 
+[[/Gradient]]
 
 ~~~
 Syntax
 ------
 
-  numpy gradient <matrix> spacing=<matrix> axis=<int> edge_order=<int>
+numpy gradient <matrix> spacing=<matrix> axis=<int> edge_order=<int>
 
 
     Return the gradient of an N-dimensional array.

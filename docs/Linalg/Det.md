@@ -1,10 +1,10 @@
-[[/Linalg/Det]] -- 
+[[/Linalg/Det]]
 
 ~~~
 Syntax
 ------
 
-  numpy det <matrix>
+numpy det <matrix>
 
 
     Compute the determinant of an array.

@@ -1,10 +1,10 @@
-[[/Real]] -- 
+[[/Real]]
 
 ~~~
 Syntax
 ------
 
-  numpy real <matrix>
+numpy real <matrix>
 
 
     Return the real part of the complex argument.

@@ -1,10 +1,10 @@
-[[/Matrix/Mean]] -- 
+[[/Matrix/Mean]]
 
 ~~~
 Syntax
 ------
 
-  numpy mean <matrix>
+numpy mean <matrix>
 
 
         Returns the average of the matrix elements along the given axis.

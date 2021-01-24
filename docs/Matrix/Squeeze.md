@@ -1,10 +1,10 @@
-[[/Matrix/Squeeze]] -- 
+[[/Matrix/Squeeze]]
 
 ~~~
 Syntax
 ------
 
-  numpy squeeze <matrix>
+numpy squeeze <matrix>
 
 
         Return a possibly reshaped matrix.

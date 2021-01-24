@@ -1,10 +1,10 @@
-[[/Ones]] -- 
+[[/Ones]]
 
 ~~~
 Syntax
 ------
 
-  numpy ones <intlist> dtype=<str> order=<str>
+numpy ones <intlist> dtype=<str> order=<str>
 
 
     Return a new array of given shape and type, filled with ones.

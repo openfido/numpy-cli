@@ -1,10 +1,10 @@
-[[/Zeros]] --     Return a new array of given shape and type, filled with zeros.
+[[/Zeros]]
 
 ~~~
 Syntax
 ------
 
-  numpy zeros <intlist> dtype=<str> order=<str>
+numpy zeros <intlist> dtype=<str> order=<str>
 
 zeros(shape, dtype=float, order='C')
 

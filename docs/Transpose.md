@@ -1,10 +1,10 @@
-[[/Transpose]] -- 
+[[/Transpose]]
 
 ~~~
 Syntax
 ------
 
-  numpy transpose <matrix>
+numpy transpose <matrix>
 
 
     Reverse or permute the axes of an array; returns the modified array.

@@ -1,10 +1,10 @@
-[[/Savetxt]] -- 
+[[/Savetxt]]
 
 ~~~
 Syntax
 ------
 
-  numpy savetxt <str> <matrix> fmt=<str> delimiter=<str> newline=<str> header=<str> footer=<str> comments=<str> encoding=<str>
+numpy savetxt <str> <matrix> fmt=<str> delimiter=<str> newline=<str> header=<str> footer=<str> comments=<str> encoding=<str>
 
 
     Save an array to a text file.

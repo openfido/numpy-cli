@@ -1,10 +1,10 @@
-[[/Matlib/Rand]] -- 
+[[/Matlib/Rand]]
 
 ~~~
 Syntax
 ------
 
-  numpy rand <intlist_args>
+numpy rand <intlist_args>
 
 
     Return a matrix of random values with given shape.

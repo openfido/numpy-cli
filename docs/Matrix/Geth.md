@@ -1,10 +1,10 @@
-[[/Matrix/Geth]] -- 
+[[/Matrix/Geth]]
 
 ~~~
 Syntax
 ------
 
-  numpy getH <matrix>
+numpy getH <matrix>
 
 
         Returns the (complex) conjugate transpose of `self`.

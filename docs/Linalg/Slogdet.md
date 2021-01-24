@@ -1,10 +1,10 @@
-[[/Linalg/Slogdet]] -- 
+[[/Linalg/Slogdet]]
 
 ~~~
 Syntax
 ------
 
-  numpy slogdet <matrix>
+numpy slogdet <matrix>
 
 
     Compute the sign and (natural) logarithm of the determinant of an array.

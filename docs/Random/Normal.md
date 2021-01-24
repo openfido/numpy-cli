@@ -1,10 +1,10 @@
-[[/Random/Normal]] -- 
+[[/Random/Normal]]
 
 ~~~
 Syntax
 ------
 
-  numpy normal loc=<matrix> scale=<matrix> size=<intlist>
+numpy normal loc=<matrix> scale=<matrix> size=<intlist>
 
 
         normal(loc=0.0, scale=1.0, size=None)

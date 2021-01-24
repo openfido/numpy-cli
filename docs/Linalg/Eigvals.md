@@ -1,10 +1,10 @@
-[[/Linalg/Eigvals]] -- 
+[[/Linalg/Eigvals]]
 
 ~~~
 Syntax
 ------
 
-  numpy eigvals <matrix>
+numpy eigvals <matrix>
 
 
     Compute the eigenvalues of a general matrix.

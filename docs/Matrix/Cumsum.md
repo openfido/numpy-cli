@@ -1,10 +1,10 @@
-[[/Matrix/Cumsum]] --     Return the cumulative sum of the elements along the given axis.
+[[/Matrix/Cumsum]]
 
 ~~~
 Syntax
 ------
 
-  numpy cumsum <matrix>
+numpy cumsum <matrix>
 
 a.cumsum(axis=None, dtype=None, out=None)
 

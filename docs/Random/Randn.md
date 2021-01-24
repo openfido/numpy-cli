@@ -1,10 +1,10 @@
-[[/Random/Randn]] -- 
+[[/Random/Randn]]
 
 ~~~
 Syntax
 ------
 
-  numpy randn <intlist_args>
+numpy randn <intlist_args>
 
 
         randn(d0, d1, ..., dn)

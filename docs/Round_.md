@@ -1,10 +1,10 @@
-[[/Round_]] -- 
+[[/Round_]]
 
 ~~~
 Syntax
 ------
 
-  numpy round_ <matrix> decimals=<int>
+numpy round_ <matrix> decimals=<int>
 
 
     Round an array to the given number of decimals.

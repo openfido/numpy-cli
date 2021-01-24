@@ -1,10 +1,10 @@
-[[/Linalg/Cholesky]] -- 
+[[/Linalg/Cholesky]]
 
 ~~~
 Syntax
 ------
 
-  numpy cholesky <matrix>
+numpy cholesky <matrix>
 
 
     Cholesky decomposition.

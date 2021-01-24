@@ -1,10 +1,10 @@
-[[/Angle]] -- 
+[[/Angle]]
 
 ~~~
 Syntax
 ------
 
-  numpy angle <matrix> deg=<bool>
+numpy angle <matrix> deg=<bool>
 
 
     Return the angle of the complex argument.

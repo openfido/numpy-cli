@@ -1,10 +1,10 @@
-[[/Matrix/Sort]] --     Sort an array in-place. Refer to `numpy.sort` for full documentation.
+[[/Matrix/Sort]]
 
 ~~~
 Syntax
 ------
 
-  numpy sort <matrix>
+numpy sort <matrix>
 
 a.sort(axis=-1, kind=None, order=None)
 

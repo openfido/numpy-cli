@@ -1,10 +1,10 @@
-[[/Random/Random]] -- 
+[[/Random/Random]]
 
 ~~~
 Syntax
 ------
 
-  numpy random size=<intlist>
+numpy random size=<intlist>
 
 
         random(size=None)

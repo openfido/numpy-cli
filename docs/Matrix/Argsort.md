@@ -1,10 +1,10 @@
-[[/Matrix/Argsort]] --     Returns the indices that would sort this array.
+[[/Matrix/Argsort]]
 
 ~~~
 Syntax
 ------
 
-  numpy argsort <matrix> axis=<int> kind=<str> order=<intlist>
+numpy argsort <matrix> axis=<int> kind=<str> order=<intlist>
 
 a.argsort(axis=-1, kind=None, order=None)
 

@@ -1,10 +1,10 @@
-[[/Matrix/Round]] --     Return `a` with each element rounded to the given number of decimals.
+[[/Matrix/Round]]
 
 ~~~
 Syntax
 ------
 
-  numpy round <matrix>
+numpy round <matrix>
 
 a.round(decimals=0, out=None)
 

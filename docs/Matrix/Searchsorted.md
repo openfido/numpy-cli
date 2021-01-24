@@ -1,10 +1,10 @@
-[[/Matrix/Searchsorted]] --     Find indices where elements of v should be inserted in a to maintain order.
+[[/Matrix/Searchsorted]]
 
 ~~~
 Syntax
 ------
 
-  numpy searchsorted <matrix>
+numpy searchsorted <matrix>
 
 a.searchsorted(v, side='left', sorter=None)
 

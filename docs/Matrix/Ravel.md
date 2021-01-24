@@ -1,10 +1,10 @@
-[[/Matrix/Ravel]] -- 
+[[/Matrix/Ravel]]
 
 ~~~
 Syntax
 ------
 
-  numpy ravel <matrix>
+numpy ravel <matrix>
 
 
         Return a flattened matrix.

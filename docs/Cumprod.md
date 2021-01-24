@@ -1,10 +1,10 @@
-[[/Cumprod]] -- 
+[[/Cumprod]]
 
 ~~~
 Syntax
 ------
 
-  numpy cumprod <matrix> [axis=<intlist>] [dtype=<str>]
+numpy cumprod <matrix> [axis=<intlist>] [dtype=<str>]
 
 
     Return the cumulative product of elements along a given axis.

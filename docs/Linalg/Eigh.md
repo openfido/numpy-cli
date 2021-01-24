@@ -1,10 +1,10 @@
-[[/Linalg/Eigh]] --     (conjugate symmetric) or a real symmetric matrix.
+[[/Linalg/Eigh]]
 
 ~~~
 Syntax
 ------
 
-  numpy eigh <matrix> UPLO=<str>
+numpy eigh <matrix> UPLO=<str>
 
 
     Return the eigenvalues and eigenvectors of a complex Hermitian

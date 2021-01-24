@@ -1,10 +1,10 @@
-[[/Matrix/Clip]] --     Return an array whose values are limited to ``[min, max]``.
+[[/Matrix/Clip]]
 
 ~~~
 Syntax
 ------
 
-  numpy clip <matrix> min=<float> max=<float> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
+numpy clip <matrix> min=<float> max=<float> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 a.clip(min=None, max=None, out=None, **kwargs)
 

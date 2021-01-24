@@ -1,10 +1,10 @@
-[[/Matrix/Put]] --     Set ``a.flat[n] = values[n]`` for all `n` in indices.
+[[/Matrix/Put]]
 
 ~~~
 Syntax
 ------
 
-  numpy put <matrix>
+numpy put <matrix>
 
 a.put(indices, values, mode='raise')
 

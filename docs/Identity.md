@@ -1,10 +1,10 @@
-[[/Identity]] -- 
+[[/Identity]]
 
 ~~~
 Syntax
 ------
 
-  numpy identity <int> dtype=<str>
+numpy identity <int> dtype=<str>
 
 
     Return the identity array.

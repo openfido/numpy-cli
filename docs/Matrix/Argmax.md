@@ -1,10 +1,10 @@
-[[/Matrix/Argmax]] -- 
+[[/Matrix/Argmax]]
 
 ~~~
 Syntax
 ------
 
-  numpy argmax <matrix> axis=<int>
+numpy argmax <matrix> axis=<int>
 
 
         Indexes of the maximum values along an axis.

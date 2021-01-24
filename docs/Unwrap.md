@@ -1,10 +1,10 @@
-[[/Unwrap]] -- 
+[[/Unwrap]]
 
 ~~~
 Syntax
 ------
 
-  numpy unwrap <matrix> discont=<float> axis=<int>
+numpy unwrap <matrix> discont=<float> axis=<int>
 
 
     Unwrap by changing deltas between values to 2*pi complement.

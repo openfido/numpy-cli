@@ -1,10 +1,10 @@
-[[/Matrix/Flatten]] -- 
+[[/Matrix/Flatten]]
 
 ~~~
 Syntax
 ------
 
-  numpy flatten <matrix>
+numpy flatten <matrix>
 
 
         Return a flattened copy of the matrix.

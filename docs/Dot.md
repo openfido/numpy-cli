@@ -1,10 +1,10 @@
-[[/Dot]] -- 
+[[/Dot]]
 
 ~~~
 Syntax
 ------
 
-  numpy dot <matrix> <matrix>
+numpy dot <matrix> <matrix>
 
 
     dot(a, b, out=None)

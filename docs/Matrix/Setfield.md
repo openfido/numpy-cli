@@ -1,10 +1,10 @@
-[[/Matrix/Setfield]] --     Put a value into a specified place in a field defined by a data-type.
+[[/Matrix/Setfield]]
 
 ~~~
 Syntax
 ------
 
-  numpy setfield <matrix>
+numpy setfield <matrix>
 
 a.setfield(val, dtype, offset=0)
 

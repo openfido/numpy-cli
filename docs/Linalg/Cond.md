@@ -1,10 +1,10 @@
-[[/Linalg/Cond]] -- 
+[[/Linalg/Cond]]
 
 ~~~
 Syntax
 ------
 
-  numpy cond <matrix> p=<order>
+numpy cond <matrix> p=<order>
 
 
     Compute the condition number of a matrix.

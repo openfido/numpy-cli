@@ -1,10 +1,10 @@
-[[/Linalg/Svd]] -- 
+[[/Linalg/Svd]]
 
 ~~~
 Syntax
 ------
 
-  numpy svd <matrix> full_matrices=<bool> compute_uv=<bool> hermitian=<bool>
+numpy svd <matrix> full_matrices=<bool> compute_uv=<bool> hermitian=<bool>
 
 
     Singular Value Decomposition.

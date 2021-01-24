@@ -1,10 +1,10 @@
-[[/Matrix/Take]] --     Return an array formed from the elements of `a` at the given indices.
+[[/Matrix/Take]]
 
 ~~~
 Syntax
 ------
 
-  numpy take <matrix>
+numpy take <matrix>
 
 a.take(indices, axis=None, out=None, mode='raise')
 

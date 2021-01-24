@@ -1,10 +1,10 @@
-[[/Matrix/Max]] -- 
+[[/Matrix/Max]]
 
 ~~~
 Syntax
 ------
 
-  numpy max <matrix>
+numpy max <matrix>
 
 
         Return the maximum value along an axis.

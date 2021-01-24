@@ -1,10 +1,10 @@
-[[/Eye]] -- 
+[[/Eye]]
 
 ~~~
 Syntax
 ------
 
-  numpy eye <int> M=<int> k=<int> dtype=<str> order=<str>
+numpy eye <int> M=<int> k=<int> dtype=<str> order=<str>
 
 
     Return a 2-D array with ones on the diagonal and zeros elsewhere.

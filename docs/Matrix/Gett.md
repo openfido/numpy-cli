@@ -1,10 +1,10 @@
-[[/Matrix/Gett]] -- 
+[[/Matrix/Gett]]
 
 ~~~
 Syntax
 ------
 
-  numpy getT <matrix>
+numpy getT <matrix>
 
 
         Returns the transpose of the matrix.

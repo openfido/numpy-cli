@@ -1,10 +1,10 @@
-[[/Matrix/Repeat]] --     Repeat elements of an array.
+[[/Matrix/Repeat]]
 
 ~~~
 Syntax
 ------
 
-  numpy repeat <matrix>
+numpy repeat <matrix>
 
 a.repeat(repeats, axis=None)
 

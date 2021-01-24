@@ -1,10 +1,10 @@
-[[/Linalg/Inv]] -- 
+[[/Linalg/Inv]]
 
 ~~~
 Syntax
 ------
 
-  numpy inv <matrix>
+numpy inv <matrix>
 
 
     Compute the (multiplicative) inverse of a matrix.

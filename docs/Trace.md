@@ -1,10 +1,10 @@
-[[/Trace]] -- 
+[[/Trace]]
 
 ~~~
 Syntax
 ------
 
-  numpy trace <matrix> offset=<int> axis=<int> dtype=<str>
+numpy trace <matrix> offset=<int> axis=<int> dtype=<str>
 
 
     Return the sum along diagonals of the array.

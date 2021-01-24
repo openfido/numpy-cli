@@ -1,10 +1,10 @@
-[[/Matrix/Any]] -- 
+[[/Matrix/Any]]
 
 ~~~
 Syntax
 ------
 
-  numpy any <matrix> axis=<int>
+numpy any <matrix> axis=<int>
 
 
         Test whether any array element along a given axis evaluates to True.

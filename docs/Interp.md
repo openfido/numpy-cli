@@ -1,10 +1,10 @@
-[[/Interp]] -- 
+[[/Interp]]
 
 ~~~
 Syntax
 ------
 
-  numpy interp <array> <array> <array> left=<complex> right=<complex> period=<complex>
+numpy interp <array> <array> <array> left=<complex> right=<complex> period=<complex>
 
 
     One-dimensional linear interpolation.

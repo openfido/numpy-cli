@@ -1,10 +1,10 @@
-[[/Matrix/Transpose]] --     Returns a view of the array with axes transposed.
+[[/Matrix/Transpose]]
 
 ~~~
 Syntax
 ------
 
-  numpy transpose <matrix>
+numpy transpose <matrix>
 
 a.transpose(*axes)
 

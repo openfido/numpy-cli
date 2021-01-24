@@ -1,10 +1,10 @@
-[[/Matrix/Choose]] --     Use an index array to construct a new array from a set of choices.
+[[/Matrix/Choose]]
 
 ~~~
 Syntax
 ------
 
-  numpy choose <matrix> <intlist> mode=<str>
+numpy choose <matrix> <intlist> mode=<str>
 
 a.choose(choices, out=None, mode='raise')
 

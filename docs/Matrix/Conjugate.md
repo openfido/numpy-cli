@@ -1,10 +1,10 @@
-[[/Matrix/Conjugate]] --     Return the complex conjugate, element-wise.
+[[/Matrix/Conjugate]]
 
 ~~~
 Syntax
 ------
 
-  numpy conjugate <matrix>
+numpy conjugate <matrix>
 
 a.conjugate()
 

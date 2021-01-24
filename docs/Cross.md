@@ -1,10 +1,10 @@
-[[/Cross]] -- 
+[[/Cross]]
 
 ~~~
 Syntax
 ------
 
-  numpy cross <matrix> <matrix> axisa=<int> axisb=<int> axisc=<int> axis=<int>
+numpy cross <matrix> <matrix> axisa=<int> axisb=<int> axisc=<int> axis=<int>
 
 
     Return the cross product of two (arrays of) vectors.

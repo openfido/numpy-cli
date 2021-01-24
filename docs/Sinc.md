@@ -1,10 +1,10 @@
-[[/Sinc]] -- 
+[[/Sinc]]
 
 ~~~
 Syntax
 ------
 
-  numpy sinc <matrix>
+numpy sinc <matrix>
 
 
     Return the sinc function.

@@ -1,10 +1,10 @@
-[[/Matrix/Item]] --     Copy an element of an array to a standard Python scalar and return it.
+[[/Matrix/Item]]
 
 ~~~
 Syntax
 ------
 
-  numpy item <matrix>
+numpy item <matrix>
 
 a.item(*args)
 

@@ -1,10 +1,10 @@
-[[/Matrix/Itemset]] --     Insert scalar into an array (scalar is cast to array's dtype, if possible)
+[[/Matrix/Itemset]]
 
 ~~~
 Syntax
 ------
 
-  numpy itemset <matrix>
+numpy itemset <matrix>
 
 a.itemset(*args)
 

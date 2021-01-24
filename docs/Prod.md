@@ -1,10 +1,10 @@
-[[/Prod]] -- 
+[[/Prod]]
 
 ~~~
 Syntax
 ------
 
-  numpy prod <matrix> initial=<float> [axis=<intlist>] [dtype=<str>] [keepdims=<bool>] [where=<boollist>]
+numpy prod <matrix> initial=<float> [axis=<intlist>] [dtype=<str>] [keepdims=<bool>] [where=<boollist>]
 
 
     Return the product of array elements over a given axis.

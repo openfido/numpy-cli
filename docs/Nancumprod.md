@@ -1,10 +1,10 @@
-[[/Nancumprod]] --     Numbers (NaNs) as one.  The cumulative product does not change when NaNs are
+[[/Nancumprod]]
 
 ~~~
 Syntax
 ------
 
-  numpy nancumprod <matrix> [axis=<intlist>] [dtype=<str>]
+numpy nancumprod <matrix> [axis=<intlist>] [dtype=<str>]
 
 
     Return the cumulative product of array elements over a given axis treating Not a

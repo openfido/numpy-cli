@@ -1,10 +1,10 @@
-[[/Linalg/Matrix_Rank]] -- 
+[[/Linalg/Matrix_Rank]]
 
 ~~~
 Syntax
 ------
 
-  numpy matrix_rank <matrix>
+numpy matrix_rank <matrix>
 
 
     Return matrix rank of array using SVD method

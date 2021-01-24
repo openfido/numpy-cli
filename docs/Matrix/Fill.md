@@ -1,10 +1,10 @@
-[[/Matrix/Fill]] --     Fill the array with a scalar value.
+[[/Matrix/Fill]]
 
 ~~~
 Syntax
 ------
 
-  numpy fill <matrix>
+numpy fill <matrix>
 
 a.fill(value)
 

@@ -1,10 +1,10 @@
-[[/Random/Ranf]] --     documentation.
+[[/Random/Ranf]]
 
 ~~~
 Syntax
 ------
 
-  numpy ranf size=<intlist>
+numpy ranf size=<intlist>
 
 
     This is an alias of `random_sample`. See `random_sample`  for the complete

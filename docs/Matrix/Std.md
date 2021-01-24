@@ -1,10 +1,10 @@
-[[/Matrix/Std]] -- 
+[[/Matrix/Std]]
 
 ~~~
 Syntax
 ------
 
-  numpy std <matrix>
+numpy std <matrix>
 
 
         Return the standard deviation of the array elements along the given axis.

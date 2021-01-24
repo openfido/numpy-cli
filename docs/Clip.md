@@ -1,10 +1,10 @@
-[[/Clip]] -- 
+[[/Clip]]
 
 ~~~
 Syntax
 ------
 
-  numpy clip <matrix> a_min=<matrix> a_max=<matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
+numpy clip <matrix> a_min=<matrix> a_max=<matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 
     Clip (limit) the values in an array.

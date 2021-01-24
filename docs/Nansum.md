@@ -1,10 +1,10 @@
-[[/Nansum]] --     Numbers (NaNs) as zero.
+[[/Nansum]]
 
 ~~~
 Syntax
 ------
 
-  numpy nansum <matrix> initial=<float> [axis=<intlist>] [dtype=<str>] [keepdims=<bool>] [where=<boollist>]
+numpy nansum <matrix> initial=<float> [axis=<intlist>] [dtype=<str>] [keepdims=<bool>] [where=<boollist>]
 
 
     Return the sum of array elements over a given axis treating Not a

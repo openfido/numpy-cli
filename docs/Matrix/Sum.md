@@ -1,10 +1,10 @@
-[[/Matrix/Sum]] -- 
+[[/Matrix/Sum]]
 
 ~~~
 Syntax
 ------
 
-  numpy sum <matrix>
+numpy sum <matrix>
 
 
         Returns the sum of the matrix elements, along the given axis.

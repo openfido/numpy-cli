@@ -1,10 +1,10 @@
-[[/Matrix/Astype]] --     Copy of the array, cast to a specified type.
+[[/Matrix/Astype]]
 
 ~~~
 Syntax
 ------
 
-  numpy astype <matrix> order=<str> casting=<str> subok=<bool>
+numpy astype <matrix> order=<str> casting=<str> subok=<bool>
 
 a.astype(dtype, order='K', casting='unsafe', subok=True, copy=True)
 

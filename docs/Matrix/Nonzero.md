@@ -1,10 +1,10 @@
-[[/Matrix/Nonzero]] --     Return the indices of the elements that are non-zero.
+[[/Matrix/Nonzero]]
 
 ~~~
 Syntax
 ------
 
-  numpy nonzero <matrix>
+numpy nonzero <matrix>
 
 a.nonzero()
 

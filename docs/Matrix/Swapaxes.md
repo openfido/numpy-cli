@@ -1,10 +1,10 @@
-[[/Matrix/Swapaxes]] --     Return a view of the array with `axis1` and `axis2` interchanged.
+[[/Matrix/Swapaxes]]
 
 ~~~
 Syntax
 ------
 
-  numpy swapaxes <matrix>
+numpy swapaxes <matrix>
 
 a.swapaxes(axis1, axis2)
 

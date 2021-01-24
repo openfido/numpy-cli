@@ -1,10 +1,10 @@
-[[/Matrix/Min]] -- 
+[[/Matrix/Min]]
 
 ~~~
 Syntax
 ------
 
-  numpy min <matrix>
+numpy min <matrix>
 
 
         Return the minimum value along an axis.

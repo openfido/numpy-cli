@@ -1,10 +1,10 @@
-[[/Matrix/Dot]] --     Dot product of two arrays.
+[[/Matrix/Dot]]
 
 ~~~
 Syntax
 ------
 
-  numpy dot <matrix>
+numpy dot <matrix>
 
 a.dot(b, out=None)
 

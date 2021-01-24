@@ -1,10 +1,10 @@
-[[/Matrix/All]] -- 
+[[/Matrix/All]]
 
 ~~~
 Syntax
 ------
 
-  numpy all <matrix> axis=<int>
+numpy all <matrix> axis=<int>
 
 
         Test whether all matrix elements along a given axis evaluate to True.

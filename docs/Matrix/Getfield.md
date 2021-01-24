@@ -1,10 +1,10 @@
-[[/Matrix/Getfield]] --     Returns a field of the given array as a certain type.
+[[/Matrix/Getfield]]
 
 ~~~
 Syntax
 ------
 
-  numpy getfield <matrix>
+numpy getfield <matrix>
 
 a.getfield(dtype, offset=0)
 

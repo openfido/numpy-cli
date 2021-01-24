@@ -1,10 +1,10 @@
-[[/Imag]] -- 
+[[/Imag]]
 
 ~~~
 Syntax
 ------
 
-  numpy imag <matrix>
+numpy imag <matrix>
 
 
     Return the imaginary part of the complex argument.

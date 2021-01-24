@@ -1,10 +1,10 @@
-[[/Linalg/Eig]] -- 
+[[/Linalg/Eig]]
 
 ~~~
 Syntax
 ------
 
-  numpy eig <matrix>
+numpy eig <matrix>
 
 
     Compute the eigenvalues and right eigenvectors of a square array.

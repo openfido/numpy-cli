@@ -1,10 +1,10 @@
-[[/Matrix/Conj]] --     Complex-conjugate all elements.
+[[/Matrix/Conj]]
 
 ~~~
 Syntax
 ------
 
-  numpy conj <matrix>
+numpy conj <matrix>
 
 a.conj()
 

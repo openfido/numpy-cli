@@ -1,10 +1,10 @@
-[[/Real_If_Close]] --     real parts.
+[[/Real_If_Close]]
 
 ~~~
 Syntax
 ------
 
-  numpy real_if_close <matrix> tol=<float>
+numpy real_if_close <matrix> tol=<float>
 
 
     If input is complex with all imaginary parts close to zero, return 

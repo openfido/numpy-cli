@@ -1,10 +1,10 @@
-[[/Matrix/Diagonal]] --     Return specified diagonals. In NumPy 1.9 the returned array is a
+[[/Matrix/Diagonal]]
 
 ~~~
 Syntax
 ------
 
-  numpy diagonal <matrix>
+numpy diagonal <matrix>
 
 a.diagonal(offset=0, axis1=0, axis2=1)
 

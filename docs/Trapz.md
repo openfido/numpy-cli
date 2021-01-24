@@ -1,10 +1,10 @@
-[[/Trapz]] -- 
+[[/Trapz]]
 
 ~~~
 Syntax
 ------
 
-  numpy trapz <matrix> x=<matrix> dx=<float> axis=<int>
+numpy trapz <matrix> x=<matrix> dx=<float> axis=<int>
 
 
     Integrate along the given axis using the composite trapezoidal rule.

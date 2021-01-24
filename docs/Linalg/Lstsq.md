@@ -1,10 +1,10 @@
-[[/Linalg/Lstsq]] -- 
+[[/Linalg/Lstsq]]
 
 ~~~
 Syntax
 ------
 
-  numpy lstsq <matrix> <matrix> rcond=<float>
+numpy lstsq <matrix> <matrix> rcond=<float>
 
 
     Return the least-squares solution to a linear matrix equation.

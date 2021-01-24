@@ -1,10 +1,10 @@
-[[/Matrix/Reshape]] --     Returns an array containing the same data with a new shape.
+[[/Matrix/Reshape]]
 
 ~~~
 Syntax
 ------
 
-  numpy reshape <matrix>
+numpy reshape <matrix>
 
 a.reshape(shape, order='C')
 

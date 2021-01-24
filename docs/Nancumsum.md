@@ -1,10 +1,10 @@
-[[/Nancumsum]] --     Numbers (NaNs) as zero.  The cumulative sum does not change when NaNs are
+[[/Nancumsum]]
 
 ~~~
 Syntax
 ------
 
-  numpy nancumsum <matrix> [axis=<intlist>] [dtype=<str>]
+numpy nancumsum <matrix> [axis=<intlist>] [dtype=<str>]
 
 
     Return the cumulative sum of array elements over a given axis treating Not a

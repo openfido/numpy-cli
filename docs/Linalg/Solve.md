@@ -1,10 +1,10 @@
-[[/Linalg/Solve]] -- 
+[[/Linalg/Solve]]
 
 ~~~
 Syntax
 ------
 
-  numpy solve <matrix> <matrix>
+numpy solve <matrix> <matrix>
 
 
     Solve a linear matrix equation, or system of linear scalar equations.

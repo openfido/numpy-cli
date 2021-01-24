@@ -1,10 +1,10 @@
-[[/Matlib/Randn]] -- 
+[[/Matlib/Randn]]
 
 ~~~
 Syntax
 ------
 
-  numpy randn <intlist_args>
+numpy randn <intlist_args>
 
 
     Return a random matrix with data from the "standard normal" distribution.

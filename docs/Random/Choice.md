@@ -1,10 +1,10 @@
-[[/Random/Choice]] -- 
+[[/Random/Choice]]
 
 ~~~
 Syntax
 ------
 
-  numpy choice <arrayorint> size=<intlist> replace=<bool> p=<array>
+numpy choice <arrayorint> size=<intlist> replace=<bool> p=<array>
 
 
         choice(a, size=None, replace=True, p=None)

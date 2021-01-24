@@ -1,10 +1,10 @@
-[[/Linalg/Norm]] -- 
+[[/Linalg/Norm]]
 
 ~~~
 Syntax
 ------
 
-  numpy norm <matrix> ord=<order> axis=<int> keepdims=<bool>
+numpy norm <matrix> ord=<order> axis=<int> keepdims=<bool>
 
 
     Matrix or vector norm.

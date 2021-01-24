@@ -1,10 +1,10 @@
-[[/Convolve]] -- 
+[[/Convolve]]
 
 ~~~
 Syntax
 ------
 
-  numpy convolve <array> <array> mode=<str>
+numpy convolve <array> <array> mode=<str>
 
 
     Returns the discrete, linear convolution of two one-dimensional sequences.

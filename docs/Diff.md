@@ -1,10 +1,10 @@
-[[/Diff]] -- 
+[[/Diff]]
 
 ~~~
 Syntax
 ------
 
-  numpy diff <matrix> n=<int> prepend=<matrix> append=<matrix> [axis=<intlist>]
+numpy diff <matrix> n=<int> prepend=<matrix> append=<matrix> [axis=<intlist>]
 
 
     Calculate the n-th discrete difference along the given axis.

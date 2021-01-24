@@ -1,10 +1,10 @@
-[[/Linalg/Qr]] -- 
+[[/Linalg/Qr]]
 
 ~~~
 Syntax
 ------
 
-  numpy qr <matrix> mode=<str>
+numpy qr <matrix> mode=<str>
 
 
     Compute the qr factorization of a matrix.

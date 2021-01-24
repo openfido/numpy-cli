@@ -1,10 +1,10 @@
-[[/Cumsum]] -- 
+[[/Cumsum]]
 
 ~~~
 Syntax
 ------
 
-  numpy cumsum <matrix> [axis=<intlist>] [dtype=<str>]
+numpy cumsum <matrix> [axis=<intlist>] [dtype=<str>]
 
 
     Return the cumulative sum of the elements along a given axis.

@@ -1076,11 +1076,6 @@ def makedocs():
 			call = getattr(lib,specs[-1])
 			NL="\n"
 			docs = call.__doc__.split(NL)
-			indent = len(docs[0]) - len(docs[0].lstrip())
-			for line in docs:
-				line = line[indent:]
-			fh.write(f"[[{path}/{name}]] -- {docs[2]}")
-			fh.write("\n\n~~~\n")
 			fspecs = functions[function]
 			args = []
 			for tag, value in fspecs.items():
@@ -1098,7 +1093,6 @@ def makedocs():
 					args.append(f"{tag}=<{value.__name__}>")
 				else:
 					args.append(f"[{tag}=<{str(value)}>]")
-			fh.write(f"Syntax\n------\n\n  numpy {specs[-1]} {' '.join(args)}\n\n")
 			try:
 				parameters = docs.index("Parameters")
 			except:
@@ -1107,6 +1101,13 @@ def makedocs():
 				examples = docs.index("Examples")
 			except:
 				examples = -1
+			if parameters > 0:
+				fh.write(f"[[{path}/{name}]] -- {docs[2]}")
+			else:
+				fh.write(f"[[{path}/{name}]]")				
+			fh.write("\n\n~~~\n")
+			fh.write(f"Syntax\n------\n\n")
+			fh.write(f"numpy {specs[-1]} {' '.join(args)}\n\n")
 			fh.write("\n".join(docs[parameters:examples]))
 			fh.write("\n~~~\n")
 

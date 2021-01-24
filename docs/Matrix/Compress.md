@@ -1,10 +1,10 @@
-[[/Matrix/Compress]] --     Return selected slices of this array along given axis.
+[[/Matrix/Compress]]
 
 ~~~
 Syntax
 ------
 
-  numpy compress <matrix>
+numpy compress <matrix>
 
 a.compress(condition, axis=None, out=None)
 

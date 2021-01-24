@@ -1,10 +1,10 @@
-[[/Matrix/Argmin]] -- 
+[[/Matrix/Argmin]]
 
 ~~~
 Syntax
 ------
 
-  numpy argmin <matrix> axis=<int>
+numpy argmin <matrix> axis=<int>
 
 
         Indexes of the minimum values along an axis.

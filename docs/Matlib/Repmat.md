@@ -1,10 +1,10 @@
-[[/Matlib/Repmat]] -- 
+[[/Matlib/Repmat]]
 
 ~~~
 Syntax
 ------
 
-  numpy repmat <matrix> <int> <int>
+numpy repmat <matrix> <int> <int>
 
 
     Repeat a 0-D to 2-D array or matrix MxN times.

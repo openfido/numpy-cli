@@ -1,10 +1,10 @@
-[[/Linalg/Eigvalsh]] -- 
+[[/Linalg/Eigvalsh]]
 
 ~~~
 Syntax
 ------
 
-  numpy eigvalsh <matrix> UPLO=<str>
+numpy eigvalsh <matrix> UPLO=<str>
 
 
     Compute the eigenvalues of a complex Hermitian or real symmetric matrix.

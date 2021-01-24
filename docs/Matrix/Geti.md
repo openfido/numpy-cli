@@ -1,10 +1,10 @@
-[[/Matrix/Geti]] -- 
+[[/Matrix/Geti]]
 
 ~~~
 Syntax
 ------
 
-  numpy getI <matrix>
+numpy getI <matrix>
 
 
         Returns the (multiplicative) inverse of invertible `self`.

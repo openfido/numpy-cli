@@ -1,10 +1,10 @@
-[[/Matrix/Var]] -- 
+[[/Matrix/Var]]
 
 ~~~
 Syntax
 ------
 
-  numpy var <matrix>
+numpy var <matrix>
 
 
         Returns the variance of the matrix elements, along the given axis.

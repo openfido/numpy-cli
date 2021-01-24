@@ -1,10 +1,10 @@
-[[/Matrix/Ptp]] -- 
+[[/Matrix/Ptp]]
 
 ~~~
 Syntax
 ------
 
-  numpy ptp <matrix>
+numpy ptp <matrix>
 
 
         Peak-to-peak (maximum - minimum) value along the given axis.
