@@ -1066,7 +1066,8 @@ def makedocs():
 		specs = function.split(".")
 		path = "/".join(list(map(lambda n:n.title(),specs[0:-1])))
 		if len(specs) > 1:
-			os.makedirs("docs/"+path.title(),exist_ok=True)
+			path = "/" + path
+			os.makedirs("docs"+path.title(),exist_ok=True)
 		name = specs[-1].title()
 		with open(f"docs{path}/{name}.md","w") as fh:
 			lib = numpy
