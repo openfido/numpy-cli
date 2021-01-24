@@ -1,18 +1,10 @@
-[[//Hypot]]
+[[/Hypot]] -- Given the "legs" of a right triangle, return its hypotenuse.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Hypot [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-hypot(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Given the "legs" of a right triangle, return its hypotenuse.
-
-Equivalent to ``sqrt(x1**2 + x2**2)``, element-wise.  If `x1` or
-`x2` is scalar_like (i.e., unambiguously cast-able to a scalar type),
-it is broadcast for use with each element of the other argument.
-(See Examples)
+  numpy hypot <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -42,17 +34,4 @@ z : ndarray
     The hypotenuse of the triangle(s).
     This is a scalar if both `x1` and `x2` are scalars.
 
-Examples
---------
->>> np.hypot(3*np.ones((3, 3)), 4*np.ones((3, 3)))
-array([[ 5.,  5.,  5.],
-       [ 5.,  5.,  5.],
-       [ 5.,  5.,  5.]])
-
-Example showing broadcast of scalar_like argument:
-
->>> np.hypot(3*np.ones((3, 3)), [4])
-array([[ 5.,  5.,  5.],
-       [ 5.,  5.,  5.],
-       [ 5.,  5.,  5.]])
 ~~~

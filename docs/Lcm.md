@@ -1,13 +1,10 @@
-[[//Lcm]]
+[[/Lcm]] -- Returns the lowest common multiple of ``|x1|`` and ``|x2|``
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Lcm [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-lcm(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Returns the lowest common multiple of ``|x1|`` and ``|x2|``
+  numpy lcm <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -26,14 +23,4 @@ See Also
 --------
 gcd : The greatest common divisor
 
-Examples
---------
->>> np.lcm(12, 20)
-60
->>> np.lcm.reduce([3, 12, 20])
-60
->>> np.lcm.reduce([40, 12, 20])
-120
->>> np.lcm(np.arange(6), 20)
-array([ 0, 20, 20, 60, 20, 20])
 ~~~

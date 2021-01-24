@@ -1,9 +1,10 @@
-[[//Trace]]
+[[/Trace]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Trace [<function matrix at 0x10222a7a0>]
+  numpy trace <matrix> offset=<int> axis=<int> dtype=<str>
 
 
     Return the sum along diagonals of the array.
@@ -59,5 +60,4 @@ Syntax:
     >>> np.trace(a).shape
     (2, 3)
 
-    
 ~~~

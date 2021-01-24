@@ -1,13 +1,10 @@
-[[//Multiply]]
+[[/Multiply]] -- Multiply arguments element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Multiply [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-multiply(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Multiply arguments element-wise.
+  numpy multiply <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -41,15 +38,4 @@ Notes
 -----
 Equivalent to `x1` * `x2` in terms of array broadcasting.
 
-Examples
---------
->>> np.multiply(2.0, 4.0)
-8.0
-
->>> x1 = np.arange(9.0).reshape((3, 3))
->>> x2 = np.arange(3.0)
->>> np.multiply(x1, x2)
-array([[  0.,   1.,   4.],
-       [  0.,   4.,  10.],
-       [  0.,   7.,  16.]])
 ~~~

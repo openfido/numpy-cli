@@ -1,15 +1,10 @@
-[[//Cbrt]]
+[[/Cbrt]] -- Return the cube-root of an array, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Cbrt [<function matrix at 0x10222a7a0>]
-
-cbrt(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Return the cube-root of an array, element-wise.
-
-.. versionadded:: 1.10.0
+  numpy cbrt <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -40,8 +35,4 @@ y : ndarray
     This is a scalar if `x` is a scalar.
 
 
-Examples
---------
->>> np.cbrt([1,8,27])
-array([ 1.,  2.,  3.])
 ~~~

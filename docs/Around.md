@@ -1,9 +1,10 @@
-[[//Around]]
+[[/Around]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Around [<function matrix at 0x10222a7a0>]
+  numpy around <matrix> decimals=<int>
 
 
     Evenly round to the given number of decimals.
@@ -96,5 +97,4 @@ Syntax:
     >>> np.around([1,2,3,11], decimals=-1)
     array([ 0,  0,  0, 10])
 
-    
 ~~~

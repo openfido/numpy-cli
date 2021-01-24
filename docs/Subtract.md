@@ -1,13 +1,10 @@
-[[//Subtract]]
+[[/Subtract]] -- Subtract arguments, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Subtract [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-subtract(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Subtract arguments, element-wise.
+  numpy subtract <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -41,15 +38,4 @@ Notes
 -----
 Equivalent to ``x1 - x2`` in terms of array broadcasting.
 
-Examples
---------
->>> np.subtract(1.0, 4.0)
--3.0
-
->>> x1 = np.arange(9.0).reshape((3, 3))
->>> x2 = np.arange(3.0)
->>> np.subtract(x1, x2)
-array([[ 0.,  0.,  0.],
-       [ 3.,  3.,  3.],
-       [ 6.,  6.,  6.]])
 ~~~

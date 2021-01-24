@@ -1,13 +1,10 @@
-[[//Negative]]
+[[/Negative]] -- Numerical negative, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Negative [<function matrix at 0x10222a7a0>]
-
-negative(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Numerical negative, element-wise.
+  numpy negative <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -35,8 +32,4 @@ y : ndarray or scalar
     Returned array or scalar: `y = -x`.
     This is a scalar if `x` is a scalar.
 
-Examples
---------
->>> np.negative([1.,-1.])
-array([-1.,  1.])
 ~~~

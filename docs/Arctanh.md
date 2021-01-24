@@ -1,13 +1,10 @@
-[[//Arctanh]]
+[[/Arctanh]] -- Inverse hyperbolic tangent element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Arctanh [<function matrix at 0x10222a7a0>]
-
-arctanh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Inverse hyperbolic tangent element-wise.
+  numpy arctanh <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -62,8 +59,4 @@ References
 .. [2] Wikipedia, "Inverse hyperbolic function",
        https://en.wikipedia.org/wiki/Arctanh
 
-Examples
---------
->>> np.arctanh([0, -0.5])
-array([ 0.        , -0.54930614])
 ~~~

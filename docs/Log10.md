@@ -1,13 +1,10 @@
-[[//Log10]]
+[[/Log10]] -- Return the base 10 logarithm of the input array, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Log10 [<function matrix at 0x10222a7a0>]
-
-log10(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Return the base 10 logarithm of the input array, element-wise.
+  numpy log10 <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -61,8 +58,4 @@ References
        10th printing, 1964, pp. 67. http://www.math.sfu.ca/~cbm/aands/
 .. [2] Wikipedia, "Logarithm". https://en.wikipedia.org/wiki/Logarithm
 
-Examples
---------
->>> np.log10([1e-15, -3.])
-array([-15.,  nan])
 ~~~

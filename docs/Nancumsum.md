@@ -1,9 +1,10 @@
-[[//Nancumsum]]
+[[/Nancumsum]] --     Numbers (NaNs) as zero.  The cumulative sum does not change when NaNs are
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Nancumsum [<function matrix at 0x10222a7a0>]
+  numpy nancumsum <matrix> [axis=<intlist>] [dtype=<str>]
 
 
     Return the cumulative sum of array elements over a given axis treating Not a
@@ -64,5 +65,4 @@ Syntax:
     array([[1.,  3.],
            [3.,  3.]])
 
-    
 ~~~

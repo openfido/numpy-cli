@@ -1,15 +1,10 @@
-[[//Cosh]]
+[[/Cosh]] -- Hyperbolic cosine, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Cosh [<function matrix at 0x10222a7a0>]
-
-cosh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Hyperbolic cosine, element-wise.
-
-Equivalent to ``1/2 * (np.exp(x) + np.exp(-x))`` and ``np.cos(1j*x)``.
+  numpy cosh <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -37,15 +32,4 @@ out : ndarray or scalar
     Output array of same shape as `x`.
     This is a scalar if `x` is a scalar.
 
-Examples
---------
->>> np.cosh(0)
-1.0
-
-The hyperbolic cosine describes the shape of a hanging cable:
-
->>> import matplotlib.pyplot as plt
->>> x = np.linspace(-4, 4, 1000)
->>> plt.plot(x, np.cosh(x))
->>> plt.show()
 ~~~

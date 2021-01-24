@@ -1,25 +1,10 @@
-[[//Arctan2]]
+[[/Arctan2]] -- Element-wise arc tangent of ``x1/x2`` choosing the quadrant correctly.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Arctan2 [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-arctan2(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Element-wise arc tangent of ``x1/x2`` choosing the quadrant correctly.
-
-The quadrant (i.e., branch) is chosen so that ``arctan2(x1, x2)`` is
-the signed angle in radians between the ray ending at the origin and
-passing through the point (1,0), and the ray ending at the origin and
-passing through the point (`x2`, `x1`).  (Note the role reversal: the
-"`y`-coordinate" is the first function parameter, the "`x`-coordinate"
-is the second.)  By IEEE convention, this function is defined for
-`x2` = +/-0 and for either or both of `x1` and `x2` = +/-inf (see
-Notes for specific values).
-
-This function is not defined for complex-valued arguments; for the
-so-called argument of complex values, use `angle`.
+  numpy arctan2 <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -79,21 +64,4 @@ References
 ----------
 .. [1] ISO/IEC standard 9899:1999, "Programming language C."
 
-Examples
---------
-Consider four points in different quadrants:
-
->>> x = np.array([-1, +1, +1, -1])
->>> y = np.array([-1, -1, +1, +1])
->>> np.arctan2(y, x) * 180 / np.pi
-array([-135.,  -45.,   45.,  135.])
-
-Note the order of the parameters. `arctan2` is defined also when `x2` = 0
-and at several other special points, obtaining values in
-the range ``[-pi, pi]``:
-
->>> np.arctan2([1., -1.], [0., 0.])
-array([ 1.57079633, -1.57079633])
->>> np.arctan2([0., 0., np.inf], [+0., -0., np.inf])
-array([ 0.        ,  3.14159265,  0.78539816])
 ~~~

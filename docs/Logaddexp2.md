@@ -1,19 +1,10 @@
-[[//Logaddexp2]]
+[[/Logaddexp2]] -- Logarithm of the sum of exponentiations of the inputs in base-2.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Logaddexp2 [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-logaddexp2(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Logarithm of the sum of exponentiations of the inputs in base-2.
-
-Calculates ``log2(2**x1 + 2**x2)``. This function is useful in machine
-learning when the calculated probabilities of events may be so small as
-to exceed the range of normal floating point numbers.  In such cases
-the base-2 logarithm of the calculated probability can be used instead.
-This function allows adding probabilities stored in such a fashion.
+  numpy logaddexp2 <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -51,13 +42,4 @@ Notes
 -----
 .. versionadded:: 1.3.0
 
-Examples
---------
->>> prob1 = np.log2(1e-50)
->>> prob2 = np.log2(2.5e-50)
->>> prob12 = np.logaddexp2(prob1, prob2)
->>> prob1, prob2, prob12
-(-166.09640474436813, -164.77447664948076, -164.28904982231052)
->>> 2**prob12
-3.4999999999999914e-50
 ~~~

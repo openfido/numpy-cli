@@ -1,9 +1,10 @@
-[[//Gradient]]
+[[/Gradient]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Gradient [<function matrix at 0x10222a7a0>]
+  numpy gradient <matrix> spacing=<matrix> axis=<int> edge_order=<int>
 
 
     Return the gradient of an N-dimensional array.
@@ -177,5 +178,4 @@ Syntax:
             Mathematics of Computation 51, no. 184 : 699-706.
             `PDF <http://www.ams.org/journals/mcom/1988-51-184/
             S0025-5718-1988-0935077-0/S0025-5718-1988-0935077-0.pdf>`_.
-    
 ~~~

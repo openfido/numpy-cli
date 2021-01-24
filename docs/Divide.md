@@ -1,17 +1,10 @@
-[[//Divide]]
+[[/Divide]] -- Returns a true division of the inputs, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Divide [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-true_divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Returns a true division of the inputs, element-wise.
-
-Instead of the Python traditional 'floor division', this returns a true
-division.  True division adjusts the output type to present the best
-answer, regardless of input types.
+  numpy divide <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -48,15 +41,4 @@ In Python, ``//`` is the floor division operator and ``/`` the
 true division operator.  The ``true_divide(x1, x2)`` function is
 equivalent to true division in Python.
 
-Examples
---------
->>> x = np.arange(5)
->>> np.true_divide(x, 4)
-array([ 0.  ,  0.25,  0.5 ,  0.75,  1.  ])
-
->>> x/4
-array([ 0.  ,  0.25,  0.5 ,  0.75,  1.  ])
-
->>> x//4
-array([0, 0, 0, 0, 1])
 ~~~

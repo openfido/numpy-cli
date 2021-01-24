@@ -1,15 +1,10 @@
-[[//Positive]]
+[[/Positive]] -- Numerical positive, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Positive [<function matrix at 0x10222a7a0>]
-
-positive(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Numerical positive, element-wise.
-
-.. versionadded:: 1.13.0
+  numpy positive <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -25,5 +20,4 @@ y : ndarray or scalar
 Notes
 -----
 Equivalent to `x.copy()`, but only defined for types that support
-arithmetic.
 ~~~

@@ -1,9 +1,10 @@
-[[//Nanprod]]
+[[/Nanprod]] --     Numbers (NaNs) as ones.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Nanprod [<function matrix at 0x10222a7a0>]
+  numpy nanprod <matrix> initial=<float> [axis=<intlist>] [dtype=<str>] [keepdims=<bool>] [where=<boollist>]
 
 
     Return the product of array elements over a given axis treating Not a
@@ -64,5 +65,4 @@ Syntax:
     >>> np.nanprod(a, axis=0)
     array([3., 2.])
 
-    
 ~~~

@@ -1,9 +1,10 @@
-[[//Nansum]]
+[[/Nansum]] --     Numbers (NaNs) as zero.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Nansum [<function matrix at 0x10222a7a0>]
+  numpy nansum <matrix> initial=<float> [axis=<intlist>] [dtype=<str>] [keepdims=<bool>] [where=<boollist>]
 
 
     Return the sum of array elements over a given axis treating Not a
@@ -92,5 +93,4 @@ Syntax:
     ...     np.nansum([1, np.nan, np.inf, -np.inf]) # both +/- infinity present
     nan
 
-    
 ~~~

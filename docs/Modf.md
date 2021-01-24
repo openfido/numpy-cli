@@ -1,16 +1,10 @@
-[[//Modf]]
+[[/Modf]] -- Return the fractional and integral parts of an array, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Modf [<function matrix at 0x10222a7a0>]
-
-modf(x[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Return the fractional and integral parts of an array, element-wise.
-
-The fractional and integral parts are negative if the given number is
-negative.
+  numpy modf <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -50,10 +44,4 @@ See Also
 divmod : ``divmod(x, 1)`` is equivalent to ``modf`` with the return values
          switched, except it always has a positive remainder.
 
-Examples
---------
->>> np.modf([0, 3.5])
-(array([ 0. ,  0.5]), array([ 0.,  3.]))
->>> np.modf(-0.5)
-(-0.5, -0)
 ~~~

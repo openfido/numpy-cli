@@ -1,16 +1,10 @@
-[[//Ldexp]]
+[[/Ldexp]] -- Returns x1 * 2**x2, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Ldexp [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-ldexp(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Returns x1 * 2**x2, element-wise.
-
-The mantissas `x1` and twos exponents `x2` are used to construct
-floating point numbers ``x1 * 2**x2``.
+  numpy ldexp <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -53,12 +47,4 @@ Complex dtypes are not supported, they will raise a TypeError.
 `ldexp` is useful as the inverse of `frexp`, if used by itself it is
 more clear to simply use the expression ``x1 * 2**x2``.
 
-Examples
---------
->>> np.ldexp(5, np.arange(4))
-array([ 5., 10., 20., 40.], dtype=float16)
-
->>> x = np.arange(6)
->>> np.ldexp(*np.frexp(x))
-array([ 0.,  1.,  2.,  3.,  4.,  5.])
 ~~~

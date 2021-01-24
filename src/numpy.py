@@ -1068,23 +1068,45 @@ def makedocs():
 		if len(specs) > 1:
 			os.makedirs("docs/"+path.title(),exist_ok=True)
 		name = specs[-1].title()
-		with open(f"docs/{path}/{name}.md","w") as fh:
-			fh.write(f"[[/{path}/{name}]]\n\n~~~\n")
+		with open(f"docs{path}/{name}.md","w") as fh:
 			lib = numpy
 			for pkg in specs[0:-1]:
 				lib = getattr(lib,pkg)
 			call = getattr(lib,specs[-1])
+			NL="\n"
+			docs = call.__doc__.split(NL)
+			indent = len(docs[0]) - len(docs[0].lstrip())
+			for line in docs:
+				line = line[indent:]
+			fh.write(f"[[{path}/{name}]] -- {docs[2]}")
+			fh.write("\n\n~~~\n")
 			fspecs = functions[function]
 			args = []
 			for tag, value in fspecs.items():
 				if tag == POSITIONAL:
-					if not type(value) is list:
-						value = [value]
-					if not type(value)  is str:
-						value = str(value)
-					args.append(value)
-			fh.write(f"Syntax:\n\n  numpy {name} {' '.join(args)}\n\n")
-			fh.write(call.__doc__)
+					if type(value) is list:
+						for item in value:
+							args.append(f"<{item.__name__}>")
+					else:
+						args.append(f"<{value.__name__}>")
+				elif tag == UARGS:
+					for utag in value:
+						uval = UFUNC[utag]
+						args.append(f"[{utag}=<{uval.__name__}>]")
+				elif hasattr(value,"__name__"):
+					args.append(f"{tag}=<{value.__name__}>")
+				else:
+					args.append(f"[{tag}=<{str(value)}>]")
+			fh.write(f"Syntax\n------\n\n  numpy {specs[-1]} {' '.join(args)}\n\n")
+			try:
+				parameters = docs.index("Parameters")
+			except:
+				parameters = 0
+			try:
+				examples = docs.index("Examples")
+			except:
+				examples = -1
+			fh.write("\n".join(docs[parameters:examples]))
 			fh.write("\n~~~\n")
 
 def help(name='.*'):

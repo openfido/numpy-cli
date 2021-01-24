@@ -1,28 +1,10 @@
-[[//Remainder]]
+[[/Remainder]] -- Return element-wise remainder of division.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Remainder [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-remainder(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Return element-wise remainder of division.
-
-Computes the remainder complementary to the `floor_divide` function.  It is
-equivalent to the Python modulus operator``x1 % x2`` and has the same sign
-as the divisor `x2`. The MATLAB function equivalent to ``np.remainder``
-is ``mod``.
-
-.. warning::
-
-    This should not be confused with:
-
-    * Python 3.7's `math.remainder` and C's ``remainder``, which
-      computes the IEEE remainder, which are the complement to
-      ``round(x1 / x2)``.
-    * The MATLAB ``rem`` function and or the C ``%`` operator which is the
-      complement to ``int(x1 / x2)``.
+  numpy remainder <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -67,10 +49,4 @@ Returns 0 when `x2` is 0 and both `x1` and `x2` are (arrays of)
 integers.
 ``mod`` is an alias of ``remainder``.
 
-Examples
---------
->>> np.remainder([4, 7], [2, 3])
-array([0, 1])
->>> np.remainder(np.arange(7), 5)
-array([0, 1, 2, 3, 4, 0, 1])
 ~~~

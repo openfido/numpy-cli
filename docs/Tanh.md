@@ -1,15 +1,10 @@
-[[//Tanh]]
+[[/Tanh]] -- Compute hyperbolic tangent element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Tanh [<function matrix at 0x10222a7a0>]
-
-tanh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Compute hyperbolic tangent element-wise.
-
-Equivalent to ``np.sinh(x)/np.cosh(x)`` or ``-1j * np.tan(1j*x)``.
+  numpy tanh <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -51,21 +46,4 @@ References
 .. [2] Wikipedia, "Hyperbolic function",
        https://en.wikipedia.org/wiki/Hyperbolic_function
 
-Examples
---------
->>> np.tanh((0, np.pi*1j, np.pi*1j/2))
-array([ 0. +0.00000000e+00j,  0. -1.22460635e-16j,  0. +1.63317787e+16j])
-
->>> # Example of providing the optional output parameter illustrating
->>> # that what is returned is a reference to said parameter
->>> out1 = np.array([0], dtype='d')
->>> out2 = np.tanh([0.1], out1)
->>> out2 is out1
-True
-
->>> # Example of ValueError due to provision of shape mis-matched `out`
->>> np.tanh(np.zeros((3,3)),np.zeros((2,2)))
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-ValueError: operands could not be broadcast together with shapes (3,3) (2,2)
 ~~~

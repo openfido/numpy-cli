@@ -1,13 +1,10 @@
-[[//Arcsinh]]
+[[/Arcsinh]] -- Inverse hyperbolic sine element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Arcsinh [<function matrix at 0x10222a7a0>]
-
-arcsinh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Inverse hyperbolic sine element-wise.
+  numpy arcsinh <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -58,8 +55,4 @@ References
 .. [2] Wikipedia, "Inverse hyperbolic function",
        https://en.wikipedia.org/wiki/Arcsinh
 
-Examples
---------
->>> np.arcsinh(np.array([np.e, 10.0]))
-array([ 1.72538256,  2.99822295])
 ~~~

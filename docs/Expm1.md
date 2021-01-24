@@ -1,13 +1,10 @@
-[[//Expm1]]
+[[/Expm1]] -- Calculate ``exp(x) - 1`` for all elements in the array.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Expm1 [<function matrix at 0x10222a7a0>]
-
-expm1(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Calculate ``exp(x) - 1`` for all elements in the array.
+  numpy expm1 <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -45,14 +42,4 @@ Notes
 This function provides greater precision than ``exp(x) - 1``
 for small values of ``x``.
 
-Examples
---------
-The true value of ``exp(1e-10) - 1`` is ``1.00000000005e-10`` to
-about 32 significant digits. This example shows the superiority of
-expm1 in this case.
-
->>> np.expm1(1e-10)
-1.00000000005e-10
->>> np.exp(1e-10) - 1
-1.000000082740371e-10
 ~~~

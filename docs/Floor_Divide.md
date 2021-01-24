@@ -1,16 +1,10 @@
-[[//Floor_Divide]]
+[[/Floor_Divide]] -- Return the largest integer smaller or equal to the division of the inputs.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Floor_Divide [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-floor_divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Return the largest integer smaller or equal to the division of the inputs.
-It is equivalent to the Python ``//`` operator and pairs with the
-Python ``%`` (`remainder`), function so that ``a = a % b + b * (a // b)``
-up to roundoff.
+  numpy floor_divide <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -50,10 +44,4 @@ divide : Standard division.
 floor : Round a number to the nearest integer toward minus infinity.
 ceil : Round a number to the nearest integer toward infinity.
 
-Examples
---------
->>> np.floor_divide(7,3)
-2
->>> np.floor_divide([1., 2., 3., 4.], 2.5)
-array([ 0.,  0.,  1.,  1.])
 ~~~

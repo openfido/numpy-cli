@@ -1,17 +1,10 @@
-[[//Fabs]]
+[[/Fabs]] -- Compute the absolute values element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Fabs [<function matrix at 0x10222a7a0>]
-
-fabs(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Compute the absolute values element-wise.
-
-This function returns the absolute values (positive magnitude) of the
-data in `x`. Complex values are not handled, use `absolute` to find the
-absolute values of complex data.
+  numpy fabs <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -44,10 +37,4 @@ See Also
 --------
 absolute : Absolute values including `complex` types.
 
-Examples
---------
->>> np.fabs(-1)
-1.0
->>> np.fabs([-1.2, 1.2])
-array([ 1.2,  1.2])
 ~~~

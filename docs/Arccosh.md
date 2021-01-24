@@ -1,13 +1,10 @@
-[[//Arccosh]]
+[[/Arccosh]] -- Inverse hyperbolic cosine, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Arccosh [<function matrix at 0x10222a7a0>]
-
-arccosh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Inverse hyperbolic cosine, element-wise.
+  numpy arccosh <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -61,10 +58,4 @@ References
 .. [2] Wikipedia, "Inverse hyperbolic function",
        https://en.wikipedia.org/wiki/Arccosh
 
-Examples
---------
->>> np.arccosh([np.e, 10.0])
-array([ 1.65745445,  2.99322285])
->>> np.arccosh(1)
-0.0
 ~~~

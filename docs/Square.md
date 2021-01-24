@@ -1,13 +1,10 @@
-[[//Square]]
+[[/Square]] -- Return the element-wise square of the input.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Square [<function matrix at 0x10222a7a0>]
-
-square(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Return the element-wise square of the input.
+  numpy square <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -41,8 +38,4 @@ numpy.linalg.matrix_power
 sqrt
 power
 
-Examples
---------
->>> np.square([-1j, 1])
-array([-1.-0.j,  1.+0.j])
 ~~~

@@ -1,18 +1,10 @@
-[[//Fmod]]
+[[/Fmod]] -- Return the element-wise remainder of division.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Fmod [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-fmod(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Return the element-wise remainder of division.
-
-This is the NumPy implementation of the C library function fmod, the
-remainder has the same sign as the dividend `x1`. It is equivalent to
-the Matlab(TM) ``rem`` function and should not be confused with the
-Python modulus operator ``x1 % x2``.
+  numpy fmod <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -57,22 +49,4 @@ the dividend, while for `remainder` the sign of the result is the sign
 of the divisor. The `fmod` function is equivalent to the Matlab(TM)
 ``rem`` function.
 
-Examples
---------
->>> np.fmod([-3, -2, -1, 1, 2, 3], 2)
-array([-1,  0, -1,  1,  0,  1])
->>> np.remainder([-3, -2, -1, 1, 2, 3], 2)
-array([1, 0, 1, 1, 0, 1])
-
->>> np.fmod([5, 3], [2, 2.])
-array([ 1.,  1.])
->>> a = np.arange(-3, 3).reshape(3, 2)
->>> a
-array([[-3, -2],
-       [-1,  0],
-       [ 1,  2]])
->>> np.fmod(a, [2,2])
-array([[-1,  0],
-       [-1,  0],
-       [ 1,  0]])
 ~~~

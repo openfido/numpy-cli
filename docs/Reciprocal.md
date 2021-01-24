@@ -1,15 +1,10 @@
-[[//Reciprocal]]
+[[/Reciprocal]] -- Return the reciprocal of the argument, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Reciprocal [<function matrix at 0x10222a7a0>]
-
-reciprocal(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Return the reciprocal of the argument, element-wise.
-
-Calculates ``1/x``.
+  numpy reciprocal <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -46,10 +41,4 @@ For integer arguments with absolute value larger than 1 the result is
 always zero because of the way Python handles integer division.  For
 integer zero the result is an overflow.
 
-Examples
---------
->>> np.reciprocal(2.)
-0.5
->>> np.reciprocal([1, 2., 3.33])
-array([ 1.       ,  0.5      ,  0.3003003])
 ~~~

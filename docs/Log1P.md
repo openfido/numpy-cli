@@ -1,15 +1,10 @@
-[[//Log1P]]
+[[/Log1P]] -- Return the natural logarithm of one plus the input array, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Log1P [<function matrix at 0x10222a7a0>]
-
-log1p(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Return the natural logarithm of one plus the input array, element-wise.
-
-Calculates ``log(1 + x)``.
+  numpy log1p <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -65,10 +60,4 @@ References
        10th printing, 1964, pp. 67. http://www.math.sfu.ca/~cbm/aands/
 .. [2] Wikipedia, "Logarithm". https://en.wikipedia.org/wiki/Logarithm
 
-Examples
---------
->>> np.log1p(1e-99)
-1e-99
->>> np.log(1 + 1e-99)
-0.0
 ~~~

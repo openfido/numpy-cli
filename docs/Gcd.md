@@ -1,13 +1,10 @@
-[[//Gcd]]
+[[/Gcd]] -- Returns the greatest common divisor of ``|x1|`` and ``|x2|``
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Gcd [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-gcd(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Returns the greatest common divisor of ``|x1|`` and ``|x2|``
+  numpy gcd <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -26,12 +23,4 @@ See Also
 --------
 lcm : The lowest common multiple
 
-Examples
---------
->>> np.gcd(12, 20)
-4
->>> np.gcd.reduce([15, 25, 35])
-5
->>> np.gcd(np.arange(6), 20)
-array([20,  1,  2,  1,  4,  5])
 ~~~

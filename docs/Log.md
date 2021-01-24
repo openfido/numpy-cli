@@ -1,17 +1,10 @@
-[[//Log]]
+[[/Log]] -- Natural logarithm, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Log [<function matrix at 0x10222a7a0>]
-
-log(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Natural logarithm, element-wise.
-
-The natural logarithm `log` is the inverse of the exponential function,
-so that `log(exp(x)) = x`. The natural logarithm is logarithm in base
-`e`.
+  numpy log <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -64,8 +57,4 @@ References
        10th printing, 1964, pp. 67. http://www.math.sfu.ca/~cbm/aands/
 .. [2] Wikipedia, "Logarithm". https://en.wikipedia.org/wiki/Logarithm
 
-Examples
---------
->>> np.log([1, np.e, np.e**2, 0])
-array([  0.,   1.,   2., -Inf])
 ~~~

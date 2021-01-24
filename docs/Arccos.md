@@ -1,15 +1,10 @@
-[[//Arccos]]
+[[/Arccos]] -- Trigonometric inverse cosine, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Arccos [<function matrix at 0x10222a7a0>]
-
-arccos(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Trigonometric inverse cosine, element-wise.
-
-The inverse of `cos` so that, if ``y = cos(x)``, then ``x = arccos(y)``.
+  numpy arccos <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -64,18 +59,4 @@ References
 M. Abramowitz and I.A. Stegun, "Handbook of Mathematical Functions",
 10th printing, 1964, pp. 79. http://www.math.sfu.ca/~cbm/aands/
 
-Examples
---------
-We expect the arccos of 1 to be 0, and of -1 to be pi:
-
->>> np.arccos([1, -1])
-array([ 0.        ,  3.14159265])
-
-Plot arccos:
-
->>> import matplotlib.pyplot as plt
->>> x = np.linspace(-1, 1, num=100)
->>> plt.plot(x, np.arccos(x))
->>> plt.axis('tight')
->>> plt.show()
 ~~~

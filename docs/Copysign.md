@@ -1,15 +1,10 @@
-[[//Copysign]]
+[[/Copysign]] -- Change the sign of x1 to that of x2, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Copysign [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-copysign(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Change the sign of x1 to that of x2, element-wise.
-
-If `x2` is a scalar, its sign will be copied to all elements of `x1`.
+  numpy copysign <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -41,17 +36,4 @@ out : ndarray or scalar
     The values of `x1` with the sign of `x2`.
     This is a scalar if both `x1` and `x2` are scalars.
 
-Examples
---------
->>> np.copysign(1.3, -1)
--1.3
->>> 1/np.copysign(0, 1)
-inf
->>> 1/np.copysign(0, -1)
--inf
-
->>> np.copysign([-1, 0, 1], -1.1)
-array([-1., -0., -1.])
->>> np.copysign([-1, 0, 1], np.arange(3)-1)
-array([-1.,  0.,  1.])
 ~~~

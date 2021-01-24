@@ -1,9 +1,10 @@
-[[//Real_If_Close]]
+[[/Real_If_Close]] --     real parts.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Real_If_Close [<function matrix at 0x10222a7a0>]
+  numpy real_if_close <matrix> tol=<float>
 
 
     If input is complex with all imaginary parts close to zero, return 
@@ -47,5 +48,4 @@ Syntax:
     >>> np.real_if_close([2.1 + 4e-13j, 5.2 + 3e-15j], tol=1000)
     array([2.1+4.e-13j, 5.2 + 3e-15j])
 
-    
 ~~~

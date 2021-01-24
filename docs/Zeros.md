@@ -1,9 +1,10 @@
-[[//Zeros]]
+[[/Zeros]] --     Return a new array of given shape and type, filled with zeros.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Zeros [<function intlist at 0x10cf39290>]
+  numpy zeros <intlist> dtype=<str> order=<str>
 
 zeros(shape, dtype=float, order='C')
 
@@ -52,5 +53,4 @@ zeros(shape, dtype=float, order='C')
 
     >>> np.zeros((2,), dtype=[('x', 'i4'), ('y', 'i4')]) # custom dtype
     array([(0, 0), (0, 0)],
-          dtype=[('x', '<i4'), ('y', '<i4')])
 ~~~

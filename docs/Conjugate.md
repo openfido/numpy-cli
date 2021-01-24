@@ -1,16 +1,10 @@
-[[//Conjugate]]
+[[/Conjugate]] -- Return the complex conjugate, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Conjugate [<function matrix at 0x10222a7a0>]
-
-conjugate(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Return the complex conjugate, element-wise.
-
-The complex conjugate of a complex number is obtained by changing the
-sign of its imaginary part.
+  numpy conjugate <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -45,13 +39,4 @@ Notes
 >>> np.conj is np.conjugate
 True
 
-Examples
---------
->>> np.conjugate(1+2j)
-(1-2j)
-
->>> x = np.eye(2) + 1j * np.eye(2)
->>> np.conjugate(x)
-array([[ 1.-1.j,  0.-0.j],
-       [ 0.-0.j,  1.-1.j]])
 ~~~

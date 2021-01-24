@@ -1,13 +1,10 @@
-[[//Nextafter]]
+[[/Nextafter]] -- Return the next floating-point value after x1 towards x2, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Nextafter [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-nextafter(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Return the next floating-point value after x1 towards x2, element-wise.
+  numpy nextafter <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -39,11 +36,4 @@ out : ndarray or scalar
     The next representable values of `x1` in the direction of `x2`.
     This is a scalar if both `x1` and `x2` are scalars.
 
-Examples
---------
->>> eps = np.finfo(np.float64).eps
->>> np.nextafter(1, 2) == eps + 1
-True
->>> np.nextafter([1, 2], [2, 1]) == [eps + 1, 2 - eps]
-array([ True,  True])
 ~~~

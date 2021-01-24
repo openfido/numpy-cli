@@ -1,17 +1,10 @@
-[[//Trunc]]
+[[/Trunc]] -- Return the truncated value of the input, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Trunc [<function matrix at 0x10222a7a0>]
-
-trunc(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Return the truncated value of the input, element-wise.
-
-The truncated value of the scalar `x` is the nearest integer `i` which
-is closer to zero than `x` is. In short, the fractional part of the
-signed number `x` is discarded.
+  numpy trunc <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -47,9 +40,4 @@ Notes
 -----
 .. versionadded:: 1.3.0
 
-Examples
---------
->>> a = np.array([-1.7, -1.5, -0.2, 0.2, 1.5, 1.7, 2.0])
->>> np.trunc(a)
-array([-1., -1., -0.,  0.,  1.,  1.,  2.])
 ~~~

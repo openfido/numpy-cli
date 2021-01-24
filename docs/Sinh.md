@@ -1,16 +1,10 @@
-[[//Sinh]]
+[[/Sinh]] -- Hyperbolic sine, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Sinh [<function matrix at 0x10222a7a0>]
-
-sinh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Hyperbolic sine, element-wise.
-
-Equivalent to ``1/2 * (np.exp(x) - np.exp(-x))`` or
-``-1j * np.sin(1j*x)``.
+  numpy sinh <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -48,25 +42,4 @@ References
 M. Abramowitz and I. A. Stegun, Handbook of Mathematical Functions.
 New York, NY: Dover, 1972, pg. 83.
 
-Examples
---------
->>> np.sinh(0)
-0.0
->>> np.sinh(np.pi*1j/2)
-1j
->>> np.sinh(np.pi*1j) # (exact value is 0)
-1.2246063538223773e-016j
->>> # Discrepancy due to vagaries of floating point arithmetic.
-
->>> # Example of providing the optional output parameter
->>> out1 = np.array([0], dtype='d')
->>> out2 = np.sinh([0.1], out1)
->>> out2 is out1
-True
-
->>> # Example of ValueError due to provision of shape mis-matched `out`
->>> np.sinh(np.zeros((3,3)),np.zeros((2,2)))
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-ValueError: operands could not be broadcast together with shapes (3,3) (2,2)
 ~~~

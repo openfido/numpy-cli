@@ -1,9 +1,10 @@
-[[//Sum]]
+[[/Sum]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Sum [<function matrix at 0x10222a7a0>]
+  numpy sum <matrix> initial=<float> [axis=<intlist>] [dtype=<str>] [keepdims=<bool>] [where=<boollist>]
 
 
     Sum of array elements over a given axis.
@@ -124,5 +125,4 @@ Syntax:
 
     >>> np.sum([10], initial=5)
     15
-    
 ~~~

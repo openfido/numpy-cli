@@ -1,9 +1,10 @@
-[[//Prod]]
+[[/Prod]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Prod [<function matrix at 0x10222a7a0>]
+  numpy prod <matrix> initial=<float> [axis=<intlist>] [dtype=<str>] [keepdims=<bool>] [where=<boollist>]
 
 
     Return the product of array elements over a given axis.
@@ -119,5 +120,4 @@ Syntax:
 
     >>> np.prod([1, 2], initial=5)
     10
-    
 ~~~

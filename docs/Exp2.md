@@ -1,13 +1,10 @@
-[[//Exp2]]
+[[/Exp2]] -- Calculate `2**p` for all `p` in the input array.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Exp2 [<function matrix at 0x10222a7a0>]
-
-exp2(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Calculate `2**p` for all `p` in the input array.
+  numpy exp2 <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -45,8 +42,4 @@ Notes
 
 
 
-Examples
---------
->>> np.exp2([2, 3])
-array([ 4.,  8.])
 ~~~

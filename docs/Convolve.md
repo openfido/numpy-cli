@@ -1,9 +1,10 @@
-[[//Convolve]]
+[[/Convolve]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Convolve [<function array at 0x10d17eb00>, <function array at 0x10d17eb00>]
+  numpy convolve <array> <array> mode=<str>
 
 
     Returns the discrete, linear convolution of two one-dimensional sequences.
@@ -91,5 +92,4 @@ Syntax:
     >>> np.convolve([1,2,3],[0,1,0.5], 'valid')
     array([2.5])
 
-    
 ~~~

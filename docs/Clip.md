@@ -1,9 +1,10 @@
-[[//Clip]]
+[[/Clip]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Clip [<function matrix at 0x10222a7a0>]
+  numpy clip <matrix> a_min=<matrix> a_max=<matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 
     Clip (limit) the values in an array.
@@ -66,5 +67,4 @@ Syntax:
     >>> np.clip(a, [3, 4, 1, 1, 1, 4, 4, 4, 4, 4], 8)
     array([3, 4, 2, 3, 4, 5, 6, 7, 8, 8])
 
-    
 ~~~

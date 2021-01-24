@@ -1,19 +1,10 @@
-[[//Logaddexp]]
+[[/Logaddexp]] -- Logarithm of the sum of exponentiations of the inputs.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Logaddexp [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-logaddexp(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Logarithm of the sum of exponentiations of the inputs.
-
-Calculates ``log(exp(x1) + exp(x2))``. This function is useful in
-statistics where the calculated probabilities of events may be so small
-as to exceed the range of normal floating point numbers.  In such cases
-the logarithm of the calculated probability is stored. This function
-allows adding probabilities stored in such a fashion.
+  numpy logaddexp <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -51,13 +42,4 @@ Notes
 -----
 .. versionadded:: 1.3.0
 
-Examples
---------
->>> prob1 = np.log(1e-50)
->>> prob2 = np.log(2.5e-50)
->>> prob12 = np.logaddexp(prob1, prob2)
->>> prob12
--113.87649168120691
->>> np.exp(prob12)
-3.5000000000000057e-50
 ~~~

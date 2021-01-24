@@ -1,15 +1,10 @@
-[[//Arctan]]
+[[/Arctan]] -- Trigonometric inverse tangent, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Arctan [<function matrix at 0x10222a7a0>]
-
-arctan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Trigonometric inverse tangent, element-wise.
-
-The inverse of tan, so that if ``y = tan(x)`` then ``x = arctan(y)``.
+  numpy arctan <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -65,21 +60,4 @@ Abramowitz, M. and Stegun, I. A., *Handbook of Mathematical Functions*,
 10th printing, New York: Dover, 1964, pp. 79.
 http://www.math.sfu.ca/~cbm/aands/
 
-Examples
---------
-We expect the arctan of 0 to be 0, and of 1 to be pi/4:
-
->>> np.arctan([0, 1])
-array([ 0.        ,  0.78539816])
-
->>> np.pi/4
-0.78539816339744828
-
-Plot arctan:
-
->>> import matplotlib.pyplot as plt
->>> x = np.linspace(-10, 10)
->>> plt.plot(x, np.arctan(x))
->>> plt.axis('tight')
->>> plt.show()
 ~~~

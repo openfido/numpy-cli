@@ -1,17 +1,10 @@
-[[//Power]]
+[[/Power]] -- First array elements raised to powers from second array, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Power [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-power(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-First array elements raised to powers from second array, element-wise.
-
-Raise each base in `x1` to the positionally-corresponding power in
-`x2`.  `x1` and `x2` must be broadcastable to the same shape. Note that an
-integer type raised to a negative integer power will raise a ValueError.
+  numpy power <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -47,29 +40,4 @@ See Also
 --------
 float_power : power function that promotes integers to float
 
-Examples
---------
-Cube each element in a list.
-
->>> x1 = range(6)
->>> x1
-[0, 1, 2, 3, 4, 5]
->>> np.power(x1, 3)
-array([  0,   1,   8,  27,  64, 125])
-
-Raise the bases to different exponents.
-
->>> x2 = [1.0, 2.0, 3.0, 3.0, 2.0, 1.0]
->>> np.power(x1, x2)
-array([  0.,   1.,   8.,  27.,  16.,   5.])
-
-The effect of broadcasting.
-
->>> x2 = np.array([[1, 2, 3, 3, 2, 1], [1, 2, 3, 3, 2, 1]])
->>> x2
-array([[1, 2, 3, 3, 2, 1],
-       [1, 2, 3, 3, 2, 1]])
->>> np.power(x1, x2)
-array([[ 0,  1,  8, 27, 16,  5],
-       [ 0,  1,  8, 27, 16,  5]])
 ~~~

@@ -1,9 +1,10 @@
-[[//Ones]]
+[[/Ones]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Ones [<function intlist at 0x10cf39290>]
+  numpy ones <intlist> dtype=<str> order=<str>
 
 
     Return a new array of given shape and type, filled with ones.
@@ -50,5 +51,4 @@ Syntax:
     array([[1.,  1.],
            [1.,  1.]])
 
-    
 ~~~

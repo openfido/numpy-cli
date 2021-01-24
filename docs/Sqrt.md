@@ -1,13 +1,10 @@
-[[//Sqrt]]
+[[/Sqrt]] -- Return the non-negative square-root of an array, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Sqrt [<function matrix at 0x10222a7a0>]
-
-sqrt(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Return the non-negative square-root of an array, element-wise.
+  numpy sqrt <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -52,14 +49,4 @@ real "interval" [`-inf`, 0), and is continuous from above on it.
 A branch cut is a curve in the complex plane across which a given
 complex function fails to be continuous.
 
-Examples
---------
->>> np.sqrt([1,4,9])
-array([ 1.,  2.,  3.])
-
->>> np.sqrt([4, -1, -3+4J])
-array([ 2.+0.j,  0.+1.j,  1.+2.j])
-
->>> np.sqrt([4, -1, np.inf])
-array([ 2., nan, inf])
 ~~~

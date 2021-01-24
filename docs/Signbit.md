@@ -1,13 +1,10 @@
-[[//Signbit]]
+[[/Signbit]] -- Returns element-wise True where signbit is set (less than zero).
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Signbit [<function matrix at 0x10222a7a0>]
-
-signbit(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Returns element-wise True where signbit is set (less than zero).
+  numpy signbit <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -35,10 +32,4 @@ result : ndarray of bool
     Output array, or reference to `out` if that was supplied.
     This is a scalar if `x` is a scalar.
 
-Examples
---------
->>> np.signbit(-1.2)
-True
->>> np.signbit(np.array([1, -2.3, 2.1]))
-array([False,  True, False])
 ~~~

@@ -1,9 +1,10 @@
-[[//Interp]]
+[[/Interp]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Interp [<function array at 0x10d17eb00>, <function array at 0x10d17eb00>, <function array at 0x10d17eb00>]
+  numpy interp <array> <array> <array> left=<complex> right=<complex> period=<complex>
 
 
     One-dimensional linear interpolation.
@@ -102,5 +103,4 @@ Syntax:
     >>> np.interp(x, xp, fp)
     array([0.+1.j , 1.+1.5j])
 
-    
 ~~~

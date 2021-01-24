@@ -1,9 +1,10 @@
-[[//Dot]]
+[[/Dot]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Dot [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
+  numpy dot <matrix> <matrix>
 
 
     dot(a, b, out=None)
@@ -87,5 +88,4 @@ Syntax:
     >>> sum(a[2,3,2,:] * b[1,2,:,2])
     499128
 
-    
 ~~~

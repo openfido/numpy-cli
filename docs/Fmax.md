@@ -1,20 +1,10 @@
-[[//Fmax]]
+[[/Fmax]] -- Element-wise maximum of array elements.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Fmax [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-fmax(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Element-wise maximum of array elements.
-
-Compare two arrays and returns a new array containing the element-wise
-maxima. If one of the elements being compared is a NaN, then the
-non-nan element is returned. If both elements are NaNs then the first
-is returned.  The latter distinction is important for complex NaNs,
-which are defined as at least one of the real or imaginary parts being
-a NaN. The net effect is that NaNs are ignored when possible.
+  numpy fmax <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -64,15 +54,4 @@ Notes
 The fmax is equivalent to ``np.where(x1 >= x2, x1, x2)`` when neither
 x1 nor x2 are NaNs, but it is faster and does proper broadcasting.
 
-Examples
---------
->>> np.fmax([2, 3, 4], [1, 5, 2])
-array([ 2.,  5.,  4.])
-
->>> np.fmax(np.eye(2), [0.5, 2])
-array([[ 1. ,  2. ],
-       [ 0.5,  2. ]])
-
->>> np.fmax([np.nan, 0, np.nan],[0, np.nan, np.nan])
-array([ 0.,  0., nan])
 ~~~

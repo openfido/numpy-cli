@@ -1,9 +1,10 @@
-[[//Imag]]
+[[/Imag]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Imag [<function matrix at 0x10222a7a0>]
+  numpy imag <matrix>
 
 
     Return the imaginary part of the complex argument.
@@ -35,5 +36,4 @@ Syntax:
     >>> np.imag(1 + 1j)
     1.0
 
-    
 ~~~

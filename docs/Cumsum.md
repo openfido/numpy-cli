@@ -1,9 +1,10 @@
-[[//Cumsum]]
+[[/Cumsum]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Cumsum [<function matrix at 0x10222a7a0>]
+  numpy cumsum <matrix> [axis=<intlist>] [dtype=<str>]
 
 
     Return the cumulative sum of the elements along a given axis.
@@ -67,5 +68,4 @@ Syntax:
     array([[ 1,  3,  6],
            [ 4,  9, 15]])
 
-    
 ~~~

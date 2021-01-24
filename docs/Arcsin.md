@@ -1,13 +1,10 @@
-[[//Arcsin]]
+[[/Arcsin]] -- Inverse sine, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Arcsin [<function matrix at 0x10222a7a0>]
-
-arcsin(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Inverse sine, element-wise.
+  numpy arcsin <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -62,12 +59,4 @@ Abramowitz, M. and Stegun, I. A., *Handbook of Mathematical Functions*,
 10th printing, New York: Dover, 1964, pp. 79ff.
 http://www.math.sfu.ca/~cbm/aands/
 
-Examples
---------
->>> np.arcsin(1)     # pi/2
-1.5707963267948966
->>> np.arcsin(-1)    # -pi/2
--1.5707963267948966
->>> np.arcsin(0)
-0.0
 ~~~

@@ -1,16 +1,10 @@
-[[//Ceil]]
+[[/Ceil]] -- Return the ceiling of the input, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Ceil [<function matrix at 0x10222a7a0>]
-
-ceil(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Return the ceiling of the input, element-wise.
-
-The ceil of the scalar `x` is the smallest integer `i`, such that
-`i >= x`.  It is often denoted as :math:`\lceil x \rceil`.
+  numpy ceil <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -42,9 +36,4 @@ See Also
 --------
 floor, trunc, rint
 
-Examples
---------
->>> a = np.array([-1.7, -1.5, -0.2, 0.2, 1.5, 1.7, 2.0])
->>> np.ceil(a)
-array([-1., -1., -0.,  1.,  2.,  2.,  2.])
 ~~~

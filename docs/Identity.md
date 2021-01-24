@@ -1,9 +1,10 @@
-[[//Identity]]
+[[/Identity]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Identity [<class 'int'>]
+  numpy identity <int> dtype=<str>
 
 
     Return the identity array.
@@ -31,5 +32,4 @@ Syntax:
            [0.,  1.,  0.],
            [0.,  0.,  1.]])
 
-    
 ~~~

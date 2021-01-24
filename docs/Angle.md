@@ -1,9 +1,10 @@
-[[//Angle]]
+[[/Angle]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Angle [<function matrix at 0x10222a7a0>]
+  numpy angle <matrix> deg=<bool>
 
 
     Return the angle of the complex argument.
@@ -41,5 +42,4 @@ Syntax:
     >>> np.angle(1+1j, deg=True)                  # in degrees
     45.0
 
-    
 ~~~

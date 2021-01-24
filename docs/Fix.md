@@ -1,9 +1,10 @@
-[[//Fix]]
+[[/Fix]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Fix [<function matrix at 0x10222a7a0>]
+  numpy fix <matrix>
 
 
     Round to nearest integer towards zero.
@@ -44,5 +45,4 @@ Syntax:
     >>> np.fix([2.1, 2.9, -2.1, -2.9])
     array([ 2.,  2., -2., -2.])
 
-    
 ~~~

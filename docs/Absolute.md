@@ -1,15 +1,10 @@
-[[//Absolute]]
+[[/Absolute]] -- Calculate the absolute value element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Absolute [<function matrix at 0x10222a7a0>]
-
-absolute(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Calculate the absolute value element-wise.
-
-``np.abs`` is a shorthand for this function.
+  numpy absolute <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -39,25 +34,4 @@ absolute : ndarray
     absolute value is :math:`\sqrt{ a^2 + b^2 }`.
     This is a scalar if `x` is a scalar.
 
-Examples
---------
->>> x = np.array([-1.2, 1.2])
->>> np.absolute(x)
-array([ 1.2,  1.2])
->>> np.absolute(1.2 + 1j)
-1.5620499351813308
-
-Plot the function over ``[-10, 10]``:
-
->>> import matplotlib.pyplot as plt
-
->>> x = np.linspace(start=-10, stop=10, num=101)
->>> plt.plot(x, np.absolute(x))
->>> plt.show()
-
-Plot the function over the complex plane:
-
->>> xx = x + 1j * x[:, np.newaxis]
->>> plt.imshow(np.abs(xx), extent=[-10, 10, -10, 10], cmap='gray')
->>> plt.show()
 ~~~

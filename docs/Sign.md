@@ -1,21 +1,10 @@
-[[//Sign]]
+[[/Sign]] -- Returns an element-wise indication of the sign of a number.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Sign [<function matrix at 0x10222a7a0>]
-
-sign(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Returns an element-wise indication of the sign of a number.
-
-The `sign` function returns ``-1 if x < 0, 0 if x==0, 1 if x > 0``.  nan
-is returned for nan inputs.
-
-For complex inputs, the `sign` function returns
-``sign(x.real) + 0j if x.real != 0 else sign(x.imag) + 0j``.
-
-complex(nan, 0) is returned for complex nan inputs.
+  numpy sign <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -49,12 +38,4 @@ There is more than one definition of sign in common use for complex
 numbers.  The definition used here is equivalent to :math:`x/\sqrt{x*x}`
 which is different from a common alternative, :math:`x/|x|`.
 
-Examples
---------
->>> np.sign([-5., 4.5])
-array([-1.,  1.])
->>> np.sign(0)
-0
->>> np.sign(5-2j)
-(1+0j)
 ~~~

@@ -1,13 +1,10 @@
-[[//Rint]]
+[[/Rint]] -- Round elements of the array to the nearest integer.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Rint [<function matrix at 0x10222a7a0>]
-
-rint(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Round elements of the array to the nearest integer.
+  numpy rint <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -39,9 +36,4 @@ See Also
 --------
 ceil, floor, trunc
 
-Examples
---------
->>> a = np.array([-1.7, -1.5, -0.2, 0.2, 1.5, 1.7, 2.0])
->>> np.rint(a)
-array([-2., -2., -0.,  0.,  2.,  2.,  2.])
 ~~~

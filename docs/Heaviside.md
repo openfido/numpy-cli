@@ -1,21 +1,10 @@
-[[//Heaviside]]
+[[/Heaviside]] -- Compute the Heaviside step function.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Heaviside [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-heaviside(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Compute the Heaviside step function.
-
-The Heaviside step function is defined as::
-
-                          0   if x1 < 0
-    heaviside(x1, x2) =  x2   if x1 == 0
-                          1   if x1 > 0
-
-where `x2` is often taken to be 0.5, but 0 and 1 are also sometimes used.
+  numpy heaviside <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -56,10 +45,4 @@ References
 .. Wikipedia, "Heaviside step function",
    https://en.wikipedia.org/wiki/Heaviside_step_function
 
-Examples
---------
->>> np.heaviside([-1.5, 0, 2.0], 0.5)
-array([ 0. ,  0.5,  1. ])
->>> np.heaviside([-1.5, 0, 2.0], 1)
-array([ 0.,  1.,  1.])
 ~~~

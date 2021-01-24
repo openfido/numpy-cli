@@ -1,9 +1,10 @@
-[[//Unwrap]]
+[[/Unwrap]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Unwrap [<function matrix at 0x10222a7a0>]
+  numpy unwrap <matrix> discont=<float> axis=<int>
 
 
     Unwrap by changing deltas between values to 2*pi complement.
@@ -44,5 +45,4 @@ Syntax:
     >>> np.unwrap(phase)
     array([ 0.        ,  0.78539816,  1.57079633, -0.78539816,  0.        ]) # may vary
 
-    
 ~~~

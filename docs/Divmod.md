@@ -1,19 +1,10 @@
-[[//Divmod]]
+[[/Divmod]] -- Return element-wise quotient and remainder simultaneously.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Divmod [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-divmod(x1, x2[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Return element-wise quotient and remainder simultaneously.
-
-.. versionadded:: 1.13.0
-
-``np.divmod(x, y)`` is equivalent to ``(x // y, x % y)``, but faster
-because it avoids redundant work. It is used to implement the Python
-built-in function ``divmod`` on NumPy arrays.
+  numpy divmod <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -55,8 +46,4 @@ remainder : Equivalent to Python's ``%`` operator.
 modf : Equivalent to ``divmod(x, 1)`` for positive ``x`` with the return
        values switched.
 
-Examples
---------
->>> np.divmod(np.arange(5), 3)
-(array([0, 0, 0, 1, 1]), array([0, 1, 2, 0, 1]))
 ~~~

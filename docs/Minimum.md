@@ -1,20 +1,10 @@
-[[//Minimum]]
+[[/Minimum]] -- Element-wise minimum of array elements.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Minimum [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-minimum(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Element-wise minimum of array elements.
-
-Compare two arrays and returns a new array containing the element-wise
-minima. If one of the elements being compared is a NaN, then that
-element is returned. If both elements are NaNs then the first is
-returned. The latter distinction is important for complex NaNs, which
-are defined as at least one of the real or imaginary parts being a NaN.
-The net effect is that NaNs are propagated.
+  numpy minimum <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -63,17 +53,4 @@ The minimum is equivalent to ``np.where(x1 <= x2, x1, x2)`` when
 neither x1 nor x2 are NaNs, but it is faster and does proper
 broadcasting.
 
-Examples
---------
->>> np.minimum([2, 3, 4], [1, 5, 2])
-array([1, 3, 2])
-
->>> np.minimum(np.eye(2), [0.5, 2]) # broadcasting
-array([[ 0.5,  0. ],
-       [ 0. ,  1. ]])
-
->>> np.minimum([np.nan, 0, np.nan],[0, np.nan, np.nan])
-array([nan, nan, nan])
->>> np.minimum(-np.Inf, 1)
--inf
 ~~~

@@ -1,13 +1,10 @@
-[[//Add]]
+[[/Add]] -- Add arguments element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Add [<function matrix at 0x10222a7a0>, <function matrix at 0x10222a7a0>]
-
-add(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Add arguments element-wise.
+  numpy add <matrix> <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -41,14 +38,4 @@ Notes
 -----
 Equivalent to `x1` + `x2` in terms of array broadcasting.
 
-Examples
---------
->>> np.add(1.0, 4.0)
-5.0
->>> x1 = np.arange(9.0).reshape((3, 3))
->>> x2 = np.arange(3.0)
->>> np.add(x1, x2)
-array([[  0.,   2.,   4.],
-       [  3.,   5.,   7.],
-       [  6.,   8.,  10.]])
 ~~~

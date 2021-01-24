@@ -1,13 +1,10 @@
-[[//Deg2Rad]]
+[[/Deg2Rad]] -- Convert angles from degrees to radians.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Deg2Rad [<function matrix at 0x10222a7a0>]
-
-deg2rad(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Convert angles from degrees to radians.
+  numpy deg2rad <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -46,8 +43,4 @@ Notes
 
 ``deg2rad(x)`` is ``x * pi / 180``.
 
-Examples
---------
->>> np.deg2rad(180)
-3.1415926535897931
 ~~~

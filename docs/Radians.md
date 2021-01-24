@@ -1,13 +1,10 @@
-[[//Radians]]
+[[/Radians]] -- Convert angles from degrees to radians.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Radians [<function matrix at 0x10222a7a0>]
-
-radians(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Convert angles from degrees to radians.
+  numpy radians <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -39,18 +36,4 @@ See Also
 --------
 deg2rad : equivalent function
 
-Examples
---------
-Convert a degree array to radians
-
->>> deg = np.arange(12.) * 30.
->>> np.radians(deg)
-array([ 0.        ,  0.52359878,  1.04719755,  1.57079633,  2.0943951 ,
-        2.61799388,  3.14159265,  3.66519143,  4.1887902 ,  4.71238898,
-        5.23598776,  5.75958653])
-
->>> out = np.zeros((deg.shape))
->>> ret = np.radians(deg, out)
->>> ret is out
-True
 ~~~

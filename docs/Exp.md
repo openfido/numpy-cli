@@ -1,13 +1,10 @@
-[[//Exp]]
+[[/Exp]] -- Calculate the exponential of all elements in the input array.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Exp [<function matrix at 0x10222a7a0>]
-
-exp(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Calculate the exponential of all elements in the input array.
+  numpy exp <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -61,24 +58,4 @@ References
        with Formulas, Graphs, and Mathematical Tables," Dover, 1964, p. 69,
        http://www.math.sfu.ca/~cbm/aands/page_69.htm
 
-Examples
---------
-Plot the magnitude and phase of ``exp(x)`` in the complex plane:
-
->>> import matplotlib.pyplot as plt
-
->>> x = np.linspace(-2*np.pi, 2*np.pi, 100)
->>> xx = x + 1j * x[:, np.newaxis] # a + ib over complex plane
->>> out = np.exp(xx)
-
->>> plt.subplot(121)
->>> plt.imshow(np.abs(out),
-...            extent=[-2*np.pi, 2*np.pi, -2*np.pi, 2*np.pi], cmap='gray')
->>> plt.title('Magnitude of exp(x)')
-
->>> plt.subplot(122)
->>> plt.imshow(np.angle(out),
-...            extent=[-2*np.pi, 2*np.pi, -2*np.pi, 2*np.pi], cmap='hsv')
->>> plt.title('Phase (angle) of exp(x)')
->>> plt.show()
 ~~~

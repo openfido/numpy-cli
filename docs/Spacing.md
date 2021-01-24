@@ -1,13 +1,10 @@
-[[//Spacing]]
+[[/Spacing]] -- Return the distance between x and the nearest adjacent number.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Spacing [<function matrix at 0x10222a7a0>]
-
-spacing(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Return the distance between x and the nearest adjacent number.
+  numpy spacing <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -44,8 +41,4 @@ x for any finite x.
 
 Spacing of +- inf and NaN is NaN.
 
-Examples
---------
->>> np.spacing(1) == np.finfo(np.float64).eps
-True
 ~~~

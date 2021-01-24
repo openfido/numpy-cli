@@ -1,16 +1,10 @@
-[[//Floor]]
+[[/Floor]] -- Return the floor of the input, element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Floor [<function matrix at 0x10222a7a0>]
-
-floor(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Return the floor of the input, element-wise.
-
-The floor of the scalar `x` is the largest integer `i`, such that
-`i <= x`.  It is often denoted as :math:`\lfloor x \rfloor`.
+  numpy floor <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -48,9 +42,4 @@ Some spreadsheet programs calculate the "floor-towards-zero", in other
 words ``floor(-2.5) == -2``.  NumPy instead uses the definition of
 `floor` where `floor(-2.5) == -3`.
 
-Examples
---------
->>> a = np.array([-1.7, -1.5, -0.2, 0.2, 1.5, 1.7, 2.0])
->>> np.floor(a)
-array([-2., -2., -1.,  0.,  1.,  1.,  2.])
 ~~~

@@ -1,9 +1,10 @@
-[[//Real]]
+[[/Real]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Real [<function matrix at 0x10222a7a0>]
+  numpy real <matrix>
 
 
     Return the real part of the complex argument.
@@ -38,5 +39,4 @@ Syntax:
     >>> np.real(1 + 1j)
     1.0
 
-    
 ~~~

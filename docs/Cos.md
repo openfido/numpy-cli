@@ -1,13 +1,10 @@
-[[//Cos]]
+[[/Cos]] -- Cosine element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Cos [<function matrix at 0x10222a7a0>]
-
-cos(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Cosine element-wise.
+  numpy cos <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -45,20 +42,4 @@ References
 M. Abramowitz and I. A. Stegun, Handbook of Mathematical Functions.
 New York, NY: Dover, 1972.
 
-Examples
---------
->>> np.cos(np.array([0, np.pi/2, np.pi]))
-array([  1.00000000e+00,   6.12303177e-17,  -1.00000000e+00])
->>>
->>> # Example of providing the optional output parameter
->>> out1 = np.array([0], dtype='d')
->>> out2 = np.cos([0.1], out1)
->>> out2 is out1
-True
->>>
->>> # Example of ValueError due to provision of shape mis-matched `out`
->>> np.cos(np.zeros((3,3)),np.zeros((2,2)))
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-ValueError: operands could not be broadcast together with shapes (3,3) (2,2)
 ~~~

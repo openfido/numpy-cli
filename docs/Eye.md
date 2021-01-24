@@ -1,9 +1,10 @@
-[[//Eye]]
+[[/Eye]] -- 
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Eye [<class 'int'>]
+  numpy eye <int> M=<int> k=<int> dtype=<str> order=<str>
 
 
     Return a 2-D array with ones on the diagonal and zeros elsewhere.
@@ -47,5 +48,4 @@ Syntax:
            [0.,  0.,  1.],
            [0.,  0.,  0.]])
 
-    
 ~~~

@@ -1,15 +1,10 @@
-[[//Tan]]
+[[/Tan]] -- Compute tangent element-wise.
 
 ~~~
-Syntax:
+Syntax
+------
 
-  numpy Tan [<function matrix at 0x10222a7a0>]
-
-tan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature, extobj])
-
-Compute tangent element-wise.
-
-Equivalent to ``np.sin(x)/np.cos(x)`` element-wise.
+  numpy tan <matrix> [where=<boollist>] [axes=<tuplelist>] [axis=<intlist>] [keepdims=<bool>] [casting=<str>] [order=<str>] [dtype=<str>] [subok=<bool>]
 
 Parameters
 ----------
@@ -47,22 +42,4 @@ References
 M. Abramowitz and I. A. Stegun, Handbook of Mathematical Functions.
 New York, NY: Dover, 1972.
 
-Examples
---------
->>> from math import pi
->>> np.tan(np.array([-pi,pi/2,pi]))
-array([  1.22460635e-16,   1.63317787e+16,  -1.22460635e-16])
->>>
->>> # Example of providing the optional output parameter illustrating
->>> # that what is returned is a reference to said parameter
->>> out1 = np.array([0], dtype='d')
->>> out2 = np.cos([0.1], out1)
->>> out2 is out1
-True
->>>
->>> # Example of ValueError due to provision of shape mis-matched `out`
->>> np.cos(np.zeros((3,3)),np.zeros((2,2)))
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-ValueError: operands could not be broadcast together with shapes (3,3) (2,2)
 ~~~
