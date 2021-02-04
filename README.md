@@ -4,6 +4,10 @@
 
 This project provides a command-line interface (CLI) for the python numpy package.
 
+# Documentation
+
+Online documentation is available from the [SLAC GISMo Document Browser](http://docs.gridlabd.us/index.html?owner=dchassin&project=numpy-cli&branch=master&folder=&doc=/README.md).
+
 ## Prerequisites
 
 The `numpy-cli` requires python3 and numpy.  Please consult the installation procedures for these tools if they are not already installed.  See https://python.org/ and https://numpy.org for details.
