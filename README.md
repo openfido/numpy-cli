@@ -6,7 +6,7 @@ This project provides a command-line interface (CLI) for the python numpy packag
 
 # Documentation
 
-Online documentation is available from the [SLAC GISMo Document Browser](http://docs.gridlabd.us/index.html?owner=dchassin&project=numpy-cli&branch=master&folder=&doc=/README.md).
+Online documentation is available from the [SLAC GISMo Document Browser](http://docs.gridlabd.us/index.html?owner=openfido&project=numpy-cli&branch=master&folder=&doc=/README.md).
 
 ## Prerequisites
 
