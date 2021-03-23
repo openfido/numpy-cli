@@ -51,7 +51,7 @@ E_NOTFOUND = 3
 E_INVALID = 4
 
 import sys, os, subprocess, csv, urllib.request, re
-cmdname = os.path.basename(sys.argv[0])
+cmdname = 'numpy'
 try:
 	import numpy
 except:
