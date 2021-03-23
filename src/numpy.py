@@ -51,7 +51,18 @@ E_NOTFOUND = 3
 E_INVALID = 4
 
 import sys, os, subprocess, csv, urllib.request, re
-cmdname = 'numpy'
+cmdname = os.path.basename(sys.argv[0])
+if not cmdname:
+	cmdname = "numpy"
+	exit_on_error = False
+else:
+	exit_on_error = True
+def local_exit(code):
+	if exit_on_error:
+		exit(code)
+	else: 
+		return
+
 try:
 	import numpy
 except:
@@ -59,8 +70,11 @@ except:
 		subprocess.check_call([sys.executable, "-m", "pip", "install", "--user", "-q","numpy"],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
 		import numpy
 	except Exception as err:
-		print(f"ERROR [{cmdname}]: unable to install numpy automatically ({err}), manual installation required",file=sys.stderr)
-		exit(E_FAILED)
+		if exit_on_error:
+			print(f"ERROR [{cmdname}]: unable to install numpy automatically ({err}), manual installation required",file=sys.stderr)
+			exit(E_FAILED)
+		else:
+			raise
 import numpy.matlib as matlib
 import numpy.linalg as linalg
 
@@ -1055,7 +1069,7 @@ def error(msg,code=None):
 	if config.exception:
 		raise Exception(msg)
 	elif code != None:
-		exit(code)
+		return local_exit(code)
 	
 def debug(msg):
 	if config.debug:
@@ -1193,28 +1207,27 @@ def main(argv):
 			argv[1] = "version"
 		elif argv[1] == "--makedocs":
 			makedocs()
-			exit(E_OK)
+			return local_exit(E_OK)
 		elif argv[1][0] == '-':
 			error(f"option '{argv[1]}' is not valid",code=E_INVALID)
 		else:
 			done = True
 
-	if len(sys.argv) < 2:
+	if len(argv) < 2:
 		help(None)
-		exit(E_NOARGS)
-	elif sys.argv[1] == "help":
-		if len(sys.argv) == 2:
+		return local_exit(E_NOARGS)
+	elif argv[1] == "help":
+		if len(argv) == 2:
 			help()
-			exit(E_OK)
+			return local_exit(E_OK)
 		elif len(argv) == 3 and argv[1] == "help":
 			help(argv[2])
-			exit(E_OK)
+			return local_exit(E_OK)
 		else:
 			error("too many help functions requested",code=E_INVALID)
 	elif argv[1] == "version":
 		print(numpy.__version__,file=sys.stdout)
-		exit(E_OK)
-
+		return local_exit(E_OK)
 	try:
 		package = argv[1].split('.')
 		lib = numpy
@@ -1269,7 +1282,7 @@ def main(argv):
 			raise
 		error(f"'{' '.join(argv[1:])}' failed - {info}",E_FAILED)
 
-	exit(E_OK)
+	return local_exit(E_OK)
 
 if __name__ == '__main__':
 	main(sys.argv)
